@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEC6B518-EA67-4FF4-AD0B-587311335A5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Barroc_IT</RootNamespace>
+    <AssemblyName>Barroc IT</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateClient.Designer.cs">
+      <DependentUpon>CreateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateInvoice.Designer.cs">
+      <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateMeeting.Designer.cs">
+      <DependentUpon>CreateMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateProject.Designer.cs">
+      <DependentUpon>CreateProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateQuotation.Designer.cs">
+      <DependentUpon>CreateQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormReference.cs" />
+    <Compile Include="ModifyMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyMeeting.Designer.cs">
+      <DependentUpon>ModifyMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchClient.Designer.cs">
+      <DependentUpon>SearchClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchProject.Designer.cs">
+      <DependentUpon>SearchProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchQuotation.Designer.cs">
+      <DependentUpon>SearchQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+    <Compile Include="ViewInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewInvoices.Designer.cs">
+      <DependentUpon>ViewInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMeeting.Designer.cs">
+      <DependentUpon>ViewMeeting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreateClient.resx">
+      <DependentUpon>CreateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateInvoice.resx">
+      <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateMeeting.resx">
+      <DependentUpon>CreateMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateProject.resx">
+      <DependentUpon>CreateProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateQuotation.resx">
+      <DependentUpon>CreateQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyMeeting.resx">
+      <DependentUpon>ModifyMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchClient.resx">
+      <DependentUpon>SearchClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchProject.resx">
+      <DependentUpon>SearchProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchQuotation.resx">
+      <DependentUpon>SearchQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewInvoices.resx">
+      <DependentUpon>ViewInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMeeting.resx">
+      <DependentUpon>ViewMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
