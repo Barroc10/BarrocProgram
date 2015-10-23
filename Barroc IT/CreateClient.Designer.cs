@@ -104,9 +104,11 @@
             this.gb_CreateClient.Controls.Add(this.tb_Company1);
             this.gb_CreateClient.Controls.Add(this.lbl_Company1);
             this.gb_CreateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_CreateClient.Location = new System.Drawing.Point(12, 12);
+            this.gb_CreateClient.Location = new System.Drawing.Point(16, 15);
+            this.gb_CreateClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gb_CreateClient.Name = "gb_CreateClient";
-            this.gb_CreateClient.Size = new System.Drawing.Size(436, 592);
+            this.gb_CreateClient.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gb_CreateClient.Size = new System.Drawing.Size(581, 729);
             this.gb_CreateClient.TabIndex = 0;
             this.gb_CreateClient.TabStop = false;
             this.gb_CreateClient.Text = "Create client";
@@ -115,9 +117,10 @@
             // 
             this.lbl_LedgerAccountNumber.AutoSize = true;
             this.lbl_LedgerAccountNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LedgerAccountNumber.Location = new System.Drawing.Point(6, 555);
+            this.lbl_LedgerAccountNumber.Location = new System.Drawing.Point(8, 683);
+            this.lbl_LedgerAccountNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_LedgerAccountNumber.Name = "lbl_LedgerAccountNumber";
-            this.lbl_LedgerAccountNumber.Size = new System.Drawing.Size(142, 20);
+            this.lbl_LedgerAccountNumber.Size = new System.Drawing.Size(175, 25);
             this.lbl_LedgerAccountNumber.TabIndex = 49;
             this.lbl_LedgerAccountNumber.Text = "Ledger account nr:";
             // 
@@ -125,9 +128,10 @@
             // 
             this.lbl_BankAccountNumber.AutoSize = true;
             this.lbl_BankAccountNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BankAccountNumber.Location = new System.Drawing.Point(6, 522);
+            this.lbl_BankAccountNumber.Location = new System.Drawing.Point(8, 642);
+            this.lbl_BankAccountNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_BankAccountNumber.Name = "lbl_BankAccountNumber";
-            this.lbl_BankAccountNumber.Size = new System.Drawing.Size(129, 20);
+            this.lbl_BankAccountNumber.Size = new System.Drawing.Size(159, 25);
             this.lbl_BankAccountNumber.TabIndex = 48;
             this.lbl_BankAccountNumber.Text = "Bank account nr:";
             // 
@@ -135,9 +139,10 @@
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.Location = new System.Drawing.Point(6, 489);
+            this.lbl_Email.Location = new System.Drawing.Point(8, 602);
+            this.lbl_Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(57, 20);
+            this.lbl_Email.Size = new System.Drawing.Size(73, 25);
             this.lbl_Email.TabIndex = 47;
             this.lbl_Email.Text = "E-mail:";
             // 
@@ -145,9 +150,10 @@
             // 
             this.lbl_FaxNumber.AutoSize = true;
             this.lbl_FaxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_FaxNumber.Location = new System.Drawing.Point(6, 456);
+            this.lbl_FaxNumber.Location = new System.Drawing.Point(8, 561);
+            this.lbl_FaxNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_FaxNumber.Name = "lbl_FaxNumber";
-            this.lbl_FaxNumber.Size = new System.Drawing.Size(97, 20);
+            this.lbl_FaxNumber.Size = new System.Drawing.Size(122, 25);
             this.lbl_FaxNumber.TabIndex = 46;
             this.lbl_FaxNumber.Text = "Fax number:";
             // 
@@ -155,9 +161,10 @@
             // 
             this.lbl_PhoneNumber2.AutoSize = true;
             this.lbl_PhoneNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PhoneNumber2.Location = new System.Drawing.Point(6, 423);
+            this.lbl_PhoneNumber2.Location = new System.Drawing.Point(8, 521);
+            this.lbl_PhoneNumber2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PhoneNumber2.Name = "lbl_PhoneNumber2";
-            this.lbl_PhoneNumber2.Size = new System.Drawing.Size(130, 20);
+            this.lbl_PhoneNumber2.Size = new System.Drawing.Size(162, 25);
             this.lbl_PhoneNumber2.TabIndex = 45;
             this.lbl_PhoneNumber2.Text = "Phone number 2:";
             // 
@@ -165,9 +172,10 @@
             // 
             this.lbl_PhoneNumber1.AutoSize = true;
             this.lbl_PhoneNumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PhoneNumber1.Location = new System.Drawing.Point(6, 390);
+            this.lbl_PhoneNumber1.Location = new System.Drawing.Point(8, 480);
+            this.lbl_PhoneNumber1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PhoneNumber1.Name = "lbl_PhoneNumber1";
-            this.lbl_PhoneNumber1.Size = new System.Drawing.Size(130, 20);
+            this.lbl_PhoneNumber1.Size = new System.Drawing.Size(162, 25);
             this.lbl_PhoneNumber1.TabIndex = 44;
             this.lbl_PhoneNumber1.Text = "Phone number 1:";
             // 
@@ -175,9 +183,10 @@
             // 
             this.lbl_Initials.AutoSize = true;
             this.lbl_Initials.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Initials.Location = new System.Drawing.Point(6, 357);
+            this.lbl_Initials.Location = new System.Drawing.Point(8, 439);
+            this.lbl_Initials.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Initials.Name = "lbl_Initials";
-            this.lbl_Initials.Size = new System.Drawing.Size(58, 20);
+            this.lbl_Initials.Size = new System.Drawing.Size(72, 25);
             this.lbl_Initials.TabIndex = 43;
             this.lbl_Initials.Text = "Initials:";
             // 
@@ -185,9 +194,10 @@
             // 
             this.lbl_ContactPerson.AutoSize = true;
             this.lbl_ContactPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ContactPerson.Location = new System.Drawing.Point(6, 324);
+            this.lbl_ContactPerson.Location = new System.Drawing.Point(8, 399);
+            this.lbl_ContactPerson.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ContactPerson.Name = "lbl_ContactPerson";
-            this.lbl_ContactPerson.Size = new System.Drawing.Size(122, 20);
+            this.lbl_ContactPerson.Size = new System.Drawing.Size(151, 25);
             this.lbl_ContactPerson.TabIndex = 42;
             this.lbl_ContactPerson.Text = "Contact person:";
             // 
@@ -195,9 +205,10 @@
             // 
             this.lbl_Zipcode2.AutoSize = true;
             this.lbl_Zipcode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Zipcode2.Location = new System.Drawing.Point(6, 291);
+            this.lbl_Zipcode2.Location = new System.Drawing.Point(8, 358);
+            this.lbl_Zipcode2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Zipcode2.Name = "lbl_Zipcode2";
-            this.lbl_Zipcode2.Size = new System.Drawing.Size(83, 20);
+            this.lbl_Zipcode2.Size = new System.Drawing.Size(104, 25);
             this.lbl_Zipcode2.TabIndex = 41;
             this.lbl_Zipcode2.Text = "Zipcode 2:";
             // 
@@ -205,9 +216,10 @@
             // 
             this.lbl_City2.AutoSize = true;
             this.lbl_City2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_City2.Location = new System.Drawing.Point(6, 259);
+            this.lbl_City2.Location = new System.Drawing.Point(8, 319);
+            this.lbl_City2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_City2.Name = "lbl_City2";
-            this.lbl_City2.Size = new System.Drawing.Size(52, 20);
+            this.lbl_City2.Size = new System.Drawing.Size(68, 25);
             this.lbl_City2.TabIndex = 40;
             this.lbl_City2.Text = "City 2:";
             // 
@@ -215,9 +227,10 @@
             // 
             this.lbl_Number2.AutoSize = true;
             this.lbl_Number2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Number2.Location = new System.Drawing.Point(6, 226);
+            this.lbl_Number2.Location = new System.Drawing.Point(8, 278);
+            this.lbl_Number2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Number2.Name = "lbl_Number2";
-            this.lbl_Number2.Size = new System.Drawing.Size(82, 20);
+            this.lbl_Number2.Size = new System.Drawing.Size(103, 25);
             this.lbl_Number2.TabIndex = 39;
             this.lbl_Number2.Text = "Number 2:";
             // 
@@ -225,9 +238,10 @@
             // 
             this.lbl_Address2.AutoSize = true;
             this.lbl_Address2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address2.Location = new System.Drawing.Point(6, 193);
+            this.lbl_Address2.Location = new System.Drawing.Point(8, 238);
+            this.lbl_Address2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Address2.Name = "lbl_Address2";
-            this.lbl_Address2.Size = new System.Drawing.Size(85, 20);
+            this.lbl_Address2.Size = new System.Drawing.Size(107, 25);
             this.lbl_Address2.TabIndex = 38;
             this.lbl_Address2.Text = "Address 2:";
             // 
@@ -235,9 +249,10 @@
             // 
             this.lbl_Zipcode1.AutoSize = true;
             this.lbl_Zipcode1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Zipcode1.Location = new System.Drawing.Point(6, 160);
+            this.lbl_Zipcode1.Location = new System.Drawing.Point(8, 197);
+            this.lbl_Zipcode1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Zipcode1.Name = "lbl_Zipcode1";
-            this.lbl_Zipcode1.Size = new System.Drawing.Size(83, 20);
+            this.lbl_Zipcode1.Size = new System.Drawing.Size(104, 25);
             this.lbl_Zipcode1.TabIndex = 37;
             this.lbl_Zipcode1.Text = "Zipcode 1:";
             // 
@@ -245,9 +260,10 @@
             // 
             this.lbl_City1.AutoSize = true;
             this.lbl_City1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_City1.Location = new System.Drawing.Point(6, 127);
+            this.lbl_City1.Location = new System.Drawing.Point(8, 156);
+            this.lbl_City1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_City1.Name = "lbl_City1";
-            this.lbl_City1.Size = new System.Drawing.Size(52, 20);
+            this.lbl_City1.Size = new System.Drawing.Size(68, 25);
             this.lbl_City1.TabIndex = 36;
             this.lbl_City1.Text = "City 1:";
             // 
@@ -255,9 +271,10 @@
             // 
             this.lbl_Number1.AutoSize = true;
             this.lbl_Number1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Number1.Location = new System.Drawing.Point(6, 94);
+            this.lbl_Number1.Location = new System.Drawing.Point(8, 116);
+            this.lbl_Number1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Number1.Name = "lbl_Number1";
-            this.lbl_Number1.Size = new System.Drawing.Size(82, 20);
+            this.lbl_Number1.Size = new System.Drawing.Size(103, 25);
             this.lbl_Number1.TabIndex = 35;
             this.lbl_Number1.Text = "Number 1:";
             // 
@@ -265,146 +282,166 @@
             // 
             this.lbl_Address1.AutoSize = true;
             this.lbl_Address1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Address1.Location = new System.Drawing.Point(6, 62);
+            this.lbl_Address1.Location = new System.Drawing.Point(8, 76);
+            this.lbl_Address1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Address1.Name = "lbl_Address1";
-            this.lbl_Address1.Size = new System.Drawing.Size(85, 20);
+            this.lbl_Address1.Size = new System.Drawing.Size(107, 25);
             this.lbl_Address1.TabIndex = 34;
             this.lbl_Address1.Text = "Address 1:";
             // 
             // tb_LedgerAccountNumber
             // 
-            this.tb_LedgerAccountNumber.Location = new System.Drawing.Point(170, 548);
+            this.tb_LedgerAccountNumber.Location = new System.Drawing.Point(227, 674);
+            this.tb_LedgerAccountNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_LedgerAccountNumber.Name = "tb_LedgerAccountNumber";
-            this.tb_LedgerAccountNumber.Size = new System.Drawing.Size(260, 27);
+            this.tb_LedgerAccountNumber.Size = new System.Drawing.Size(345, 32);
             this.tb_LedgerAccountNumber.TabIndex = 33;
             // 
             // tb_BankAccountNumber
             // 
-            this.tb_BankAccountNumber.Location = new System.Drawing.Point(170, 515);
+            this.tb_BankAccountNumber.Location = new System.Drawing.Point(227, 634);
+            this.tb_BankAccountNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_BankAccountNumber.Name = "tb_BankAccountNumber";
-            this.tb_BankAccountNumber.Size = new System.Drawing.Size(260, 27);
+            this.tb_BankAccountNumber.Size = new System.Drawing.Size(345, 32);
             this.tb_BankAccountNumber.TabIndex = 32;
             // 
             // tb_Email
             // 
-            this.tb_Email.Location = new System.Drawing.Point(170, 482);
+            this.tb_Email.Location = new System.Drawing.Point(227, 593);
+            this.tb_Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(260, 27);
+            this.tb_Email.Size = new System.Drawing.Size(345, 32);
             this.tb_Email.TabIndex = 31;
             // 
             // tb_FaxNumber
             // 
-            this.tb_FaxNumber.Location = new System.Drawing.Point(170, 449);
+            this.tb_FaxNumber.Location = new System.Drawing.Point(227, 553);
+            this.tb_FaxNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_FaxNumber.Name = "tb_FaxNumber";
-            this.tb_FaxNumber.Size = new System.Drawing.Size(260, 27);
+            this.tb_FaxNumber.Size = new System.Drawing.Size(345, 32);
             this.tb_FaxNumber.TabIndex = 30;
             // 
             // tb_PhoneNumber2
             // 
-            this.tb_PhoneNumber2.Location = new System.Drawing.Point(170, 416);
+            this.tb_PhoneNumber2.Location = new System.Drawing.Point(227, 512);
+            this.tb_PhoneNumber2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_PhoneNumber2.Name = "tb_PhoneNumber2";
-            this.tb_PhoneNumber2.Size = new System.Drawing.Size(260, 27);
+            this.tb_PhoneNumber2.Size = new System.Drawing.Size(345, 32);
             this.tb_PhoneNumber2.TabIndex = 29;
             // 
             // tb_PhoneNumber1
             // 
-            this.tb_PhoneNumber1.Location = new System.Drawing.Point(170, 383);
+            this.tb_PhoneNumber1.Location = new System.Drawing.Point(227, 471);
+            this.tb_PhoneNumber1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_PhoneNumber1.Name = "tb_PhoneNumber1";
-            this.tb_PhoneNumber1.Size = new System.Drawing.Size(260, 27);
+            this.tb_PhoneNumber1.Size = new System.Drawing.Size(345, 32);
             this.tb_PhoneNumber1.TabIndex = 28;
             // 
             // tb_Initials
             // 
-            this.tb_Initials.Location = new System.Drawing.Point(170, 350);
+            this.tb_Initials.Location = new System.Drawing.Point(227, 431);
+            this.tb_Initials.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Initials.Name = "tb_Initials";
-            this.tb_Initials.Size = new System.Drawing.Size(260, 27);
+            this.tb_Initials.Size = new System.Drawing.Size(345, 32);
             this.tb_Initials.TabIndex = 27;
             // 
             // tb_ContactPerson
             // 
-            this.tb_ContactPerson.Location = new System.Drawing.Point(170, 317);
+            this.tb_ContactPerson.Location = new System.Drawing.Point(227, 390);
+            this.tb_ContactPerson.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_ContactPerson.Name = "tb_ContactPerson";
-            this.tb_ContactPerson.Size = new System.Drawing.Size(260, 27);
+            this.tb_ContactPerson.Size = new System.Drawing.Size(345, 32);
             this.tb_ContactPerson.TabIndex = 26;
             // 
             // tb_Zipcode2
             // 
-            this.tb_Zipcode2.Location = new System.Drawing.Point(170, 284);
+            this.tb_Zipcode2.Location = new System.Drawing.Point(227, 350);
+            this.tb_Zipcode2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Zipcode2.Name = "tb_Zipcode2";
-            this.tb_Zipcode2.Size = new System.Drawing.Size(260, 27);
+            this.tb_Zipcode2.Size = new System.Drawing.Size(345, 32);
             this.tb_Zipcode2.TabIndex = 25;
             // 
             // tb_City2
             // 
-            this.tb_City2.Location = new System.Drawing.Point(170, 252);
+            this.tb_City2.Location = new System.Drawing.Point(227, 310);
+            this.tb_City2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_City2.Name = "tb_City2";
-            this.tb_City2.Size = new System.Drawing.Size(260, 27);
+            this.tb_City2.Size = new System.Drawing.Size(345, 32);
             this.tb_City2.TabIndex = 24;
             // 
             // tb_Number2
             // 
-            this.tb_Number2.Location = new System.Drawing.Point(170, 219);
+            this.tb_Number2.Location = new System.Drawing.Point(227, 270);
+            this.tb_Number2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Number2.Name = "tb_Number2";
-            this.tb_Number2.Size = new System.Drawing.Size(260, 27);
+            this.tb_Number2.Size = new System.Drawing.Size(345, 32);
             this.tb_Number2.TabIndex = 23;
             // 
             // tb_Address2
             // 
-            this.tb_Address2.Location = new System.Drawing.Point(170, 186);
+            this.tb_Address2.Location = new System.Drawing.Point(227, 229);
+            this.tb_Address2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Address2.Name = "tb_Address2";
-            this.tb_Address2.Size = new System.Drawing.Size(260, 27);
+            this.tb_Address2.Size = new System.Drawing.Size(345, 32);
             this.tb_Address2.TabIndex = 22;
             // 
             // tb_Zipcode
             // 
-            this.tb_Zipcode.Location = new System.Drawing.Point(170, 153);
+            this.tb_Zipcode.Location = new System.Drawing.Point(227, 188);
+            this.tb_Zipcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Zipcode.Name = "tb_Zipcode";
-            this.tb_Zipcode.Size = new System.Drawing.Size(260, 27);
+            this.tb_Zipcode.Size = new System.Drawing.Size(345, 32);
             this.tb_Zipcode.TabIndex = 21;
             // 
             // tb_City1
             // 
-            this.tb_City1.Location = new System.Drawing.Point(170, 120);
+            this.tb_City1.Location = new System.Drawing.Point(227, 148);
+            this.tb_City1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_City1.Name = "tb_City1";
-            this.tb_City1.Size = new System.Drawing.Size(260, 27);
+            this.tb_City1.Size = new System.Drawing.Size(345, 32);
             this.tb_City1.TabIndex = 20;
             // 
             // tb_Number1
             // 
-            this.tb_Number1.Location = new System.Drawing.Point(170, 87);
+            this.tb_Number1.Location = new System.Drawing.Point(227, 107);
+            this.tb_Number1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Number1.Name = "tb_Number1";
-            this.tb_Number1.Size = new System.Drawing.Size(260, 27);
+            this.tb_Number1.Size = new System.Drawing.Size(345, 32);
             this.tb_Number1.TabIndex = 19;
             // 
             // tb_Address1
             // 
-            this.tb_Address1.Location = new System.Drawing.Point(170, 55);
+            this.tb_Address1.Location = new System.Drawing.Point(227, 68);
+            this.tb_Address1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Address1.Name = "tb_Address1";
-            this.tb_Address1.Size = new System.Drawing.Size(260, 27);
+            this.tb_Address1.Size = new System.Drawing.Size(345, 32);
             this.tb_Address1.TabIndex = 18;
             // 
             // tb_Company1
             // 
-            this.tb_Company1.Location = new System.Drawing.Point(170, 22);
+            this.tb_Company1.Location = new System.Drawing.Point(227, 27);
+            this.tb_Company1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Company1.Name = "tb_Company1";
-            this.tb_Company1.Size = new System.Drawing.Size(260, 27);
+            this.tb_Company1.Size = new System.Drawing.Size(345, 32);
             this.tb_Company1.TabIndex = 17;
             // 
             // lbl_Company1
             // 
             this.lbl_Company1.AutoSize = true;
             this.lbl_Company1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Company1.Location = new System.Drawing.Point(6, 29);
+            this.lbl_Company1.Location = new System.Drawing.Point(8, 36);
+            this.lbl_Company1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Company1.Name = "lbl_Company1";
-            this.lbl_Company1.Size = new System.Drawing.Size(93, 20);
+            this.lbl_Company1.Size = new System.Drawing.Size(119, 25);
             this.lbl_Company1.TabIndex = 0;
             this.lbl_Company1.Text = "Company 1:";
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(345, 610);
+            this.btn_Create.Location = new System.Drawing.Point(460, 751);
+            this.btn_Create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(103, 32);
+            this.btn_Create.Size = new System.Drawing.Size(137, 39);
             this.btn_Create.TabIndex = 1;
             this.btn_Create.Text = "Create";
             this.btn_Create.UseVisualStyleBackColor = true;
@@ -412,14 +449,16 @@
             // 
             // CreateClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 654);
+            this.ClientSize = new System.Drawing.Size(613, 805);
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.gb_CreateClient);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "CreateClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateClient";
             this.gb_CreateClient.ResumeLayout(false);
             this.gb_CreateClient.PerformLayout();
