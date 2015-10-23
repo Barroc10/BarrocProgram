@@ -15,13 +15,13 @@ namespace Barroc_IT
         public CreateInvoice()
         {
             InitializeComponent();
+            dtp_Date.Format = DateTimePickerFormat.Custom;
+            dtp_Date.CustomFormat = "dd-MM-yyyy";
         }
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            string date = tb_Date.Text;
-            date = date.Replace("-", "");
-            DateTime dueDate = new DateTime(Convert.ToInt64(date[0]));
         }
+
     }
 }

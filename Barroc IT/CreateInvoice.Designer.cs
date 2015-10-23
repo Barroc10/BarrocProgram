@@ -34,23 +34,23 @@
             this.lbl_DueDate = new System.Windows.Forms.Label();
             this.tb_Reason = new System.Windows.Forms.TextBox();
             this.cb_Project = new System.Windows.Forms.ComboBox();
-            this.tb_Date = new System.Windows.Forms.TextBox();
             this.num_Amount = new System.Windows.Forms.NumericUpDown();
             this.lbl_Amount = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
+            this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.gb_CreateInvoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_Amount)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_CreateInvoice
             // 
+            this.gb_CreateInvoice.Controls.Add(this.dtp_Date);
             this.gb_CreateInvoice.Controls.Add(this.lbl_Reason);
             this.gb_CreateInvoice.Controls.Add(this.lbl_ProjectName);
             this.gb_CreateInvoice.Controls.Add(this.lbl_DueDate);
             this.gb_CreateInvoice.Controls.Add(this.tb_Reason);
             this.gb_CreateInvoice.Controls.Add(this.cb_Project);
-            this.gb_CreateInvoice.Controls.Add(this.tb_Date);
             this.gb_CreateInvoice.Controls.Add(this.num_Amount);
             this.gb_CreateInvoice.Controls.Add(this.lbl_Amount);
             this.gb_CreateInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,19 +106,28 @@
             this.cb_Project.Size = new System.Drawing.Size(156, 28);
             this.cb_Project.TabIndex = 34;
             // 
-            // tb_Date
-            // 
-            this.tb_Date.Location = new System.Drawing.Point(126, 64);
-            this.tb_Date.Name = "tb_Date";
-            this.tb_Date.Size = new System.Drawing.Size(156, 27);
-            this.tb_Date.TabIndex = 33;
-            // 
             // num_Amount
             // 
+            this.num_Amount.DecimalPlaces = 2;
             this.num_Amount.Location = new System.Drawing.Point(126, 31);
+            this.num_Amount.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.num_Amount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.num_Amount.Name = "num_Amount";
             this.num_Amount.Size = new System.Drawing.Size(156, 27);
             this.num_Amount.TabIndex = 4;
+            this.num_Amount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lbl_Amount
             // 
@@ -149,6 +158,14 @@
             this.btn_Create.UseVisualStyleBackColor = true;
             this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
+            // dtp_Date
+            // 
+            this.dtp_Date.CustomFormat = "dd-MM-yyyy";
+            this.dtp_Date.Location = new System.Drawing.Point(126, 64);
+            this.dtp_Date.Name = "dtp_Date";
+            this.dtp_Date.Size = new System.Drawing.Size(156, 27);
+            this.dtp_Date.TabIndex = 39;
+            // 
             // CreateInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,7 +190,6 @@
         private System.Windows.Forms.GroupBox gb_CreateInvoice;
         private System.Windows.Forms.NumericUpDown num_Amount;
         private System.Windows.Forms.Label lbl_Amount;
-        private System.Windows.Forms.TextBox tb_Date;
         private System.Windows.Forms.Label lbl_Reason;
         private System.Windows.Forms.Label lbl_ProjectName;
         private System.Windows.Forms.Label lbl_DueDate;
@@ -181,5 +197,6 @@
         private System.Windows.Forms.ComboBox cb_Project;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Create;
+        private System.Windows.Forms.DateTimePicker dtp_Date;
     }
 }
