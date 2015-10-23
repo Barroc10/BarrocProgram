@@ -42,10 +42,10 @@ namespace Barroc_IT
 
         public static bool checkZipcode(string zipCode)
         {
-            zipCode.Replace(" ", "");
+            zipCode = zipCode.Replace(" ", "");
             if (zipCode.Length == 6)
             {
-                if (Regex.IsMatch(zipCode[0].ToString(), @"^0-9+$") && Regex.IsMatch(zipCode[1].ToString(), @"^0-9+$") && Regex .IsMatch(zipCode[2].ToString(), @"^0-9+$") && Regex .IsMatch(zipCode[3].ToString(), @"^0-9+$") && Regex.IsMatch(zipCode[4].ToString(), @"^[a-zA-Z]+$") && Regex.IsMatch(zipCode[5].ToString(), @"^[a-zA-Z]+$"))
+                if (Regex.IsMatch(zipCode[0].ToString(), @"^[0-9]+$") && Regex.IsMatch(zipCode[1].ToString(), @"^[0-9]+$") && Regex .IsMatch(zipCode[2].ToString(), @"^[0-9]+$") && Regex .IsMatch(zipCode[3].ToString(), @"^[0-9]+$") && Regex.IsMatch(zipCode[4].ToString(), @"^[a-zA-Z]+$") && Regex.IsMatch(zipCode[5].ToString(), @"^[a-zA-Z]+$"))
                 {
                     return true;
                 }
