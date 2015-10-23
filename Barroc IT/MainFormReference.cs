@@ -9,7 +9,7 @@ namespace Barroc_IT
     public class MainFormReference // Singleton https://en.wikipedia.org/wiki/Singleton_pattern 
     {
         private static MainScreen instance;
-        private static readonly object padlock = new object();
+        private static readonly object o = new object();
 
         public MainFormReference()
         {
@@ -20,7 +20,7 @@ namespace Barroc_IT
         {
             get
             {
-                lock (padlock)
+                lock (o)
                 {
                     if (instance == null)
                     {
