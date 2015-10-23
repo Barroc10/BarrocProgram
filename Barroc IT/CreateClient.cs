@@ -62,35 +62,11 @@ namespace Barroc_IT
 
         private void CheckInformation()
         {
-            if (!Utilities.checkEmail(tb_Email.Text))
+            if (tb_Company1.Text == "")
             {
-                errorMessage.Add("Email");
+                errorMessage.Add("Company 1");
                 isError = true;
-                tb_Email.BackColor = Color.Red;
-            }
-            if (!Utilities.checkNumber(tb_Number1.Text))
-            {
-                errorMessage.Add("Number 1");
-                isError = true;
-                tb_Number1.BackColor = Color.Red;
-            }
-            if (!Utilities.checkNumber(tb_Number2.Text) && tb_Number2.Text != "")
-            {
-                errorMessage.Add("Number 2");
-                isError = true;
-                tb_Number2.BackColor = Color.Red;
-            }
-            if (!Utilities.checkZipcode(tb_Zipcode.Text))
-            {
-                errorMessage.Add("Zipcode 1");
-                isError = true;
-                tb_Zipcode.BackColor = Color.Red;
-            }
-            if (!Utilities.checkZipcode(tb_Zipcode2.Text) && tb_Zipcode2.Text != "")
-            {
-                errorMessage.Add("Zipcode 2");
-                isError = true;
-                tb_Zipcode2.BackColor = Color.Red;
+                tb_Company1.BackColor = Color.Red;
             }
             if (tb_Address1.Text == "")
             {
@@ -98,17 +74,35 @@ namespace Barroc_IT
                 isError = true;
                 tb_Address1.BackColor = Color.Red;
             }
+            if (!Utilities.checkNumber(tb_Number1.Text))
+            {
+                errorMessage.Add("Number 1");
+                isError = true;
+                tb_Number1.BackColor = Color.Red;
+            }
             if (tb_City1.Text == "")
             {
                 errorMessage.Add("City 1");
                 isError = true;
                 tb_City1.BackColor = Color.Red;
             }
-            if (tb_Company1.Text == "")
+            if (!Utilities.checkZipcode(tb_Zipcode.Text))
             {
-                errorMessage.Add("Company 1");
+                errorMessage.Add("Zipcode 1");
                 isError = true;
-                tb_Company1.BackColor = Color.Red;
+                tb_Zipcode.BackColor = Color.Red;
+            }
+            if (!Utilities.checkNumber(tb_Number2.Text) && tb_Number2.Text != "")
+            {
+                errorMessage.Add("Number 2");
+                isError = true;
+                tb_Number2.BackColor = Color.Red;
+            }
+            if (!Utilities.checkZipcode(tb_Zipcode2.Text) && tb_Zipcode2.Text != "")
+            {
+                errorMessage.Add("Zipcode 2");
+                isError = true;
+                tb_Zipcode2.BackColor = Color.Red;
             }
             if (tb_ContactPerson.Text == "")
             {
@@ -140,6 +134,12 @@ namespace Barroc_IT
                 isError = true;
                 tb_FaxNumber.BackColor = Color.Red;
             }
+            if (!Utilities.checkEmail(tb_Email.Text))
+            {
+                errorMessage.Add("Email");
+                isError = true;
+                tb_Email.BackColor = Color.Red;
+            }
             if (!Utilities.checkNumber(tb_BankAccountNumber.Text))
             {
                 errorMessage.Add("Bank account nr");
@@ -167,5 +167,92 @@ namespace Barroc_IT
             }
             
         }
+
+        private void tb_Company1_TextChanged(object sender, EventArgs e)
+        {
+            tb_Company1.BackColor = Color.White;
+        }
+
+        private void tb_Address1_TextChanged(object sender, EventArgs e)
+        {
+            tb_Address1.BackColor = Color.White;
+        }
+
+        private void tb_Number1_TextChanged(object sender, EventArgs e)
+        {
+            tb_Number1.BackColor = Color.White;
+        }
+
+        private void tb_City1_TextChanged(object sender, EventArgs e)
+        {
+            tb_City1.BackColor = Color.White;
+        }
+
+        private void tb_Zipcode_TextChanged(object sender, EventArgs e)
+        {
+            tb_Zipcode.BackColor = Color.White;
+        }
+
+        private void tb_Address2_TextChanged(object sender, EventArgs e)
+        {
+            tb_Address1.BackColor = Color.White;
+        }
+
+        private void tb_Number2_TextChanged(object sender, EventArgs e)
+        {
+            tb_Number2.BackColor = Color.White;
+        }
+
+        private void tb_City2_TextChanged(object sender, EventArgs e)
+        {
+            tb_City2.BackColor = Color.White;
+        }
+
+        private void tb_Zipcode2_TextChanged(object sender, EventArgs e)
+        {
+            tb_Zipcode2.BackColor = Color.White;
+        }
+
+        private void tb_ContactPerson_TextChanged(object sender, EventArgs e)
+        {
+            tb_ContactPerson.BackColor = Color.White;
+        }
+
+        private void tb_Initials_TextChanged(object sender, EventArgs e)
+        {
+            tb_Initials.BackColor = Color.White;
+        }
+
+        private void tb_PhoneNumber1_TextChanged(object sender, EventArgs e)
+        {
+            tb_PhoneNumber1.BackColor = Color.White;
+        }
+
+        private void tb_PhoneNumber2_TextChanged(object sender, EventArgs e)
+        {
+            tb_PhoneNumber2.BackColor = Color.White;
+        }
+
+        private void tb_FaxNumber_TextChanged(object sender, EventArgs e)
+        {
+            tb_FaxNumber.BackColor = Color.White;
+        }
+
+        private void tb_Email_TextChanged(object sender, EventArgs e)
+        {
+            tb_Email.BackColor = Color.White;
+        }
+
+        private void tb_BankAccountNumber_TextChanged(object sender, EventArgs e)
+        {
+            tb_BankAccountNumber.BackColor = Color.White;
+        }
+
+        private void tb_LedgerAccountNumber_TextChanged(object sender, EventArgs e)
+        {
+            tb_LedgerAccountNumber.BackColor = Color.White;
+        }
+
+
     }
 }
