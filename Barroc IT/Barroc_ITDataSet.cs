@@ -2,6 +2,10 @@
     
     
     public partial class Barroc_ITDataSet {
+        partial class tbl_c_regels11DataTable
+        {
+        }
+    
         partial class tbl_clientsDataTable
         {
         }

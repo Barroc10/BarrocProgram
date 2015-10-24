@@ -14,7 +14,7 @@
   <xs:element name="Barroc_ITDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Barroc_ITDataSet" msprop:Generator_UserDSName="Barroc_ITDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_clients" msprop:Generator_TableClassName="tbl_clientsDataTable" msprop:Generator_TableVarName="tabletbl_clients" msprop:Generator_TablePropName="tbl_clients" msprop:Generator_RowDeletingName="tbl_clientsRowDeleting" msprop:Generator_RowChangingName="tbl_clientsRowChanging" msprop:Generator_RowEvHandlerName="tbl_clientsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_clientsRowDeleted" msprop:Generator_UserTableName="tbl_clients" msprop:Generator_RowChangedName="tbl_clientsRowChanged" msprop:Generator_RowEvArgName="tbl_clientsRowChangeEvent" msprop:Generator_RowClassName="tbl_clientsRow">
+        <xs:element name="tbl_clients" msprop:Generator_TableClassName="tbl_clientsDataTable" msprop:Generator_TableVarName="tabletbl_clients" msprop:Generator_RowChangedName="tbl_clientsRowChanged" msprop:Generator_TablePropName="tbl_clients" msprop:Generator_RowDeletingName="tbl_clientsRowDeleting" msprop:Generator_RowChangingName="tbl_clientsRowChanging" msprop:Generator_RowEvHandlerName="tbl_clientsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_clientsRowDeleted" msprop:Generator_RowClassName="tbl_clientsRow" msprop:Generator_UserTableName="tbl_clients" msprop:Generator_RowEvArgName="tbl_clientsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_LedgerNumber" msprop:Generator_ColumnVarNameInTable="columnC_LedgerNumber" msprop:Generator_ColumnPropNameInRow="C_LedgerNumber" msprop:Generator_ColumnPropNameInTable="C_LedgerNumberColumn" msprop:Generator_UserColumnName="C_LedgerNumber" type="xs:string" minOccurs="0" />
@@ -41,7 +41,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_projects" msprop:Generator_TableClassName="tbl_projectsDataTable" msprop:Generator_TableVarName="tabletbl_projects" msprop:Generator_TablePropName="tbl_projects" msprop:Generator_RowDeletingName="tbl_projectsRowDeleting" msprop:Generator_RowChangingName="tbl_projectsRowChanging" msprop:Generator_RowEvHandlerName="tbl_projectsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_projectsRowDeleted" msprop:Generator_UserTableName="tbl_projects" msprop:Generator_RowChangedName="tbl_projectsRowChanged" msprop:Generator_RowEvArgName="tbl_projectsRowChangeEvent" msprop:Generator_RowClassName="tbl_projectsRow">
+        <xs:element name="tbl_projects" msprop:Generator_TableClassName="tbl_projectsDataTable" msprop:Generator_TableVarName="tabletbl_projects" msprop:Generator_RowChangedName="tbl_projectsRowChanged" msprop:Generator_TablePropName="tbl_projects" msprop:Generator_RowDeletingName="tbl_projectsRowDeleting" msprop:Generator_RowChangingName="tbl_projectsRowChanging" msprop:Generator_RowEvHandlerName="tbl_projectsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_projectsRowDeleted" msprop:Generator_RowClassName="tbl_projectsRow" msprop:Generator_UserTableName="tbl_projects" msprop:Generator_RowEvArgName="tbl_projectsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="P_ProjectID" msprop:Generator_ColumnVarNameInTable="columnP_ProjectID" msprop:Generator_ColumnPropNameInRow="P_ProjectID" msprop:Generator_ColumnPropNameInTable="P_ProjectIDColumn" msprop:Generator_UserColumnName="P_ProjectID" type="xs:string" minOccurs="0" />
@@ -53,7 +53,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_invoices" msprop:Generator_TableClassName="tbl_invoicesDataTable" msprop:Generator_TableVarName="tabletbl_invoices" msprop:Generator_TablePropName="tbl_invoices" msprop:Generator_RowDeletingName="tbl_invoicesRowDeleting" msprop:Generator_RowChangingName="tbl_invoicesRowChanging" msprop:Generator_RowEvHandlerName="tbl_invoicesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_invoicesRowDeleted" msprop:Generator_UserTableName="tbl_invoices" msprop:Generator_RowChangedName="tbl_invoicesRowChanged" msprop:Generator_RowEvArgName="tbl_invoicesRowChangeEvent" msprop:Generator_RowClassName="tbl_invoicesRow">
+        <xs:element name="tbl_invoices" msprop:Generator_TableClassName="tbl_invoicesDataTable" msprop:Generator_TableVarName="tabletbl_invoices" msprop:Generator_RowChangedName="tbl_invoicesRowChanged" msprop:Generator_TablePropName="tbl_invoices" msprop:Generator_RowDeletingName="tbl_invoicesRowDeleting" msprop:Generator_RowChangingName="tbl_invoicesRowChanging" msprop:Generator_RowEvHandlerName="tbl_invoicesRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_invoicesRowDeleted" msprop:Generator_RowClassName="tbl_invoicesRow" msprop:Generator_UserTableName="tbl_invoices" msprop:Generator_RowEvArgName="tbl_invoicesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="I_InvoiceID" msprop:Generator_ColumnVarNameInTable="columnI_InvoiceID" msprop:Generator_ColumnPropNameInRow="I_InvoiceID" msprop:Generator_ColumnPropNameInTable="I_InvoiceIDColumn" msprop:Generator_UserColumnName="I_InvoiceID" type="xs:string" minOccurs="0" />
@@ -65,7 +65,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_meetings" msprop:Generator_TableClassName="tbl_meetingsDataTable" msprop:Generator_TableVarName="tabletbl_meetings" msprop:Generator_TablePropName="tbl_meetings" msprop:Generator_RowDeletingName="tbl_meetingsRowDeleting" msprop:Generator_RowChangingName="tbl_meetingsRowChanging" msprop:Generator_RowEvHandlerName="tbl_meetingsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_meetingsRowDeleted" msprop:Generator_UserTableName="tbl_meetings" msprop:Generator_RowChangedName="tbl_meetingsRowChanged" msprop:Generator_RowEvArgName="tbl_meetingsRowChangeEvent" msprop:Generator_RowClassName="tbl_meetingsRow">
+        <xs:element name="tbl_meetings" msprop:Generator_TableClassName="tbl_meetingsDataTable" msprop:Generator_TableVarName="tabletbl_meetings" msprop:Generator_RowChangedName="tbl_meetingsRowChanged" msprop:Generator_TablePropName="tbl_meetings" msprop:Generator_RowDeletingName="tbl_meetingsRowDeleting" msprop:Generator_RowChangingName="tbl_meetingsRowChanging" msprop:Generator_RowEvHandlerName="tbl_meetingsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_meetingsRowDeleted" msprop:Generator_RowClassName="tbl_meetingsRow" msprop:Generator_UserTableName="tbl_meetings" msprop:Generator_RowEvArgName="tbl_meetingsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="M_MeetingID" msprop:Generator_ColumnVarNameInTable="columnM_MeetingID" msprop:Generator_ColumnPropNameInRow="M_MeetingID" msprop:Generator_ColumnPropNameInTable="M_MeetingIDColumn" msprop:Generator_UserColumnName="M_MeetingID" type="xs:string" minOccurs="0" />
@@ -78,7 +78,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_quotations" msprop:Generator_TableClassName="tbl_quotationsDataTable" msprop:Generator_TableVarName="tabletbl_quotations" msprop:Generator_TablePropName="tbl_quotations" msprop:Generator_RowDeletingName="tbl_quotationsRowDeleting" msprop:Generator_RowChangingName="tbl_quotationsRowChanging" msprop:Generator_RowEvHandlerName="tbl_quotationsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_quotationsRowDeleted" msprop:Generator_UserTableName="tbl_quotations" msprop:Generator_RowChangedName="tbl_quotationsRowChanged" msprop:Generator_RowEvArgName="tbl_quotationsRowChangeEvent" msprop:Generator_RowClassName="tbl_quotationsRow">
+        <xs:element name="tbl_quotations" msprop:Generator_TableClassName="tbl_quotationsDataTable" msprop:Generator_TableVarName="tabletbl_quotations" msprop:Generator_RowChangedName="tbl_quotationsRowChanged" msprop:Generator_TablePropName="tbl_quotations" msprop:Generator_RowDeletingName="tbl_quotationsRowDeleting" msprop:Generator_RowChangingName="tbl_quotationsRowChanging" msprop:Generator_RowEvHandlerName="tbl_quotationsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_quotationsRowDeleted" msprop:Generator_RowClassName="tbl_quotationsRow" msprop:Generator_UserTableName="tbl_quotations" msprop:Generator_RowEvArgName="tbl_quotationsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Q_QuotationID" msprop:Generator_ColumnVarNameInTable="columnQ_QuotationID" msprop:Generator_ColumnPropNameInRow="Q_QuotationID" msprop:Generator_ColumnPropNameInTable="Q_QuotationIDColumn" msprop:Generator_UserColumnName="Q_QuotationID" type="xs:string" minOccurs="0" />
@@ -97,7 +97,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_rights" msprop:Generator_TableClassName="tbl_rightsDataTable" msprop:Generator_TableVarName="tabletbl_rights" msprop:Generator_TablePropName="tbl_rights" msprop:Generator_RowDeletingName="tbl_rightsRowDeleting" msprop:Generator_RowChangingName="tbl_rightsRowChanging" msprop:Generator_RowEvHandlerName="tbl_rightsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_rightsRowDeleted" msprop:Generator_UserTableName="tbl_rights" msprop:Generator_RowChangedName="tbl_rightsRowChanged" msprop:Generator_RowEvArgName="tbl_rightsRowChangeEvent" msprop:Generator_RowClassName="tbl_rightsRow">
+        <xs:element name="tbl_rights" msprop:Generator_TableClassName="tbl_rightsDataTable" msprop:Generator_TableVarName="tabletbl_rights" msprop:Generator_RowChangedName="tbl_rightsRowChanged" msprop:Generator_TablePropName="tbl_rights" msprop:Generator_RowDeletingName="tbl_rightsRowDeleting" msprop:Generator_RowChangingName="tbl_rightsRowChanging" msprop:Generator_RowEvHandlerName="tbl_rightsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_rightsRowDeleted" msprop:Generator_RowClassName="tbl_rightsRow" msprop:Generator_UserTableName="tbl_rights" msprop:Generator_RowEvArgName="tbl_rightsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="R_DepartmentID" msprop:Generator_ColumnVarNameInTable="columnR_DepartmentID" msprop:Generator_ColumnPropNameInRow="R_DepartmentID" msprop:Generator_ColumnPropNameInTable="R_DepartmentIDColumn" msprop:Generator_UserColumnName="R_DepartmentID" type="xs:string" minOccurs="0" />
@@ -106,7 +106,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_c_regels1" msprop:Generator_TableClassName="tbl_c_regels1DataTable" msprop:Generator_TableVarName="tabletbl_c_regels1" msprop:Generator_TablePropName="tbl_c_regels1" msprop:Generator_RowDeletingName="tbl_c_regels1RowDeleting" msprop:Generator_RowChangingName="tbl_c_regels1RowChanging" msprop:Generator_RowEvHandlerName="tbl_c_regels1RowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_c_regels1RowDeleted" msprop:Generator_UserTableName="tbl_c_regels1" msprop:Generator_RowChangedName="tbl_c_regels1RowChanged" msprop:Generator_RowEvArgName="tbl_c_regels1RowChangeEvent" msprop:Generator_RowClassName="tbl_c_regels1Row">
+        <xs:element name="tbl_c_regels1" msprop:Generator_TableClassName="tbl_c_regels1DataTable" msprop:Generator_TableVarName="tabletbl_c_regels1" msprop:Generator_RowChangedName="tbl_c_regels1RowChanged" msprop:Generator_TablePropName="tbl_c_regels1" msprop:Generator_RowDeletingName="tbl_c_regels1RowDeleting" msprop:Generator_RowChangingName="tbl_c_regels1RowChanging" msprop:Generator_RowEvHandlerName="tbl_c_regels1RowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_c_regels1RowDeleted" msprop:Generator_RowClassName="tbl_c_regels1Row" msprop:Generator_UserTableName="tbl_c_regels1" msprop:Generator_RowEvArgName="tbl_c_regels1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_LedgerNumber" msprop:Generator_ColumnVarNameInTable="columnC_LedgerNumber" msprop:Generator_ColumnPropNameInRow="C_LedgerNumber" msprop:Generator_ColumnPropNameInTable="C_LedgerNumberColumn" msprop:Generator_UserColumnName="C_LedgerNumber" type="xs:string" minOccurs="0" />
@@ -114,11 +114,20 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_regels2" msprop:Generator_TableClassName="tbl_regels2DataTable" msprop:Generator_TableVarName="tabletbl_regels2" msprop:Generator_TablePropName="tbl_regels2" msprop:Generator_RowDeletingName="tbl_regels2RowDeleting" msprop:Generator_RowChangingName="tbl_regels2RowChanging" msprop:Generator_RowEvHandlerName="tbl_regels2RowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_regels2RowDeleted" msprop:Generator_UserTableName="tbl_regels2" msprop:Generator_RowChangedName="tbl_regels2RowChanged" msprop:Generator_RowEvArgName="tbl_regels2RowChangeEvent" msprop:Generator_RowClassName="tbl_regels2Row">
+        <xs:element name="tbl_regels2" msprop:Generator_TableClassName="tbl_regels2DataTable" msprop:Generator_TableVarName="tabletbl_regels2" msprop:Generator_RowChangedName="tbl_regels2RowChanged" msprop:Generator_TablePropName="tbl_regels2" msprop:Generator_RowDeletingName="tbl_regels2RowDeleting" msprop:Generator_RowChangingName="tbl_regels2RowChanging" msprop:Generator_RowEvHandlerName="tbl_regels2RowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_regels2RowDeleted" msprop:Generator_RowClassName="tbl_regels2Row" msprop:Generator_UserTableName="tbl_regels2" msprop:Generator_RowEvArgName="tbl_regels2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="P_ProjectID" msprop:Generator_ColumnVarNameInTable="columnP_ProjectID" msprop:Generator_ColumnPropNameInRow="P_ProjectID" msprop:Generator_ColumnPropNameInTable="P_ProjectIDColumn" msprop:Generator_UserColumnName="P_ProjectID" type="xs:string" minOccurs="0" />
               <xs:element name="M_MeetingID" msprop:Generator_ColumnVarNameInTable="columnM_MeetingID" msprop:Generator_ColumnPropNameInRow="M_MeetingID" msprop:Generator_ColumnPropNameInTable="M_MeetingIDColumn" msprop:Generator_UserColumnName="M_MeetingID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_c_regels11" msprop:Generator_TableClassName="tbl_c_regels11DataTable" msprop:Generator_TableVarName="tabletbl_c_regels11" msprop:Generator_TablePropName="tbl_c_regels11" msprop:Generator_RowDeletingName="tbl_c_regels11RowDeleting" msprop:Generator_RowChangingName="tbl_c_regels11RowChanging" msprop:Generator_RowEvHandlerName="tbl_c_regels11RowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_c_regels11RowDeleted" msprop:Generator_UserTableName="tbl_c_regels11" msprop:Generator_RowChangedName="tbl_c_regels11RowChanged" msprop:Generator_RowEvArgName="tbl_c_regels11RowChangeEvent" msprop:Generator_RowClassName="tbl_c_regels11Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="C_LedgerNumber" msprop:Generator_ColumnVarNameInTable="columnC_LedgerNumber" msprop:Generator_ColumnPropNameInRow="C_LedgerNumber" msprop:Generator_ColumnPropNameInTable="C_LedgerNumberColumn" msprop:Generator_UserColumnName="C_LedgerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="P_ProjectID" msprop:Generator_ColumnVarNameInTable="columnP_ProjectID" msprop:Generator_ColumnPropNameInRow="P_ProjectID" msprop:Generator_ColumnPropNameInTable="P_ProjectIDColumn" msprop:Generator_UserColumnName="P_ProjectID" type="xs:string" minOccurs="0" />
+              <xs:element name="I_InvoiceID" msprop:Generator_ColumnVarNameInTable="columnI_InvoiceID" msprop:Generator_ColumnPropNameInRow="I_InvoiceID" msprop:Generator_ColumnPropNameInTable="I_InvoiceIDColumn" msprop:Generator_UserColumnName="I_InvoiceID" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -132,25 +141,41 @@
       <xs:selector xpath=".//mstns:tbl_projects" />
       <xs:field xpath="mstns:P_ProjectID" />
     </xs:unique>
+    <xs:unique name="tbl_invoices_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:tbl_invoices" />
+      <xs:field xpath="mstns:I_InvoiceID" />
+    </xs:unique>
     <xs:unique name="tbl_meetings_Constraint1" msdata:ConstraintName="Constraint1">
       <xs:selector xpath=".//mstns:tbl_meetings" />
       <xs:field xpath="mstns:M_MeetingID" />
     </xs:unique>
-    <xs:keyref name="FK_tbl_meetings_tbl_regels2" refer="tbl_meetings_Constraint1" msprop:rel_Generator_UserChildTable="tbl_regels2" msprop:rel_Generator_ChildPropName="Gettbl_regels2Rows" msprop:rel_Generator_UserRelationName="FK_tbl_meetings_tbl_regels2" msprop:rel_Generator_ParentPropName="tbl_meetingsRow" msprop:rel_Generator_RelationVarName="relationFK_tbl_meetings_tbl_regels2" msprop:rel_Generator_UserParentTable="tbl_meetings">
+    <xs:keyref name="FK_tbl_invoices_tbl_c_regels11" refer="tbl_invoices_Constraint1" msprop:rel_Generator_UserChildTable="tbl_c_regels11" msprop:rel_Generator_ChildPropName="Gettbl_c_regels11Rows" msprop:rel_Generator_UserRelationName="FK_tbl_invoices_tbl_c_regels11" msprop:rel_Generator_ParentPropName="tbl_invoicesRow" msprop:rel_Generator_RelationVarName="relationFK_tbl_invoices_tbl_c_regels11" msprop:rel_Generator_UserParentTable="tbl_invoices">
+      <xs:selector xpath=".//mstns:tbl_c_regels11" />
+      <xs:field xpath="mstns:I_InvoiceID" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbl_projects_tbl_c_regels11" refer="tbl_projects_Constraint1" msprop:rel_Generator_UserChildTable="tbl_c_regels11" msprop:rel_Generator_ChildPropName="Gettbl_c_regels11Rows" msprop:rel_Generator_UserRelationName="FK_tbl_projects_tbl_c_regels11" msprop:rel_Generator_ParentPropName="tbl_projectsRow" msprop:rel_Generator_RelationVarName="relationFK_tbl_projects_tbl_c_regels11" msprop:rel_Generator_UserParentTable="tbl_projects">
+      <xs:selector xpath=".//mstns:tbl_c_regels11" />
+      <xs:field xpath="mstns:P_ProjectID" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbl_clients_tbl_c_regels11" refer="Constraint1" msprop:rel_Generator_UserChildTable="tbl_c_regels11" msprop:rel_Generator_ChildPropName="Gettbl_c_regels11Rows" msprop:rel_Generator_UserRelationName="FK_tbl_clients_tbl_c_regels11" msprop:rel_Generator_ParentPropName="tbl_clientsRow" msprop:rel_Generator_RelationVarName="relationFK_tbl_clients_tbl_c_regels11" msprop:rel_Generator_UserParentTable="tbl_clients">
+      <xs:selector xpath=".//mstns:tbl_c_regels11" />
+      <xs:field xpath="mstns:C_LedgerNumber" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbl_projects_tbl_regels2" refer="tbl_projects_Constraint1" msprop:rel_Generator_UserChildTable="tbl_regels2" msprop:rel_Generator_ChildPropName="Gettbl_regels2Rows" msprop:rel_Generator_UserRelationName="FK_tbl_projects_tbl_regels2" msprop:rel_Generator_RelationVarName="relationFK_tbl_projects_tbl_regels2" msprop:rel_Generator_UserParentTable="tbl_projects" msprop:rel_Generator_ParentPropName="tbl_projectsRow">
+      <xs:selector xpath=".//mstns:tbl_regels2" />
+      <xs:field xpath="mstns:P_ProjectID" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbl_meetings_tbl_regels2" refer="tbl_meetings_Constraint1" msprop:rel_Generator_UserChildTable="tbl_regels2" msprop:rel_Generator_ChildPropName="Gettbl_regels2Rows" msprop:rel_Generator_UserRelationName="FK_tbl_meetings_tbl_regels2" msprop:rel_Generator_RelationVarName="relationFK_tbl_meetings_tbl_regels2" msprop:rel_Generator_UserParentTable="tbl_meetings" msprop:rel_Generator_ParentPropName="tbl_meetingsRow">
       <xs:selector xpath=".//mstns:tbl_regels2" />
       <xs:field xpath="mstns:M_MeetingID" />
     </xs:keyref>
-    <xs:keyref name="FK_tbl_projects_tbl_regels2" refer="tbl_projects_Constraint1" msprop:rel_Generator_UserChildTable="tbl_regels2" msprop:rel_Generator_ChildPropName="Gettbl_regels2Rows" msprop:rel_Generator_UserRelationName="FK_tbl_projects_tbl_regels2" msprop:rel_Generator_ParentPropName="tbl_projectsRow" msprop:rel_Generator_RelationVarName="relationFK_tbl_projects_tbl_regels2" msprop:rel_Generator_UserParentTable="tbl_projects">
-      <xs:selector xpath=".//mstns:tbl_regels2" />
-      <xs:field xpath="mstns:P_ProjectID" />
-    </xs:keyref>
-    <xs:keyref name="FK_tbl_projects_tbl_c_regels1" refer="tbl_projects_Constraint1" msprop:rel_Generator_UserChildTable="tbl_c_regels1" msprop:rel_Generator_ChildPropName="Gettbl_c_regels1Rows" msprop:rel_Generator_UserRelationName="FK_tbl_projects_tbl_c_regels1" msprop:rel_Generator_ParentPropName="tbl_projectsRow" msprop:rel_Generator_RelationVarName="relationFK_tbl_projects_tbl_c_regels1" msprop:rel_Generator_UserParentTable="tbl_projects">
-      <xs:selector xpath=".//mstns:tbl_c_regels1" />
-      <xs:field xpath="mstns:P_ProjectID" />
-    </xs:keyref>
-    <xs:keyref name="FK_tbl_clients_tbl_c_regels1" refer="Constraint1" msprop:rel_Generator_UserChildTable="tbl_c_regels1" msprop:rel_Generator_ChildPropName="Gettbl_c_regels1Rows" msprop:rel_Generator_UserRelationName="FK_tbl_clients_tbl_c_regels1" msprop:rel_Generator_ParentPropName="tbl_clientsRow" msprop:rel_Generator_RelationVarName="relationFK_tbl_clients_tbl_c_regels1" msprop:rel_Generator_UserParentTable="tbl_clients">
+    <xs:keyref name="FK_tbl_clients_tbl_c_regels1" refer="Constraint1" msprop:rel_Generator_UserChildTable="tbl_c_regels1" msprop:rel_Generator_ChildPropName="Gettbl_c_regels1Rows" msprop:rel_Generator_UserRelationName="FK_tbl_clients_tbl_c_regels1" msprop:rel_Generator_RelationVarName="relationFK_tbl_clients_tbl_c_regels1" msprop:rel_Generator_UserParentTable="tbl_clients" msprop:rel_Generator_ParentPropName="tbl_clientsRow">
       <xs:selector xpath=".//mstns:tbl_c_regels1" />
       <xs:field xpath="mstns:C_LedgerNumber" />
+    </xs:keyref>
+    <xs:keyref name="FK_tbl_projects_tbl_c_regels1" refer="tbl_projects_Constraint1" msprop:rel_Generator_UserChildTable="tbl_c_regels1" msprop:rel_Generator_ChildPropName="Gettbl_c_regels1Rows" msprop:rel_Generator_UserRelationName="FK_tbl_projects_tbl_c_regels1" msprop:rel_Generator_RelationVarName="relationFK_tbl_projects_tbl_c_regels1" msprop:rel_Generator_UserParentTable="tbl_projects" msprop:rel_Generator_ParentPropName="tbl_projectsRow">
+      <xs:selector xpath=".//mstns:tbl_c_regels1" />
+      <xs:field xpath="mstns:P_ProjectID" />
     </xs:keyref>
   </xs:element>
 </xs:schema>
