@@ -296,6 +296,7 @@
             this.tb_LedgerAccountNumber.Name = "tb_LedgerAccountNumber";
             this.tb_LedgerAccountNumber.Size = new System.Drawing.Size(345, 32);
             this.tb_LedgerAccountNumber.TabIndex = 33;
+            this.tb_LedgerAccountNumber.TextChanged += new System.EventHandler(this.tb_LedgerAccountNumber_TextChanged);
             // 
             // tb_BankAccountNumber
             // 
@@ -304,6 +305,7 @@
             this.tb_BankAccountNumber.Name = "tb_BankAccountNumber";
             this.tb_BankAccountNumber.Size = new System.Drawing.Size(345, 32);
             this.tb_BankAccountNumber.TabIndex = 32;
+            this.tb_BankAccountNumber.TextChanged += new System.EventHandler(this.tb_BankAccountNumber_TextChanged);
             // 
             // tb_Email
             // 
@@ -312,6 +314,7 @@
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(345, 32);
             this.tb_Email.TabIndex = 31;
+            this.tb_Email.TextChanged += new System.EventHandler(this.tb_Email_TextChanged);
             // 
             // tb_FaxNumber
             // 
@@ -320,6 +323,7 @@
             this.tb_FaxNumber.Name = "tb_FaxNumber";
             this.tb_FaxNumber.Size = new System.Drawing.Size(345, 32);
             this.tb_FaxNumber.TabIndex = 30;
+            this.tb_FaxNumber.TextChanged += new System.EventHandler(this.tb_FaxNumber_TextChanged);
             // 
             // tb_PhoneNumber2
             // 
@@ -328,6 +332,7 @@
             this.tb_PhoneNumber2.Name = "tb_PhoneNumber2";
             this.tb_PhoneNumber2.Size = new System.Drawing.Size(345, 32);
             this.tb_PhoneNumber2.TabIndex = 29;
+            this.tb_PhoneNumber2.TextChanged += new System.EventHandler(this.tb_PhoneNumber2_TextChanged);
             // 
             // tb_PhoneNumber1
             // 
@@ -336,6 +341,7 @@
             this.tb_PhoneNumber1.Name = "tb_PhoneNumber1";
             this.tb_PhoneNumber1.Size = new System.Drawing.Size(345, 32);
             this.tb_PhoneNumber1.TabIndex = 28;
+            this.tb_PhoneNumber1.TextChanged += new System.EventHandler(this.tb_PhoneNumber1_TextChanged);
             // 
             // tb_Initials
             // 
@@ -344,6 +350,7 @@
             this.tb_Initials.Name = "tb_Initials";
             this.tb_Initials.Size = new System.Drawing.Size(345, 32);
             this.tb_Initials.TabIndex = 27;
+            this.tb_Initials.TextChanged += new System.EventHandler(this.tb_Initials_TextChanged);
             // 
             // tb_ContactPerson
             // 
@@ -352,6 +359,7 @@
             this.tb_ContactPerson.Name = "tb_ContactPerson";
             this.tb_ContactPerson.Size = new System.Drawing.Size(345, 32);
             this.tb_ContactPerson.TabIndex = 26;
+            this.tb_ContactPerson.TextChanged += new System.EventHandler(this.tb_ContactPerson_TextChanged);
             // 
             // tb_Zipcode2
             // 
@@ -360,6 +368,7 @@
             this.tb_Zipcode2.Name = "tb_Zipcode2";
             this.tb_Zipcode2.Size = new System.Drawing.Size(345, 32);
             this.tb_Zipcode2.TabIndex = 25;
+            this.tb_Zipcode2.TextChanged += new System.EventHandler(this.tb_Zipcode2_TextChanged);
             // 
             // tb_City2
             // 
@@ -368,6 +377,7 @@
             this.tb_City2.Name = "tb_City2";
             this.tb_City2.Size = new System.Drawing.Size(345, 32);
             this.tb_City2.TabIndex = 24;
+            this.tb_City2.TextChanged += new System.EventHandler(this.tb_City2_TextChanged);
             // 
             // tb_Number2
             // 
@@ -376,6 +386,7 @@
             this.tb_Number2.Name = "tb_Number2";
             this.tb_Number2.Size = new System.Drawing.Size(345, 32);
             this.tb_Number2.TabIndex = 23;
+            this.tb_Number2.TextChanged += new System.EventHandler(this.tb_Number2_TextChanged);
             // 
             // tb_Address2
             // 
@@ -384,6 +395,7 @@
             this.tb_Address2.Name = "tb_Address2";
             this.tb_Address2.Size = new System.Drawing.Size(345, 32);
             this.tb_Address2.TabIndex = 22;
+            this.tb_Address2.TextChanged += new System.EventHandler(this.tb_Address2_TextChanged);
             // 
             // tb_Zipcode
             // 
@@ -392,6 +404,7 @@
             this.tb_Zipcode.Name = "tb_Zipcode";
             this.tb_Zipcode.Size = new System.Drawing.Size(345, 32);
             this.tb_Zipcode.TabIndex = 21;
+            this.tb_Zipcode.TextChanged += new System.EventHandler(this.tb_Zipcode_TextChanged);
             // 
             // tb_City1
             // 
@@ -400,6 +413,7 @@
             this.tb_City1.Name = "tb_City1";
             this.tb_City1.Size = new System.Drawing.Size(345, 32);
             this.tb_City1.TabIndex = 20;
+            this.tb_City1.TextChanged += new System.EventHandler(this.tb_City1_TextChanged);
             // 
             // tb_Number1
             // 
@@ -408,6 +422,7 @@
             this.tb_Number1.Name = "tb_Number1";
             this.tb_Number1.Size = new System.Drawing.Size(345, 32);
             this.tb_Number1.TabIndex = 19;
+            this.tb_Number1.TextChanged += new System.EventHandler(this.tb_Number1_TextChanged);
             // 
             // tb_Address1
             // 
@@ -416,6 +431,7 @@
             this.tb_Address1.Name = "tb_Address1";
             this.tb_Address1.Size = new System.Drawing.Size(345, 32);
             this.tb_Address1.TabIndex = 18;
+            this.tb_Address1.TextChanged += new System.EventHandler(this.tb_Address1_TextChanged);
             // 
             // tb_Company1
             // 
@@ -424,6 +440,7 @@
             this.tb_Company1.Name = "tb_Company1";
             this.tb_Company1.Size = new System.Drawing.Size(345, 32);
             this.tb_Company1.TabIndex = 17;
+            this.tb_Company1.TextChanged += new System.EventHandler(this.tb_Company1_TextChanged);
             // 
             // lbl_Company1
             // 

@@ -16,5 +16,12 @@ namespace Barroc_IT
         {
             InitializeComponent();
         }
+
+        private void btn_Create_Click(object sender, EventArgs e)
+        {
+            string date = tb_Date.Text;
+            date = date.Replace("-", "");
+            DateTime dueDate = new DateTime(Convert.ToInt64(date[0]));
+        }
     }
 }
