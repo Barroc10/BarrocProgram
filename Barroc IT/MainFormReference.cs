@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Barroc_IT
 {
-    public class MainFormReference // Singleton https://en.wikipedia.org/wiki/Singleton_pattern 
+    public class MainFormReference
     {
         private static MainScreen instance;
         private static readonly object o = new object();
