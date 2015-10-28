@@ -38,14 +38,31 @@ namespace Barroc_IT
             time.Elapsed += SyncSeconds;
             updateTimeWorker.DoWork += UpdateTimeWorker_DoWork;
             updateTimeWorker.WorkerReportsProgress = true;
+            lbl_Time.Text = Timer.GetTime();
+            lbl_Date.Text = Timer.GetDate();
         }
 
         private void UpdateTimeWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (this.lbl_Date.InvokeRequired)
+            if (this.lbl_Time.InvokeRequired)
             {
-                
+                this.lbl_Time.BeginInvoke((MethodInvoker)delegate() { this.lbl_Time.Text = Timer.GetTime(); });                
             }
+            else
+            {
+                lbl_Time.Text = Timer.GetTime();
+            }
+            if (this.lbl_Date.Text != Timer.GetDate())
+            {
+                if (this.lbl_Date.InvokeRequired)
+                {
+                    this.lbl_Date.BeginInvoke((MethodInvoker)delegate() { this.lbl_Date.Text = Timer.GetDate(); });
+                }
+                else
+                {
+                    lbl_Date.Text = Timer.GetDate();
+                }
+            }                        
         }
 
         private void SyncSeconds(object sender, System.Timers.ElapsedEventArgs e)
