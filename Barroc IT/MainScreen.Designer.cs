@@ -238,7 +238,7 @@
             this.tab_Projects.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Projects.Name = "tab_Projects";
             this.tab_Projects.Padding = new System.Windows.Forms.Padding(2);
-            this.tab_Projects.Size = new System.Drawing.Size(684, 354);
+            this.tab_Projects.Size = new System.Drawing.Size(684, 366);
             this.tab_Projects.TabIndex = 1;
             this.tab_Projects.Text = "Projects";
             this.tab_Projects.UseVisualStyleBackColor = true;
@@ -350,7 +350,7 @@
             this.tab_Meetings.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Meetings.Name = "tab_Meetings";
             this.tab_Meetings.Padding = new System.Windows.Forms.Padding(2);
-            this.tab_Meetings.Size = new System.Drawing.Size(684, 354);
+            this.tab_Meetings.Size = new System.Drawing.Size(684, 366);
             this.tab_Meetings.TabIndex = 2;
             this.tab_Meetings.Text = "Meetings";
             this.tab_Meetings.UseVisualStyleBackColor = true;
@@ -452,7 +452,7 @@
             this.tab_Finance.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Finance.Name = "tab_Finance";
             this.tab_Finance.Padding = new System.Windows.Forms.Padding(2);
-            this.tab_Finance.Size = new System.Drawing.Size(684, 354);
+            this.tab_Finance.Size = new System.Drawing.Size(684, 366);
             this.tab_Finance.TabIndex = 3;
             this.tab_Finance.Text = "Finance";
             this.tab_Finance.UseVisualStyleBackColor = true;
@@ -567,7 +567,7 @@
             this.tab_Offer.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Offer.Name = "tab_Offer";
             this.tab_Offer.Padding = new System.Windows.Forms.Padding(2);
-            this.tab_Offer.Size = new System.Drawing.Size(684, 354);
+            this.tab_Offer.Size = new System.Drawing.Size(684, 366);
             this.tab_Offer.TabIndex = 4;
             this.tab_Offer.Text = "Quotation";
             this.tab_Offer.UseVisualStyleBackColor = true;
@@ -668,7 +668,7 @@
             // lbl_Time
             // 
             this.lbl_Time.AutoSize = true;
-            this.lbl_Time.Location = new System.Drawing.Point(621, 7);
+            this.lbl_Time.Location = new System.Drawing.Point(625, 7);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.Size = new System.Drawing.Size(37, 13);
             this.lbl_Time.TabIndex = 1;
@@ -677,7 +677,7 @@
             // lbl_Date
             // 
             this.lbl_Date.AutoSize = true;
-            this.lbl_Date.Location = new System.Drawing.Point(606, 24);
+            this.lbl_Date.Location = new System.Drawing.Point(610, 24);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(61, 13);
             this.lbl_Date.TabIndex = 2;
