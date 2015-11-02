@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Barroc_ITDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Barroc_ITDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Barroc_ITDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CreateClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,8 +212,8 @@
     </None>
     <None Include="Barroc_ITDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Barroc_ITDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Barroc_ITDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="Barroc_ITDataSet.xss">
       <DependentUpon>Barroc_ITDataSet.xsd</DependentUpon>
