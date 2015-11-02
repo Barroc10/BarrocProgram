@@ -21,6 +21,7 @@ namespace Barroc_IT
         private string zipCode1;
         private string address2;
         private int number2;
+        private string city2;
         private string zipCode2;
         private string contactPerson;
         private string initials;
@@ -48,6 +49,7 @@ namespace Barroc_IT
                 zipCode1 = tb_Zipcode.Text;
                 address2 = tb_Address2.Text;
                 number2 = Convert.ToInt32(tb_Number2.Text);
+                city2 = tb_City2.Text;
                 zipCode2 = tb_Zipcode2.Text;
                 contactPerson = tb_ContactPerson.Text;
                 initials = tb_Initials.Text;
@@ -56,29 +58,25 @@ namespace Barroc_IT
                 faxNumber = Convert.ToInt32(tb_FaxNumber.Text);
                 email = tb_Email.Text;
                 bankAccountNr = Convert.ToInt32(tb_BankAccountNumber);
-                legderAccountNr = Convert.ToInt32(tb_LedgerAccountNumber.Text);
 
-                //"INSERT INTO tbl_clients 
-                //(C_CompanyName, C_Adress0, C_HouseNumber0, C_City0, C_Zipcode0, C_Adress1, C_HouseNumber1, C_Zipcode1, C_Contact, C_Initials, C_PhoneNumber0, C_PhoneNumber1, C_Fax, C_Email, C_BankNumber, C_LedgerNumber) 
-                //VALUES (?company, ?adress0, ?houseNumber0, ?city0, ?zipcode0, ?adress1, ?houseNumber1, ?zipcode1, ?contact, ?initials, ?phoneNumber0, ?phoneNumber1, ?fax, ?email, ?bankNumber, ledgerNumber)"
-                //command.Parameters.AddWithValue("?company", company1);
-                //command.Parameters.AddWithValue("?adress0", address1);
-                //command.Parameters.AddWithValue("?houseNumber0", number1);
-                //command.Parameters.AddWithValue("?city0", city1);
-                //command.Parameters.AddWithValue("?zipcode0", zipCode1);
-                //command.Parameters.AddWithValue("?adress1", address2);
-                //command.Parameters.AddWithValue("?houseNumber1", number2);
-                //command.Parameters.AddWithValue("?zipcode1", zipCode2);
-                //command.Parameters.AddWithValue("?contact", contactPerson);
-                //command.Parameters.AddWithValue("?initials", initials);
-                //command.Parameters.AddWithValue("?phoneNumber0", phoneNumber1);
-                //command.Parameters.AddWithValue("?phoneNumber1", phoneNumber2);
-                //command.Parameters.AddWithValue("?fax", faxNumber);
-                //command.Parameters.AddWithValue("?email", email);
-                //command.Parameters.AddWithValue("?bankNumber", bankAccountNr);
-                //command.Parameters.AddWithValue("?ledgerNumber", legderAccountNr);
+                string SQLcommand = "INSERT INTO tbl_clients(C_Adress0, C_HouseNumber0, C_City0, C_Zipcode0, C_Adress1, C_HouseNumber1, C_City1, C_Zipcode1, C_Contact, C_ContactInitials, C_PhoneNumber0, C_PhoneNumber1, C_Fax, C_Email, C_BankNumber, C_Company) VALUES(@Adress0, @HouseNumber0, @City0, @Zipcode0, @Adress1, @HouseNumber1, @City1, @Zipcode1, @Contact, @ContactInitials, @PhoneNumber0, @PhoneNumber1, @Fax, @Email, @BankNumber, @CompanyName)";
+                //iets.Parameters.Add("@Adress0", address1);
+                //iets.Parameters.Add("@HouseNumber0", number1);
+                //iets.Parameters.Add("@City0", city1);
+                //iets.Parameters.Add("@Zipcode0", zipCode1);
+                //iets.Parameters.Add("@Adress1", address2);
+                //iets.Parameters.Add("@HouseNumber1", number2);
+                //iets.Parameters.Add("@City1", city2);
+                //iets.Parameters.Add("@Zipcode1", zipCode2);
+                //iets.Parameters.Add("@Contact", contactPerson);
+                //iets.Parameters.Add("@ContactInitials", initials);
+                //iets.Parameters.Add("@PhoneNumber0", phoneNumber1);
+                //iets.Parameters.Add("@PhoneNumber1", phoneNumber2);
+                //iets.Parameters.Add("@Fax", faxNumber);
+                //iets.Parameters.Add("@Email", email);
+                //iets.Parameters.Add("@BankNumber", bankAccountNr);
+                //iets.Parameters.Add("@CompanyName", company1);
 
-                //"INSERT INTO tbl_clients
 
             }
         }
