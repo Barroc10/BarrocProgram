@@ -16,5 +16,10 @@ namespace Barroc_IT
         {
             InitializeComponent();
         }
+
+        private void tb_Property_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
