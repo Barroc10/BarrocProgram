@@ -15,6 +15,8 @@ namespace Barroc_IT
         public ModifyMeeting()
         {
             InitializeComponent();
+            dtp_Date.Format = DateTimePickerFormat.Custom;
+            dtp_Date.CustomFormat = "dd-MM-yyyy";
         }
     }
 }

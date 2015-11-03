@@ -167,12 +167,6 @@ namespace Barroc_IT
                 isError = true;
                 tb_BankAccountNumber.BackColor = Color.Red;
 	        }
-            if (!Utilities.checkNumber(tb_LedgerAccountNumber.Text))
-            {
-                errorMessage.Add("Ledger account nr");
-                isError = true;
-                tb_LedgerAccountNumber.BackColor = Color.Red;
-            }
 
 
             if (isError)
@@ -267,11 +261,6 @@ namespace Barroc_IT
         private void tb_BankAccountNumber_TextChanged(object sender, EventArgs e)
         {
             tb_BankAccountNumber.BackColor = Color.White;
-        }
-
-        private void tb_LedgerAccountNumber_TextChanged(object sender, EventArgs e)
-        {
-            tb_LedgerAccountNumber.BackColor = Color.White;
         }
 
 

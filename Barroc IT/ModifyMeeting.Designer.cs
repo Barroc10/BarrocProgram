@@ -31,7 +31,6 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.rtb_Comment = new System.Windows.Forms.RichTextBox();
             this.lbl_Comment = new System.Windows.Forms.Label();
-            this.tb_Date = new System.Windows.Forms.TextBox();
             this.cb_Client = new System.Windows.Forms.ComboBox();
             this.tb_Location = new System.Windows.Forms.TextBox();
             this.num_EndTime2 = new System.Windows.Forms.NumericUpDown();
@@ -45,8 +44,9 @@
             this.lbl_EndTime = new System.Windows.Forms.Label();
             this.lbl_StartTime = new System.Windows.Forms.Label();
             this.lbl_MeetingName = new System.Windows.Forms.Label();
-            this.btn_Create = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.gb_CreateMeeting = new System.Windows.Forms.GroupBox();
+            this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.num_EndTime2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_EndTime1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_StartTime2)).BeginInit();
@@ -82,13 +82,6 @@
             this.lbl_Comment.TabIndex = 33;
             this.lbl_Comment.Text = "Comment:";
             // 
-            // tb_Date
-            // 
-            this.tb_Date.Location = new System.Drawing.Point(126, 128);
-            this.tb_Date.Name = "tb_Date";
-            this.tb_Date.Size = new System.Drawing.Size(245, 27);
-            this.tb_Date.TabIndex = 32;
-            // 
             // cb_Client
             // 
             this.cb_Client.FormattingEnabled = true;
@@ -107,6 +100,11 @@
             // num_EndTime2
             // 
             this.num_EndTime2.Location = new System.Drawing.Point(230, 96);
+            this.num_EndTime2.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
             this.num_EndTime2.Name = "num_EndTime2";
             this.num_EndTime2.Size = new System.Drawing.Size(67, 27);
             this.num_EndTime2.TabIndex = 23;
@@ -114,13 +112,33 @@
             // num_EndTime1
             // 
             this.num_EndTime1.Location = new System.Drawing.Point(126, 96);
+            this.num_EndTime1.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.num_EndTime1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.num_EndTime1.Name = "num_EndTime1";
             this.num_EndTime1.Size = new System.Drawing.Size(67, 27);
             this.num_EndTime1.TabIndex = 22;
+            this.num_EndTime1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // num_StartTime2
             // 
             this.num_StartTime2.Location = new System.Drawing.Point(230, 63);
+            this.num_StartTime2.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
             this.num_StartTime2.Name = "num_StartTime2";
             this.num_StartTime2.Size = new System.Drawing.Size(67, 27);
             this.num_StartTime2.TabIndex = 21;
@@ -128,9 +146,24 @@
             // num_StartTime1
             // 
             this.num_StartTime1.Location = new System.Drawing.Point(126, 63);
+            this.num_StartTime1.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.num_StartTime1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.num_StartTime1.Name = "num_StartTime1";
             this.num_StartTime1.Size = new System.Drawing.Size(67, 27);
             this.num_StartTime1.TabIndex = 20;
+            this.num_StartTime1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // tb_MeetingName
             // 
@@ -199,20 +232,20 @@
             this.lbl_MeetingName.TabIndex = 2;
             this.lbl_MeetingName.Text = "Meeting name:";
             // 
-            // btn_Create
+            // btn_Save
             // 
-            this.btn_Create.Location = new System.Drawing.Point(303, 343);
-            this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(103, 32);
-            this.btn_Create.TabIndex = 6;
-            this.btn_Create.Text = "Create";
-            this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Save.Location = new System.Drawing.Point(303, 343);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(103, 32);
+            this.btn_Save.TabIndex = 6;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.UseVisualStyleBackColor = true;
             // 
             // gb_CreateMeeting
             // 
+            this.gb_CreateMeeting.Controls.Add(this.dtp_Date);
             this.gb_CreateMeeting.Controls.Add(this.rtb_Comment);
             this.gb_CreateMeeting.Controls.Add(this.lbl_Comment);
-            this.gb_CreateMeeting.Controls.Add(this.tb_Date);
             this.gb_CreateMeeting.Controls.Add(this.cb_Client);
             this.gb_CreateMeeting.Controls.Add(this.tb_Location);
             this.gb_CreateMeeting.Controls.Add(this.num_EndTime2);
@@ -234,13 +267,20 @@
             this.gb_CreateMeeting.TabStop = false;
             this.gb_CreateMeeting.Text = "Modify meeting";
             // 
+            // dtp_Date
+            // 
+            this.dtp_Date.Location = new System.Drawing.Point(126, 128);
+            this.dtp_Date.Name = "dtp_Date";
+            this.dtp_Date.Size = new System.Drawing.Size(245, 27);
+            this.dtp_Date.TabIndex = 35;
+            // 
             // ModifyMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 387);
             this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.btn_Create);
+            this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.gb_CreateMeeting);
             this.Name = "ModifyMeeting";
             this.Text = "ModifyMeeting";
@@ -259,7 +299,6 @@
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.RichTextBox rtb_Comment;
         private System.Windows.Forms.Label lbl_Comment;
-        private System.Windows.Forms.TextBox tb_Date;
         private System.Windows.Forms.ComboBox cb_Client;
         private System.Windows.Forms.TextBox tb_Location;
         private System.Windows.Forms.NumericUpDown num_EndTime2;
@@ -273,7 +312,8 @@
         private System.Windows.Forms.Label lbl_EndTime;
         private System.Windows.Forms.Label lbl_StartTime;
         private System.Windows.Forms.Label lbl_MeetingName;
-        private System.Windows.Forms.Button btn_Create;
+        private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.GroupBox gb_CreateMeeting;
+        private System.Windows.Forms.DateTimePicker dtp_Date;
     }
 }

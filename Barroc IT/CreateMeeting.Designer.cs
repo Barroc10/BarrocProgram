@@ -31,7 +31,6 @@
             this.gb_CreateMeeting = new System.Windows.Forms.GroupBox();
             this.rtb_Comment = new System.Windows.Forms.RichTextBox();
             this.lbl_Comment = new System.Windows.Forms.Label();
-            this.tb_Date = new System.Windows.Forms.TextBox();
             this.cb_Client = new System.Windows.Forms.ComboBox();
             this.tb_Location = new System.Windows.Forms.TextBox();
             this.num_EndTime2 = new System.Windows.Forms.NumericUpDown();
@@ -47,6 +46,7 @@
             this.lbl_MeetingName = new System.Windows.Forms.Label();
             this.btn_Create = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
+            this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.gb_CreateMeeting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_EndTime2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_EndTime1)).BeginInit();
@@ -56,9 +56,9 @@
             // 
             // gb_CreateMeeting
             // 
+            this.gb_CreateMeeting.Controls.Add(this.dtp_Date);
             this.gb_CreateMeeting.Controls.Add(this.rtb_Comment);
             this.gb_CreateMeeting.Controls.Add(this.lbl_Comment);
-            this.gb_CreateMeeting.Controls.Add(this.tb_Date);
             this.gb_CreateMeeting.Controls.Add(this.cb_Client);
             this.gb_CreateMeeting.Controls.Add(this.tb_Location);
             this.gb_CreateMeeting.Controls.Add(this.num_EndTime2);
@@ -98,13 +98,6 @@
             this.lbl_Comment.Size = new System.Drawing.Size(82, 20);
             this.lbl_Comment.TabIndex = 33;
             this.lbl_Comment.Text = "Comment:";
-            // 
-            // tb_Date
-            // 
-            this.tb_Date.Location = new System.Drawing.Point(126, 128);
-            this.tb_Date.Name = "tb_Date";
-            this.tb_Date.Size = new System.Drawing.Size(245, 27);
-            this.tb_Date.TabIndex = 32;
             // 
             // cb_Client
             // 
@@ -234,6 +227,13 @@
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
+            // dtp_Date
+            // 
+            this.dtp_Date.Location = new System.Drawing.Point(126, 129);
+            this.dtp_Date.Name = "dtp_Date";
+            this.dtp_Date.Size = new System.Drawing.Size(245, 27);
+            this.dtp_Date.TabIndex = 35;
+            // 
             // CreateMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,8 +274,8 @@
         private System.Windows.Forms.ComboBox cb_Client;
         private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.TextBox tb_Date;
         private System.Windows.Forms.RichTextBox rtb_Comment;
         private System.Windows.Forms.Label lbl_Comment;
+        private System.Windows.Forms.DateTimePicker dtp_Date;
     }
 }

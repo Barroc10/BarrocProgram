@@ -25,7 +25,7 @@ namespace Barroc_IT
             string username = "";
             string password = "";
 
-            if(tb_Username.TextLength != 0)
+            if (tb_Username.TextLength != 0)
             {
                 username = tb_Username.ToString();
             }
@@ -35,7 +35,7 @@ namespace Barroc_IT
                 return;
             }
 
-            if(tb_Password.TextLength != 0)
+            if (tb_Password.TextLength != 0)
             {
                 password = tb_Password.ToString();
             }
@@ -55,7 +55,6 @@ namespace Barroc_IT
             {
                 MessageBox.Show("The username or password is incorrect");
             }
-            
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
