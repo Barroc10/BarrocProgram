@@ -12,6 +12,7 @@ namespace Barroc_IT
 {
     public partial class Login : Form
     {
+        private DatabaseHandler dbh = new DatabaseHandler();
         private bool succesful = false;
 
         public Login()
@@ -21,8 +22,40 @@ namespace Barroc_IT
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            succesful = true;   // als login voltooid is
-            MainFormReference.Main.LoggedIn(); 
+            string username = "";
+            string password = "";
+
+            if(tb_Username.TextLength != 0)
+            {
+                username = tb_Username.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Please enter an username");
+                return;
+            }
+
+            if(tb_Password.TextLength != 0)
+            {
+                password = tb_Password.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a password");
+                return;
+            }
+
+            int correct = 0;
+            correct = dbh.CountQuerry("*", "tbl_rights", "R_DepartmentPassword", tb_Password.ToString());
+            if (correct == 1)
+            {
+                MainFormReference.Main.LoggedIn();
+            }
+            else
+            {
+                MessageBox.Show("The username or password is incorrect");
+            }
+            
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)

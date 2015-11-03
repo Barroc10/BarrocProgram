@@ -59,20 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Barroc_ITDataSet.cs">
-      <DependentUpon>Barroc_ITDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Barroc_ITDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Barroc_ITDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Barroc_ITDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Barroc_ITDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="CreateClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,17 +193,6 @@
     <EmbeddedResource Include="ViewMeeting.resx">
       <DependentUpon>ViewMeeting.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Barroc_ITDataSet.xsc">
-      <DependentUpon>Barroc_ITDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Barroc_ITDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Barroc_ITDataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Barroc_ITDataSet.xss">
-      <DependentUpon>Barroc_ITDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

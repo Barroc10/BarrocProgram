@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gb_CreateProject = new System.Windows.Forms.GroupBox();
+            this.cb_MaintenanceContract = new System.Windows.Forms.ComboBox();
+            this.cb_ClientName = new System.Windows.Forms.ComboBox();
             this.lbl_MaintenanceContract = new System.Windows.Forms.Label();
             this.lbl_ClientName = new System.Windows.Forms.Label();
             this.lbl_InternalContact = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.tb_ProjectName = new System.Windows.Forms.TextBox();
             this.lbl_Hardware = new System.Windows.Forms.Label();
             this.lbl_ProjectName = new System.Windows.Forms.Label();
-            this.cb_ClientName = new System.Windows.Forms.ComboBox();
-            this.cb_MaintenanceContract = new System.Windows.Forms.ComboBox();
             this.btn_Create = new System.Windows.Forms.Button();
             this.gb_CreateProject.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,27 @@
             this.gb_CreateProject.TabIndex = 0;
             this.gb_CreateProject.TabStop = false;
             this.gb_CreateProject.Text = "Create project";
+            // 
+            // cb_MaintenanceContract
+            // 
+            this.cb_MaintenanceContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_MaintenanceContract.FormattingEnabled = true;
+            this.cb_MaintenanceContract.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.cb_MaintenanceContract.Location = new System.Drawing.Point(185, 226);
+            this.cb_MaintenanceContract.Name = "cb_MaintenanceContract";
+            this.cb_MaintenanceContract.Size = new System.Drawing.Size(62, 28);
+            this.cb_MaintenanceContract.TabIndex = 31;
+            // 
+            // cb_ClientName
+            // 
+            this.cb_ClientName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_ClientName.FormattingEnabled = true;
+            this.cb_ClientName.Location = new System.Drawing.Point(185, 193);
+            this.cb_ClientName.Name = "cb_ClientName";
+            this.cb_ClientName.Size = new System.Drawing.Size(245, 28);
+            this.cb_ClientName.TabIndex = 30;
             // 
             // lbl_MaintenanceContract
             // 
@@ -176,22 +197,6 @@
             this.lbl_ProjectName.TabIndex = 1;
             this.lbl_ProjectName.Text = "Project name";
             // 
-            // cb_ClientName
-            // 
-            this.cb_ClientName.FormattingEnabled = true;
-            this.cb_ClientName.Location = new System.Drawing.Point(185, 193);
-            this.cb_ClientName.Name = "cb_ClientName";
-            this.cb_ClientName.Size = new System.Drawing.Size(245, 28);
-            this.cb_ClientName.TabIndex = 30;
-            // 
-            // cb_MaintenanceContract
-            // 
-            this.cb_MaintenanceContract.FormattingEnabled = true;
-            this.cb_MaintenanceContract.Location = new System.Drawing.Point(185, 226);
-            this.cb_MaintenanceContract.Name = "cb_MaintenanceContract";
-            this.cb_MaintenanceContract.Size = new System.Drawing.Size(62, 28);
-            this.cb_MaintenanceContract.TabIndex = 31;
-            // 
             // btn_Create
             // 
             this.btn_Create.Location = new System.Drawing.Point(345, 282);
@@ -200,6 +205,7 @@
             this.btn_Create.TabIndex = 2;
             this.btn_Create.Text = "Create";
             this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // CreateProject
             // 
