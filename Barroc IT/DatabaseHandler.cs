@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using System.Reflection;
 
 
 namespace Barroc_IT
@@ -15,8 +14,7 @@ namespace Barroc_IT
         private string connectionString;
         public DatabaseHandler()
         {
-            //connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Joris\Documents\School\Periode 5\Project\Barroc IT\Barroc IT\Barroc IT.mdf";
-            connectionString = @"Data Source=(LocalDB)\v11.0;AttachDBFilename=" + AppDomain.CurrentDomain.BaseDirectory + "Barroc IT.mdf";
+            connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Joris\Documents\School\Periode 5\Project\Barroc IT\Barroc IT\Barroc IT.mdf";
         }
 
         public DatabaseHandler(string ConnectionString)
