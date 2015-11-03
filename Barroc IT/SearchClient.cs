@@ -12,9 +12,16 @@ namespace Barroc_IT
 {
     public partial class SearchClient : Form
     {
+        DatabaseHandler dbh = new DatabaseHandler();
         public SearchClient()
         {
             InitializeComponent();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string search = tb_Property.Text;
+            dgv_Clients.
         }
     }
 }
