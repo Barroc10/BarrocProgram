@@ -145,7 +145,6 @@ namespace Barroc_IT
 
         private void btn_SearchProject_Click(object sender, EventArgs e)
         {
-
             if (searchProject == null)
             {
                 searchProject = new SearchProject();
@@ -355,6 +354,11 @@ namespace Barroc_IT
         {
             MessageBox.Show("Logged out!");
             this.Close();
+        }
+
+        private void btn_ModifyProject_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
