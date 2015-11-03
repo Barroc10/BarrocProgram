@@ -22,17 +22,18 @@ namespace Barroc_IT
             connectionString = ConnectionString;
         }
 
-        public int CountQuerry(string count, string from, string where1, string where2)
+        public int CountQuerry(string count, string from, string where1, string where2) // werkt volledig met de inlog functie
         {
             int result = 0;
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("SELECT COUNT(@0) FROM " + from + " WHERE @1 = @2");
-            command.Parameters.Add(new SqlParameter("0", count.ToString()));
-            command.Parameters.Add(new SqlParameter("1", where1));
-            command.Parameters.Add(new SqlParameter("2", where2.ToCharArray()));
-            conn.Open();
+            SqlCommand command = new SqlCommand("SELECT COUNT (@count) FROM " + from + " WHERE " + where1 + " = @Pass");
+            command.Parameters.AddWithValue("count", SqlDbType.Char); 
+            command.Parameters["count"].Value = count;
+            command.Parameters.AddWithValue("Pass", SqlDbType.NVarChar);
+            command.Parameters["Pass"].Value = where2.ToCharArray();
             command.Connection = conn;
 
+            conn.Open();
             result = (int)command.ExecuteScalar();
             conn.Close();
             conn.Dispose();

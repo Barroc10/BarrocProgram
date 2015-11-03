@@ -27,7 +27,7 @@ namespace Barroc_IT
 
             if (tb_Username.TextLength != 0)
             {
-                username = tb_Username.ToString();
+                username = tb_Username.Text;
             }
             else
             {
@@ -37,7 +37,7 @@ namespace Barroc_IT
 
             if (tb_Password.TextLength != 0)
             {
-                password = tb_Password.ToString();
+                password = tb_Password.Text;
             }
             else
             {
@@ -46,7 +46,7 @@ namespace Barroc_IT
             }
 
             int correct = 0;
-            correct = dbh.CountQuerry("*", "tbl_rights", "R_DepartmentPassword", tb_Password.ToString());
+            correct = dbh.CountQuerry("*", "tbl_rights", "R_DepartmentPassword", password);
             if (correct == 1)
             {
                 MainFormReference.Main.LoggedIn();

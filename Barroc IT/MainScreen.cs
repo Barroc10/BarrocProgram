@@ -356,5 +356,10 @@ namespace Barroc_IT
             MessageBox.Show("Logged out!");
             this.Close();
         }
+
+        private void dgv_Clients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
