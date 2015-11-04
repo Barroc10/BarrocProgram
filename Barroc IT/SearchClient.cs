@@ -20,8 +20,12 @@ namespace Barroc_IT
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            string search = tb_Property.Text;
-            //dgv_Clients.
+            DataTable dtb = new DataTable();
+            string select = "*";
+            string from = "tbl_clients";
+            string where1 = "C_CompanyName";
+            string where2 = tb_Property.Text;
+            dtb = dbh.SelectQuerryDT(select, from, where1, where2);
         }
     }
 }
