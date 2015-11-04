@@ -33,10 +33,6 @@
             this.lbl_Comment = new System.Windows.Forms.Label();
             this.cb_Client = new System.Windows.Forms.ComboBox();
             this.tb_Location = new System.Windows.Forms.TextBox();
-            this.num_EndTime2 = new System.Windows.Forms.NumericUpDown();
-            this.num_EndTime1 = new System.Windows.Forms.NumericUpDown();
-            this.num_StartTime2 = new System.Windows.Forms.NumericUpDown();
-            this.num_StartTime1 = new System.Windows.Forms.NumericUpDown();
             this.tb_MeetingName = new System.Windows.Forms.TextBox();
             this.lbl_Client = new System.Windows.Forms.Label();
             this.lbl_Location = new System.Windows.Forms.Label();
@@ -47,10 +43,8 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.gb_CreateMeeting = new System.Windows.Forms.GroupBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.num_EndTime2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_EndTime1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_StartTime2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_StartTime1)).BeginInit();
+            this.dtp_StartTime = new System.Windows.Forms.DateTimePicker();
+            this.dtp_EndTime = new System.Windows.Forms.DateTimePicker();
             this.gb_CreateMeeting.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,74 +90,6 @@
             this.tb_Location.Name = "tb_Location";
             this.tb_Location.Size = new System.Drawing.Size(245, 27);
             this.tb_Location.TabIndex = 25;
-            // 
-            // num_EndTime2
-            // 
-            this.num_EndTime2.Location = new System.Drawing.Point(230, 96);
-            this.num_EndTime2.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.num_EndTime2.Name = "num_EndTime2";
-            this.num_EndTime2.Size = new System.Drawing.Size(67, 27);
-            this.num_EndTime2.TabIndex = 23;
-            // 
-            // num_EndTime1
-            // 
-            this.num_EndTime1.Location = new System.Drawing.Point(126, 96);
-            this.num_EndTime1.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.num_EndTime1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_EndTime1.Name = "num_EndTime1";
-            this.num_EndTime1.Size = new System.Drawing.Size(67, 27);
-            this.num_EndTime1.TabIndex = 22;
-            this.num_EndTime1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // num_StartTime2
-            // 
-            this.num_StartTime2.Location = new System.Drawing.Point(230, 63);
-            this.num_StartTime2.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.num_StartTime2.Name = "num_StartTime2";
-            this.num_StartTime2.Size = new System.Drawing.Size(67, 27);
-            this.num_StartTime2.TabIndex = 21;
-            // 
-            // num_StartTime1
-            // 
-            this.num_StartTime1.Location = new System.Drawing.Point(126, 63);
-            this.num_StartTime1.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.num_StartTime1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_StartTime1.Name = "num_StartTime1";
-            this.num_StartTime1.Size = new System.Drawing.Size(67, 27);
-            this.num_StartTime1.TabIndex = 20;
-            this.num_StartTime1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // tb_MeetingName
             // 
@@ -243,15 +169,13 @@
             // 
             // gb_CreateMeeting
             // 
+            this.gb_CreateMeeting.Controls.Add(this.dtp_EndTime);
+            this.gb_CreateMeeting.Controls.Add(this.dtp_StartTime);
             this.gb_CreateMeeting.Controls.Add(this.dtp_Date);
             this.gb_CreateMeeting.Controls.Add(this.rtb_Comment);
             this.gb_CreateMeeting.Controls.Add(this.lbl_Comment);
             this.gb_CreateMeeting.Controls.Add(this.cb_Client);
             this.gb_CreateMeeting.Controls.Add(this.tb_Location);
-            this.gb_CreateMeeting.Controls.Add(this.num_EndTime2);
-            this.gb_CreateMeeting.Controls.Add(this.num_EndTime1);
-            this.gb_CreateMeeting.Controls.Add(this.num_StartTime2);
-            this.gb_CreateMeeting.Controls.Add(this.num_StartTime1);
             this.gb_CreateMeeting.Controls.Add(this.tb_MeetingName);
             this.gb_CreateMeeting.Controls.Add(this.lbl_Client);
             this.gb_CreateMeeting.Controls.Add(this.lbl_Location);
@@ -274,6 +198,20 @@
             this.dtp_Date.Size = new System.Drawing.Size(245, 27);
             this.dtp_Date.TabIndex = 35;
             // 
+            // dtp_StartTime
+            // 
+            this.dtp_StartTime.Location = new System.Drawing.Point(126, 60);
+            this.dtp_StartTime.Name = "dtp_StartTime";
+            this.dtp_StartTime.Size = new System.Drawing.Size(149, 27);
+            this.dtp_StartTime.TabIndex = 37;
+            // 
+            // dtp_EndTime
+            // 
+            this.dtp_EndTime.Location = new System.Drawing.Point(126, 93);
+            this.dtp_EndTime.Name = "dtp_EndTime";
+            this.dtp_EndTime.Size = new System.Drawing.Size(149, 27);
+            this.dtp_EndTime.TabIndex = 38;
+            // 
             // ModifyMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,10 +222,6 @@
             this.Controls.Add(this.gb_CreateMeeting);
             this.Name = "ModifyMeeting";
             this.Text = "ModifyMeeting";
-            ((System.ComponentModel.ISupportInitialize)(this.num_EndTime2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_EndTime1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_StartTime2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_StartTime1)).EndInit();
             this.gb_CreateMeeting.ResumeLayout(false);
             this.gb_CreateMeeting.PerformLayout();
             this.ResumeLayout(false);
@@ -301,10 +235,6 @@
         private System.Windows.Forms.Label lbl_Comment;
         private System.Windows.Forms.ComboBox cb_Client;
         private System.Windows.Forms.TextBox tb_Location;
-        private System.Windows.Forms.NumericUpDown num_EndTime2;
-        private System.Windows.Forms.NumericUpDown num_EndTime1;
-        private System.Windows.Forms.NumericUpDown num_StartTime2;
-        private System.Windows.Forms.NumericUpDown num_StartTime1;
         private System.Windows.Forms.TextBox tb_MeetingName;
         private System.Windows.Forms.Label lbl_Client;
         private System.Windows.Forms.Label lbl_Location;
@@ -315,5 +245,7 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.GroupBox gb_CreateMeeting;
         private System.Windows.Forms.DateTimePicker dtp_Date;
+        private System.Windows.Forms.DateTimePicker dtp_EndTime;
+        private System.Windows.Forms.DateTimePicker dtp_StartTime;
     }
 }

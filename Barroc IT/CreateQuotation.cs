@@ -15,6 +15,8 @@ namespace Barroc_IT
         public CreateQuotation()
         {
             InitializeComponent();
+            dtp_Date.Format = DateTimePickerFormat.Custom;
+            dtp_Date.CustomFormat = "dd-MM-yyyy";
         }
     }
 }

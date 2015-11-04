@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barroc IT", "Barroc IT\Barroc IT.csproj", "{FEC6B518-EA67-4FF4-AD0B-587311335A5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC79E190-7D2B-4C00-BD7D-0B4C314EF8E1}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Dropbox\Barroc IT Groep 10\Barroc IT.mdf = ..\..\..\Dropbox\Barroc IT Groep 10\Barroc IT.mdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

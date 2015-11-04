@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_CreateQuotation = new System.Windows.Forms.GroupBox();
+            this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_Zipcode = new System.Windows.Forms.Label();
             this.lbl_City = new System.Windows.Forms.Label();
             this.lbl_Number = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.lbl_Name = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.gb_CreateQuotation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_Number)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Price)).BeginInit();
@@ -60,7 +60,7 @@
             // 
             // gb_CreateQuotation
             // 
-            this.gb_CreateQuotation.Controls.Add(this.dateTimePicker1);
+            this.gb_CreateQuotation.Controls.Add(this.dtp_Date);
             this.gb_CreateQuotation.Controls.Add(this.lbl_Zipcode);
             this.gb_CreateQuotation.Controls.Add(this.lbl_City);
             this.gb_CreateQuotation.Controls.Add(this.lbl_Number);
@@ -89,6 +89,13 @@
             this.gb_CreateQuotation.TabIndex = 0;
             this.gb_CreateQuotation.TabStop = false;
             this.gb_CreateQuotation.Text = "Create Quotation";
+            // 
+            // dtp_Date
+            // 
+            this.dtp_Date.Location = new System.Drawing.Point(129, 63);
+            this.dtp_Date.Name = "dtp_Date";
+            this.dtp_Date.Size = new System.Drawing.Size(225, 27);
+            this.dtp_Date.TabIndex = 41;
             // 
             // lbl_Zipcode
             // 
@@ -288,13 +295,6 @@
             this.btn_Create.Text = "Create";
             this.btn_Create.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(129, 63);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 27);
-            this.dateTimePicker1.TabIndex = 41;
-            // 
             // CreateQuotation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,6 +341,6 @@
         private System.Windows.Forms.NumericUpDown num_Price;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Create;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_Date;
     }
 }
