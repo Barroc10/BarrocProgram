@@ -64,7 +64,6 @@
             this.tb_Property.Name = "tb_Property";
             this.tb_Property.Size = new System.Drawing.Size(348, 27);
             this.tb_Property.TabIndex = 1;
-            this.tb_Property.TextChanged += new System.EventHandler(this.tb_Property_TextChanged);
             // 
             // btn_Search
             // 
