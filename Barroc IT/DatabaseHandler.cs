@@ -45,21 +45,19 @@ namespace Barroc_IT
         public DataTable SelectQuerryDT(string select, string from, string where1, string where2)
         {
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("SELECT @select FROM  " + from + " WHERE " + where1 + " = '@where'");
-            command.Parameters.AddWithValue("select", SqlDbType.Char);
-            command.Parameters["select"].Value = select;
-            command.Parameters.AddWithValue("where", SqlDbType.NVarChar);
-            command.Parameters["where"].Value = where2;
+            SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + from + " WHERE " + where1 + " LIKE '" + where2 + "'");
+            command.Parameters.AddWithValue("0", where2);
             command.Connection = conn;
             
             conn.Open();
 
-            SqlDataReader reader = command.ExecuteReader();
-            DataTable schemaTable = reader.GetSchemaTable();
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            da.Fill(table);
             conn.Close();
             conn.Dispose();
-            
-            return schemaTable;
+
+            return table;
         }
 
         public string[] SelectQuerryAR(string select,string from, string where1, string where2)
