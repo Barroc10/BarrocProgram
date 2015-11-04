@@ -61,7 +61,7 @@ namespace Barroc_IT
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (!succesful) MainFormReference.Main.Close();
+           // if (!succesful) MainFormReference.Main.Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
