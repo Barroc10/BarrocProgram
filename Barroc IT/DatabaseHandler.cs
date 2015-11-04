@@ -14,7 +14,7 @@ namespace Barroc_IT
         private string connectionString;
         public DatabaseHandler()
         {
-        //    connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Okke\Source\Repos\BarrocProgram2\Barroc IT\Barroc IT.mdf";
+            //connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Joris\Documents\School\Periode 5\Project\Barroc IT\Barroc IT\Barroc IT.mdf";
             connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=" + AppDomain.CurrentDomain.BaseDirectory + "Barroc IT.mdf";
         }
 
