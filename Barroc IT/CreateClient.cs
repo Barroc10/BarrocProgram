@@ -59,7 +59,7 @@ namespace Barroc_IT
                 email = tb_Email.Text;
                 bankAccountNr = Convert.ToInt32(tb_BankAccountNumber);
 
-                string SQLcommand = "INSERT INTO tbl_clients(C_Adress0, C_HouseNumber0, C_City0, C_Zipcode0, C_Adress1, C_HouseNumber1, C_City1, C_Zipcode1, C_Contact, C_ContactInitials, C_PhoneNumber0, C_PhoneNumber1, C_Fax, C_Email, C_BankNumber, C_Company) VALUES(@Adress0, @HouseNumber0, @City0, @Zipcode0, @Adress1, @HouseNumber1, @City1, @Zipcode1, @Contact, @ContactInitials, @PhoneNumber0, @PhoneNumber1, @Fax, @Email, @BankNumber, @CompanyName)";
+                string query = "INSERT INTO tbl_clients(C_Adress0, C_HouseNumber0, C_City0, C_Zipcode0, C_Adress1, C_HouseNumber1, C_City1, C_Zipcode1, C_Contact, C_ContactInitials, C_PhoneNumber0, C_PhoneNumber1, C_Fax, C_Email, C_BankNumber, C_Company) VALUES(@Adress0, @HouseNumber0, @City0, @Zipcode0, @Adress1, @HouseNumber1, @City1, @Zipcode1, @Contact, @ContactInitials, @PhoneNumber0, @PhoneNumber1, @Fax, @Email, @BankNumber, @CompanyName)";
                 //iets.Parameters.Add("@Adress0", address1);
                 //iets.Parameters.Add("@HouseNumber0", number1);
                 //iets.Parameters.Add("@City0", city1);
@@ -77,6 +77,9 @@ namespace Barroc_IT
                 //iets.Parameters.Add("@BankNumber", bankAccountNr);
                 //iets.Parameters.Add("@CompanyName", company1);
 
+                DatabaseHandler dbh = new DatabaseHandler();
+                dbh.CountQuerry("*", "tbl_clients", "C_CompanyName", "iets");
+                //tbl_clients, C_Adress0, address1
 
             }
         }
@@ -176,7 +179,7 @@ namespace Barroc_IT
                 {
                     error += "\n" + errorMessage[i];
                 }
-                MessageBox.Show(error);
+                MessageBox.Show(error, "Error");
                 isError = false;
                 errorMessage.Clear();
             }
@@ -262,7 +265,5 @@ namespace Barroc_IT
         {
             tb_BankAccountNumber.BackColor = Color.White;
         }
-
-
     }
 }

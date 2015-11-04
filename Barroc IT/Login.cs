@@ -49,7 +49,9 @@ namespace Barroc_IT
             correct = dbh.CountQuerry("*", "tbl_rights", "R_DepartmentPassword", password);
             if (correct == 1)
             {
+                succesful = true;
                 MainFormReference.Main.LoggedIn();
+                
             }
             else
             {

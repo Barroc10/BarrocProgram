@@ -17,6 +17,71 @@ namespace Barroc_IT
             InitializeComponent();
             dtp_Date.Format = DateTimePickerFormat.Custom;
             dtp_Date.CustomFormat = "dd-MM-yyyy";
+            dtp_StartTime.Format = DateTimePickerFormat.Custom;
+            dtp_StartTime.CustomFormat = "hh:mm tt";
+            dtp_StartTime.ShowUpDown = true;
+            dtp_EndTime.Format = DateTimePickerFormat.Custom;
+            dtp_EndTime.CustomFormat = "hh:mm tt";
+            dtp_EndTime.ShowUpDown = true;
+        }
+
+        private void btn_Create_Click(object sender, EventArgs e)
+        {
+            bool isError = false;
+            List<string> errorMessage = new List<string>();
+            if (tb_MeetingName.Text == "")
+            {
+                isError = true;
+                errorMessage.Add("Meeting name");
+                tb_MeetingName.BackColor = Color.Red;
+            }
+            if (tb_Location.Text == "")
+            {
+                isError = true;
+                errorMessage.Add("Location");
+                tb_Location.BackColor = Color.Red;
+            }
+            if (cb_Client.Text == "")
+	        {
+		        isError = true;
+                errorMessage.Add("Client");
+                cb_Client.BackColor = Color.Red;
+	        }
+            if (isError)
+            {
+                string error = "De volgende dingen zijn niet goed ingevuld:";
+                for (int i = 0; i < errorMessage.Count; i++)
+                {
+                    error += "\n" + errorMessage[i];
+                }
+                MessageBox.Show(error, "Error");
+            }
+            else
+            {
+                string query = "INSERT INTO tbl_meetings(M_Name, M_StartTime, M_EndTime, M_Date, M_Location, M_Participants. M_Note) VALUES(@name, @startTime, @endTime, @date, @location, @participants, @note)";
+                //iets.Parameters.Add("@name", tb_MeetingName.Text);
+                //iets.Parameters.Add("@startTime", dtp_StartTime.Value);
+                //iets.Parameters.Add("@endTime", dtp_EndTime.Value);
+                //iets.Parameters.Add("@date", dtp_Date.Value);
+                //iets.Parameters.Add("@location", tb_Location.Text);
+                //iets.Parameters.Add("@participants", cb_Client.Value);
+                //iets.Parameters.Add("@Note, rtb_Comment.Text);
+            }
+        }
+
+        private void tb_MeetingName_TextChanged(object sender, EventArgs e)
+        {
+            tb_MeetingName.BackColor = Color.White;
+        }
+
+        private void tb_Location_TextChanged(object sender, EventArgs e)
+        {
+            tb_Location.BackColor = Color.White;
+        }
+
+        private void cb_Client_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_Client.BackColor = Color.White;
         }
     }
 }
