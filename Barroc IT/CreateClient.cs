@@ -16,11 +16,11 @@ namespace Barroc_IT
         private bool isError = false;
         private string company1;
         private string address1;
-        private int number1;
+        private string number1;
         private string city1;
         private string zipCode1;
         private string address2;
-        private int number2;
+        private string number2;
         private string city2;
         private string zipCode2;
         private string contactPerson;
@@ -29,8 +29,7 @@ namespace Barroc_IT
         private int phoneNumber2;
         private int faxNumber;
         private string email;
-        private int bankAccountNr;
-        private int legderAccountNr;
+        private DatabaseHandler dbh = new DatabaseHandler();
 
         public CreateClient()
         {
@@ -39,45 +38,39 @@ namespace Barroc_IT
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
+            isError = false;
             CheckInformation();
-            if (isError)
+            if (!isError)
             {
+                bool succesfull = false;
                 company1 = tb_Company1.Text;
                 address1 = tb_Address1.Text;
-                number1 = Convert.ToInt32(tb_Number1.Text);
+                number1 = tb_Number1.Text;
                 city1 = tb_City1.Text;
                 zipCode1 = tb_Zipcode.Text;
                 address2 = tb_Address2.Text;
-                number2 = Convert.ToInt32(tb_Number2.Text);
+                number2 = tb_Number2.Text;
                 city2 = tb_City2.Text;
                 zipCode2 = tb_Zipcode2.Text;
                 contactPerson = tb_ContactPerson.Text;
                 initials = tb_Initials.Text;
                 phoneNumber1 = Convert.ToInt32(tb_PhoneNumber1.Text);
-                phoneNumber2 = Convert.ToInt32(tb_PhoneNumber2.Text);
+                if (tb_PhoneNumber2.Text != "")
+                {
+                    phoneNumber2 = Convert.ToInt32(tb_PhoneNumber2.Text);
+                }
                 faxNumber = Convert.ToInt32(tb_FaxNumber.Text);
                 email = tb_Email.Text;
-                bankAccountNr = Convert.ToInt32(tb_BankAccountNumber);
 
-                string SQLcommand = "INSERT INTO tbl_clients(C_Adress0, C_HouseNumber0, C_City0, C_Zipcode0, C_Adress1, C_HouseNumber1, C_City1, C_Zipcode1, C_Contact, C_ContactInitials, C_PhoneNumber0, C_PhoneNumber1, C_Fax, C_Email, C_BankNumber, C_Company) VALUES(@Adress0, @HouseNumber0, @City0, @Zipcode0, @Adress1, @HouseNumber1, @City1, @Zipcode1, @Contact, @ContactInitials, @PhoneNumber0, @PhoneNumber1, @Fax, @Email, @BankNumber, @CompanyName)";
-                //iets.Parameters.Add("@Adress0", address1);
-                //iets.Parameters.Add("@HouseNumber0", number1);
-                //iets.Parameters.Add("@City0", city1);
-                //iets.Parameters.Add("@Zipcode0", zipCode1);
-                //iets.Parameters.Add("@Adress1", address2);
-                //iets.Parameters.Add("@HouseNumber1", number2);
-                //iets.Parameters.Add("@City1", city2);
-                //iets.Parameters.Add("@Zipcode1", zipCode2);
-                //iets.Parameters.Add("@Contact", contactPerson);
-                //iets.Parameters.Add("@ContactInitials", initials);
-                //iets.Parameters.Add("@PhoneNumber0", phoneNumber1);
-                //iets.Parameters.Add("@PhoneNumber1", phoneNumber2);
-                //iets.Parameters.Add("@Fax", faxNumber);
-                //iets.Parameters.Add("@Email", email);
-                //iets.Parameters.Add("@BankNumber", bankAccountNr);
-                //iets.Parameters.Add("@CompanyName", company1);
-
-
+                succesfull = dbh.InsertInto(address1, number1, city1, zipCode1, contactPerson, initials, phoneNumber1, faxNumber, email, company1, address2, number2, city2, zipCode2, phoneNumber2);
+                if (succesfull)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("The data couldn't be saved, please check your connection to the internet and contact your server admin");
+                }
             }
         }
 
@@ -161,12 +154,7 @@ namespace Barroc_IT
                 isError = true;
                 tb_Email.BackColor = Color.Red;
             }
-            if (!Utilities.checkNumber(tb_BankAccountNumber.Text))
-            {
-                errorMessage.Add("Bank account nr");
-                isError = true;
-                tb_BankAccountNumber.BackColor = Color.Red;
-	        }
+
 
 
             if (isError)
@@ -177,7 +165,6 @@ namespace Barroc_IT
                     error += "\n" + errorMessage[i];
                 }
                 MessageBox.Show(error);
-                isError = false;
                 errorMessage.Clear();
             }
             

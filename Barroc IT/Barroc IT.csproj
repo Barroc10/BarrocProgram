@@ -208,10 +208,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Barroc IT.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Barroc IT_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Barroc IT.mdf</DependentUpon>
     </Content>
   </ItemGroup>
