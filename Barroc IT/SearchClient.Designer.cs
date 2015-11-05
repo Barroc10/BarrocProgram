@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gb_SearchClient = new System.Windows.Forms.GroupBox();
             this.dgv_Clients = new System.Windows.Forms.DataGridView();
             this.tb_Property = new System.Windows.Forms.TextBox();
@@ -43,55 +45,85 @@
             this.gb_SearchClient.Controls.Add(this.tb_Property);
             this.gb_SearchClient.Controls.Add(this.btn_Search);
             this.gb_SearchClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_SearchClient.Location = new System.Drawing.Point(12, 12);
+            this.gb_SearchClient.Location = new System.Drawing.Point(16, 15);
+            this.gb_SearchClient.Margin = new System.Windows.Forms.Padding(4);
             this.gb_SearchClient.Name = "gb_SearchClient";
-            this.gb_SearchClient.Size = new System.Drawing.Size(456, 436);
+            this.gb_SearchClient.Padding = new System.Windows.Forms.Padding(4);
+            this.gb_SearchClient.Size = new System.Drawing.Size(608, 537);
             this.gb_SearchClient.TabIndex = 0;
             this.gb_SearchClient.TabStop = false;
             this.gb_SearchClient.Text = "Search client";
             // 
             // dgv_Clients
             // 
+            this.dgv_Clients.AllowUserToAddRows = false;
+            this.dgv_Clients.AllowUserToDeleteRows = false;
+            this.dgv_Clients.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgv_Clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Clients.Location = new System.Drawing.Point(6, 59);
+            this.dgv_Clients.Cursor = System.Windows.Forms.Cursors.Arrow;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Clients.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Clients.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv_Clients.Location = new System.Drawing.Point(8, 73);
+            this.dgv_Clients.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Clients.Name = "dgv_Clients";
-            this.dgv_Clients.Size = new System.Drawing.Size(444, 371);
+            this.dgv_Clients.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Clients.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Clients.Size = new System.Drawing.Size(592, 457);
             this.dgv_Clients.TabIndex = 2;
             // 
             // tb_Property
             // 
-            this.tb_Property.Location = new System.Drawing.Point(6, 26);
+            this.tb_Property.Location = new System.Drawing.Point(8, 32);
+            this.tb_Property.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Property.Name = "tb_Property";
-            this.tb_Property.Size = new System.Drawing.Size(348, 27);
+            this.tb_Property.Size = new System.Drawing.Size(463, 32);
             this.tb_Property.TabIndex = 1;
             // 
             // btn_Search
             // 
             this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(360, 25);
+            this.btn_Search.Location = new System.Drawing.Point(480, 31);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(90, 29);
+            this.btn_Search.Size = new System.Drawing.Size(120, 36);
             this.btn_Search.TabIndex = 0;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Select
             // 
-            this.btn_Select.Location = new System.Drawing.Point(372, 454);
+            this.btn_Select.Location = new System.Drawing.Point(496, 559);
+            this.btn_Select.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Select.Name = "btn_Select";
-            this.btn_Select.Size = new System.Drawing.Size(96, 27);
+            this.btn_Select.Size = new System.Drawing.Size(128, 33);
             this.btn_Select.TabIndex = 1;
             this.btn_Select.Text = "Select";
             this.btn_Select.UseVisualStyleBackColor = true;
             // 
             // SearchClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 489);
+            this.ClientSize = new System.Drawing.Size(640, 602);
             this.Controls.Add(this.btn_Select);
             this.Controls.Add(this.gb_SearchClient);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "SearchClient";
             this.Text = "SearchClient";
