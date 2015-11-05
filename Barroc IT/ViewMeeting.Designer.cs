@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.gb_ViewMeeting = new System.Windows.Forms.GroupBox();
+            this.rtb_Comment = new System.Windows.Forms.RichTextBox();
+            this.lbl_Comment = new System.Windows.Forms.Label();
+            this.lbl_ClientTxt = new System.Windows.Forms.Label();
+            this.lbl_LocationTxt = new System.Windows.Forms.Label();
+            this.lbl_DateTxt = new System.Windows.Forms.Label();
+            this.lbl_EndTimeTxt = new System.Windows.Forms.Label();
+            this.lbl_StartTimeTxt = new System.Windows.Forms.Label();
             this.lbl_MeetinNameTxt = new System.Windows.Forms.Label();
             this.lbl_StartTime = new System.Windows.Forms.Label();
             this.lbl_EndTime = new System.Windows.Forms.Label();
@@ -36,14 +43,7 @@
             this.lbl_Location = new System.Windows.Forms.Label();
             this.lbl_Client = new System.Windows.Forms.Label();
             this.lbl_MeetingName = new System.Windows.Forms.Label();
-            this.lbl_StartTimeTxt = new System.Windows.Forms.Label();
-            this.lbl_EndTimeTxt = new System.Windows.Forms.Label();
-            this.lbl_DateTxt = new System.Windows.Forms.Label();
-            this.lbl_LocationTxt = new System.Windows.Forms.Label();
-            this.lbl_ClientTxt = new System.Windows.Forms.Label();
             this.btn_Done = new System.Windows.Forms.Button();
-            this.lbl_Comment = new System.Windows.Forms.Label();
-            this.rtb_Comment = new System.Windows.Forms.RichTextBox();
             this.gb_ViewMeeting.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,70 @@
             this.gb_ViewMeeting.TabIndex = 0;
             this.gb_ViewMeeting.TabStop = false;
             this.gb_ViewMeeting.Text = "View meeting";
+            // 
+            // rtb_Comment
+            // 
+            this.rtb_Comment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtb_Comment.Location = new System.Drawing.Point(114, 174);
+            this.rtb_Comment.Name = "rtb_Comment";
+            this.rtb_Comment.ReadOnly = true;
+            this.rtb_Comment.Size = new System.Drawing.Size(245, 90);
+            this.rtb_Comment.TabIndex = 35;
+            this.rtb_Comment.Text = "";
+            // 
+            // lbl_Comment
+            // 
+            this.lbl_Comment.AutoSize = true;
+            this.lbl_Comment.Location = new System.Drawing.Point(6, 176);
+            this.lbl_Comment.Name = "lbl_Comment";
+            this.lbl_Comment.Size = new System.Drawing.Size(91, 22);
+            this.lbl_Comment.TabIndex = 12;
+            this.lbl_Comment.Text = "Comment:";
+            // 
+            // lbl_ClientTxt
+            // 
+            this.lbl_ClientTxt.AutoSize = true;
+            this.lbl_ClientTxt.Location = new System.Drawing.Point(139, 142);
+            this.lbl_ClientTxt.Name = "lbl_ClientTxt";
+            this.lbl_ClientTxt.Size = new System.Drawing.Size(68, 22);
+            this.lbl_ClientTxt.TabIndex = 11;
+            this.lbl_ClientTxt.Text = "label12";
+            // 
+            // lbl_LocationTxt
+            // 
+            this.lbl_LocationTxt.AutoSize = true;
+            this.lbl_LocationTxt.Location = new System.Drawing.Point(139, 120);
+            this.lbl_LocationTxt.Name = "lbl_LocationTxt";
+            this.lbl_LocationTxt.Size = new System.Drawing.Size(68, 22);
+            this.lbl_LocationTxt.TabIndex = 10;
+            this.lbl_LocationTxt.Text = "label11";
+            // 
+            // lbl_DateTxt
+            // 
+            this.lbl_DateTxt.AutoSize = true;
+            this.lbl_DateTxt.Location = new System.Drawing.Point(139, 98);
+            this.lbl_DateTxt.Name = "lbl_DateTxt";
+            this.lbl_DateTxt.Size = new System.Drawing.Size(68, 22);
+            this.lbl_DateTxt.TabIndex = 9;
+            this.lbl_DateTxt.Text = "label10";
+            // 
+            // lbl_EndTimeTxt
+            // 
+            this.lbl_EndTimeTxt.AutoSize = true;
+            this.lbl_EndTimeTxt.Location = new System.Drawing.Point(139, 76);
+            this.lbl_EndTimeTxt.Name = "lbl_EndTimeTxt";
+            this.lbl_EndTimeTxt.Size = new System.Drawing.Size(58, 22);
+            this.lbl_EndTimeTxt.TabIndex = 8;
+            this.lbl_EndTimeTxt.Text = "label9";
+            // 
+            // lbl_StartTimeTxt
+            // 
+            this.lbl_StartTimeTxt.AutoSize = true;
+            this.lbl_StartTimeTxt.Location = new System.Drawing.Point(139, 54);
+            this.lbl_StartTimeTxt.Name = "lbl_StartTimeTxt";
+            this.lbl_StartTimeTxt.Size = new System.Drawing.Size(58, 22);
+            this.lbl_StartTimeTxt.TabIndex = 7;
+            this.lbl_StartTimeTxt.Text = "label8";
             // 
             // lbl_MeetinNameTxt
             // 
@@ -135,51 +199,6 @@
             this.lbl_MeetingName.TabIndex = 0;
             this.lbl_MeetingName.Text = "Meeting name:";
             // 
-            // lbl_StartTimeTxt
-            // 
-            this.lbl_StartTimeTxt.AutoSize = true;
-            this.lbl_StartTimeTxt.Location = new System.Drawing.Point(139, 54);
-            this.lbl_StartTimeTxt.Name = "lbl_StartTimeTxt";
-            this.lbl_StartTimeTxt.Size = new System.Drawing.Size(58, 22);
-            this.lbl_StartTimeTxt.TabIndex = 7;
-            this.lbl_StartTimeTxt.Text = "label8";
-            // 
-            // lbl_EndTimeTxt
-            // 
-            this.lbl_EndTimeTxt.AutoSize = true;
-            this.lbl_EndTimeTxt.Location = new System.Drawing.Point(139, 76);
-            this.lbl_EndTimeTxt.Name = "lbl_EndTimeTxt";
-            this.lbl_EndTimeTxt.Size = new System.Drawing.Size(58, 22);
-            this.lbl_EndTimeTxt.TabIndex = 8;
-            this.lbl_EndTimeTxt.Text = "label9";
-            // 
-            // lbl_DateTxt
-            // 
-            this.lbl_DateTxt.AutoSize = true;
-            this.lbl_DateTxt.Location = new System.Drawing.Point(139, 98);
-            this.lbl_DateTxt.Name = "lbl_DateTxt";
-            this.lbl_DateTxt.Size = new System.Drawing.Size(68, 22);
-            this.lbl_DateTxt.TabIndex = 9;
-            this.lbl_DateTxt.Text = "label10";
-            // 
-            // lbl_LocationTxt
-            // 
-            this.lbl_LocationTxt.AutoSize = true;
-            this.lbl_LocationTxt.Location = new System.Drawing.Point(139, 120);
-            this.lbl_LocationTxt.Name = "lbl_LocationTxt";
-            this.lbl_LocationTxt.Size = new System.Drawing.Size(68, 22);
-            this.lbl_LocationTxt.TabIndex = 10;
-            this.lbl_LocationTxt.Text = "label11";
-            // 
-            // lbl_ClientTxt
-            // 
-            this.lbl_ClientTxt.AutoSize = true;
-            this.lbl_ClientTxt.Location = new System.Drawing.Point(139, 142);
-            this.lbl_ClientTxt.Name = "lbl_ClientTxt";
-            this.lbl_ClientTxt.Size = new System.Drawing.Size(68, 22);
-            this.lbl_ClientTxt.TabIndex = 11;
-            this.lbl_ClientTxt.Text = "label12";
-            // 
             // btn_Done
             // 
             this.btn_Done.Location = new System.Drawing.Point(284, 288);
@@ -189,30 +208,11 @@
             this.btn_Done.Text = "Done";
             this.btn_Done.UseVisualStyleBackColor = true;
             // 
-            // lbl_Comment
-            // 
-            this.lbl_Comment.AutoSize = true;
-            this.lbl_Comment.Location = new System.Drawing.Point(6, 176);
-            this.lbl_Comment.Name = "lbl_Comment";
-            this.lbl_Comment.Size = new System.Drawing.Size(91, 22);
-            this.lbl_Comment.TabIndex = 12;
-            this.lbl_Comment.Text = "Comment:";
-            // 
-            // rtb_Comment
-            // 
-            this.rtb_Comment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtb_Comment.Location = new System.Drawing.Point(114, 174);
-            this.rtb_Comment.Name = "rtb_Comment";
-            this.rtb_Comment.ReadOnly = true;
-            this.rtb_Comment.Size = new System.Drawing.Size(245, 90);
-            this.rtb_Comment.TabIndex = 35;
-            this.rtb_Comment.Text = "";
-            // 
             // ViewMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 321);
+            this.ClientSize = new System.Drawing.Size(392, 320);
             this.Controls.Add(this.btn_Done);
             this.Controls.Add(this.gb_ViewMeeting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

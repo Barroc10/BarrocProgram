@@ -12,7 +12,8 @@ namespace Barroc_IT
 {
     public partial class SearchClient : Form
     {
-        DatabaseHandler dbh = new DatabaseHandler();
+        private BindingSource bindingSource1 = new BindingSource();
+        private DatabaseHandler dbh = new DatabaseHandler();
         public SearchClient()
         {
             InitializeComponent();
@@ -20,12 +21,14 @@ namespace Barroc_IT
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            DataTable dtb = new DataTable();
             string select = "*";
             string from = "tbl_clients";
             string where1 = "C_CompanyName";
             string where2 = tb_Property.Text;
-            dtb = dbh.SelectQuerryDT(select, from, where1, where2);
+            where2 = "%" + where2 + "%";
+            bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
+            dgv_Clients.DataSource = bindingSource1;
+            dgv_Clients.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
     }
 }

@@ -17,6 +17,12 @@ namespace Barroc_IT
             InitializeComponent();
             dtp_Date.Format = DateTimePickerFormat.Custom;
             dtp_Date.CustomFormat = "dd-MM-yyyy";
+            dtp_StartTime.Format = DateTimePickerFormat.Custom;
+            dtp_StartTime.CustomFormat = "hh:mm tt";
+            dtp_StartTime.ShowUpDown = true;
+            dtp_EndTime.Format = DateTimePickerFormat.Custom;
+            dtp_EndTime.CustomFormat = "hh:mm tt";
+            dtp_EndTime.ShowUpDown = true;
         }
     }
 }

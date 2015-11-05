@@ -57,7 +57,7 @@
             this.btn_ModifyMeeting = new System.Windows.Forms.Button();
             this.btn_CreateMeeting = new System.Windows.Forms.Button();
             this.dgv_Meetings = new System.Windows.Forms.DataGridView();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.calendar1 = new System.Windows.Forms.MonthCalendar();
             this.tab_Finance = new System.Windows.Forms.TabPage();
             this.lbl_Username_F = new System.Windows.Forms.Label();
             this.lbl_LoggedInAs_F = new System.Windows.Forms.Label();
@@ -179,7 +179,6 @@
             this.btn_PrintClient.TabIndex = 4;
             this.btn_PrintClient.Text = "Print client";
             this.btn_PrintClient.UseVisualStyleBackColor = true;
-            this.btn_PrintClient.Click += new System.EventHandler(this.btn_PrintClient_Click);
             // 
             // btn_SearchClient_C
             // 
@@ -347,7 +346,7 @@
             this.tab_Meetings.Controls.Add(this.btn_ModifyMeeting);
             this.tab_Meetings.Controls.Add(this.btn_CreateMeeting);
             this.tab_Meetings.Controls.Add(this.dgv_Meetings);
-            this.tab_Meetings.Controls.Add(this.monthCalendar1);
+            this.tab_Meetings.Controls.Add(this.calendar1);
             this.tab_Meetings.Location = new System.Drawing.Point(4, 54);
             this.tab_Meetings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Meetings.Name = "tab_Meetings";
@@ -431,12 +430,13 @@
             this.dgv_Meetings.Size = new System.Drawing.Size(180, 295);
             this.dgv_Meetings.TabIndex = 22;
             // 
-            // monthCalendar1
+            // calendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(14, 25);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 21;
+            this.calendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
+            this.calendar1.Location = new System.Drawing.Point(14, 25);
+            this.calendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.calendar1.Name = "calendar1";
+            this.calendar1.TabIndex = 21;
             // 
             // tab_Finance
             // 
@@ -741,7 +741,7 @@
         private System.Windows.Forms.Button btn_CreateProject;
         private System.Windows.Forms.DataGridView dgv_Projects;
         private System.Windows.Forms.DataGridView dgv_Meetings;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar calendar1;
         private System.Windows.Forms.Label lbl_Username_P;
         private System.Windows.Forms.Label lbl_LoggedInAs_P;
         private System.Windows.Forms.Button btn_LogOut_P;
