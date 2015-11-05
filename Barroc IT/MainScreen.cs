@@ -367,7 +367,7 @@ namespace Barroc_IT
             BindingSource bindingSource1 = new BindingSource();
             DatabaseHandler dbh = new DatabaseHandler();
 
-            MessageBox.Show(calendar1.SelectionEnd.ToString("dd-MM-yyyy"));
+            MessageBox.Show(calendar1.SelectionEnd.ToString());
             string select = "M_Name";
             string from = "tbl_meetings";
             string where1 = "M_Date";
