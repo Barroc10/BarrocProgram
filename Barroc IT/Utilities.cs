@@ -66,13 +66,13 @@ namespace Barroc_IT
             return DateTime.Now.ToShortDateString();
         }
 
-        public static void Print()
-        {
-            PrintDialog pdg = new PrintDialog();
+        //public static void Print()
+        //{
+        //    PrintDialog pdg = new PrintDialog();
 
-            PrintDocument pd = new PrintDocument();
+        //    PrintDocument pd = new PrintDocument();
 
-            pd.DocumentName();
-        }
+        //    pd.DocumentName();
+        //}
     }
 }

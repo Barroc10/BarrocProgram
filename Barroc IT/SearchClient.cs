@@ -30,5 +30,16 @@ namespace Barroc_IT
             dgv_Clients.DataSource = bindingSource1;
             dgv_Clients.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
+
+        private void btn_Select_Click(object sender, EventArgs e)
+        {
+            string temp;
+            temp = dgv_Clients["C_LedgerNumber", 0].Value.ToString();
+            int temp1;
+            int.TryParse(temp, out temp1);
+            MainFormReference.Main.newLedgerID = temp1;
+            MainFormReference.Main.UpdateDataGridView();
+            this.Close();
+        }
     }
 }

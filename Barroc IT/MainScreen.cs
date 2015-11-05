@@ -28,6 +28,8 @@ namespace Barroc_IT
         CreateQuotation createQuotation;
         SearchQuotation searchQuotation;
         DatabaseHandler dbh = new DatabaseHandler();
+        public int newLedgerID;
+        private int currentLedgerID;
 
         public MainScreen()
         {
@@ -78,7 +80,7 @@ namespace Barroc_IT
 
         private void TimeChanged(object sender, System.Timers.ElapsedEventArgs e)
         {
-            updateTimeWorker.RunWorkerAsync();
+            updateTimeWorker.RunWorkerAsync();           
         }
 
         private void btn_CreateClient_Click(object sender, EventArgs e)
@@ -388,15 +390,27 @@ namespace Barroc_IT
         {
             bool succesfull = false;
             int ledgerNumber;
-            int.TryParse(dgv_Clients[1, 1].ToString(), out ledgerNumber);
+            int.TryParse(dgv_Clients["C_LedgerNumber",0].Value.ToString(), out ledgerNumber);
             succesfull = dbh.Delete("tbl_clients", "C_LedgerNumber", ledgerNumber.ToString());
-            if(succesfull)
+            if(!succesfull)
             {
                 MessageBox.Show("The data has been deleted");
             }
             else
             {
                 MessageBox.Show("Unfortunatly something went wrong, please contact your server administrator");
+            }
+            UpdateDataGridView();
+        }
+
+        public void UpdateDataGridView()
+        {
+            if (newLedgerID != currentLedgerID)
+            {
+                string temp = newLedgerID.ToString();
+                BindingSource source = new BindingSource();
+                source.DataSource = dbh.SelectQuerryDT("*", "tbl_clients", "C_LedgerNumber", temp);
+                dgv_Clients.DataSource = source;
             }
         }
     }
