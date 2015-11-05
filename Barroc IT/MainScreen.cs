@@ -112,13 +112,13 @@ namespace Barroc_IT
 
             if (!searchClient.Visible)
             {
-                createClient = new CreateClient();
-                createClient.Show();
+                searchClient = new SearchClient();
+                searchClient.Show();
             }
 
             else
             {
-                createClient.Focus();
+                searchClient.Focus();
             }
         }
 

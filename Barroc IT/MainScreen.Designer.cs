@@ -121,9 +121,9 @@
             this.tab_Clients.Controls.Add(this.btn_CreateClient);
             this.tab_Clients.Controls.Add(this.dgv_Clients);
             this.tab_Clients.Location = new System.Drawing.Point(4, 54);
-            this.tab_Clients.Margin = new System.Windows.Forms.Padding(2);
+            this.tab_Clients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Clients.Name = "tab_Clients";
-            this.tab_Clients.Padding = new System.Windows.Forms.Padding(2);
+            this.tab_Clients.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Clients.Size = new System.Drawing.Size(684, 366);
             this.tab_Clients.TabIndex = 0;
             this.tab_Clients.Text = "Clients";
@@ -152,7 +152,7 @@
             // btn_LogOut_C
             // 
             this.btn_LogOut_C.Location = new System.Drawing.Point(583, 336);
-            this.btn_LogOut_C.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LogOut_C.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LogOut_C.Name = "btn_LogOut_C";
             this.btn_LogOut_C.Size = new System.Drawing.Size(92, 26);
             this.btn_LogOut_C.TabIndex = 6;
@@ -163,7 +163,7 @@
             // btn_DeleteClient
             // 
             this.btn_DeleteClient.Location = new System.Drawing.Point(583, 186);
-            this.btn_DeleteClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DeleteClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_DeleteClient.Name = "btn_DeleteClient";
             this.btn_DeleteClient.Size = new System.Drawing.Size(92, 37);
             this.btn_DeleteClient.TabIndex = 5;
@@ -173,7 +173,7 @@
             // btn_PrintClient
             // 
             this.btn_PrintClient.Location = new System.Drawing.Point(583, 145);
-            this.btn_PrintClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_PrintClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_PrintClient.Name = "btn_PrintClient";
             this.btn_PrintClient.Size = new System.Drawing.Size(92, 37);
             this.btn_PrintClient.TabIndex = 4;
@@ -183,7 +183,7 @@
             // btn_SearchClient_C
             // 
             this.btn_SearchClient_C.Location = new System.Drawing.Point(583, 103);
-            this.btn_SearchClient_C.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_SearchClient_C.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SearchClient_C.Name = "btn_SearchClient_C";
             this.btn_SearchClient_C.Size = new System.Drawing.Size(92, 37);
             this.btn_SearchClient_C.TabIndex = 3;
@@ -194,7 +194,7 @@
             // btn_ModifyClient_C
             // 
             this.btn_ModifyClient_C.Location = new System.Drawing.Point(583, 62);
-            this.btn_ModifyClient_C.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ModifyClient_C.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ModifyClient_C.Name = "btn_ModifyClient_C";
             this.btn_ModifyClient_C.Size = new System.Drawing.Size(92, 37);
             this.btn_ModifyClient_C.TabIndex = 2;
@@ -204,7 +204,7 @@
             // btn_CreateClient
             // 
             this.btn_CreateClient.Location = new System.Drawing.Point(583, 20);
-            this.btn_CreateClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CreateClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_CreateClient.Name = "btn_CreateClient";
             this.btn_CreateClient.Size = new System.Drawing.Size(92, 37);
             this.btn_CreateClient.TabIndex = 1;
@@ -217,7 +217,7 @@
             this.dgv_Clients.AllowUserToOrderColumns = true;
             this.dgv_Clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Clients.Location = new System.Drawing.Point(10, 20);
-            this.dgv_Clients.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Clients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Clients.Name = "dgv_Clients";
             this.dgv_Clients.RowTemplate.Height = 24;
             this.dgv_Clients.Size = new System.Drawing.Size(440, 336);
@@ -236,9 +236,9 @@
             this.tab_Projects.Controls.Add(this.btn_CreateProject);
             this.tab_Projects.Controls.Add(this.dgv_Projects);
             this.tab_Projects.Location = new System.Drawing.Point(4, 54);
-            this.tab_Projects.Margin = new System.Windows.Forms.Padding(2);
+            this.tab_Projects.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Projects.Name = "tab_Projects";
-            this.tab_Projects.Padding = new System.Windows.Forms.Padding(2);
+            this.tab_Projects.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Projects.Size = new System.Drawing.Size(684, 366);
             this.tab_Projects.TabIndex = 1;
             this.tab_Projects.Text = "Projects";
@@ -267,7 +267,7 @@
             // btn_LogOut_P
             // 
             this.btn_LogOut_P.Location = new System.Drawing.Point(583, 336);
-            this.btn_LogOut_P.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LogOut_P.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LogOut_P.Name = "btn_LogOut_P";
             this.btn_LogOut_P.Size = new System.Drawing.Size(92, 26);
             this.btn_LogOut_P.TabIndex = 15;
@@ -277,7 +277,7 @@
             // btn_DeleteProject
             // 
             this.btn_DeleteProject.Location = new System.Drawing.Point(583, 186);
-            this.btn_DeleteProject.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DeleteProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_DeleteProject.Name = "btn_DeleteProject";
             this.btn_DeleteProject.Size = new System.Drawing.Size(92, 37);
             this.btn_DeleteProject.TabIndex = 14;
@@ -287,7 +287,7 @@
             // btn_PrintProject
             // 
             this.btn_PrintProject.Location = new System.Drawing.Point(583, 145);
-            this.btn_PrintProject.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_PrintProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_PrintProject.Name = "btn_PrintProject";
             this.btn_PrintProject.Size = new System.Drawing.Size(92, 37);
             this.btn_PrintProject.TabIndex = 13;
@@ -297,7 +297,7 @@
             // btn_SearchProject
             // 
             this.btn_SearchProject.Location = new System.Drawing.Point(583, 103);
-            this.btn_SearchProject.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_SearchProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SearchProject.Name = "btn_SearchProject";
             this.btn_SearchProject.Size = new System.Drawing.Size(92, 37);
             this.btn_SearchProject.TabIndex = 12;
@@ -308,7 +308,7 @@
             // btn_ModifyProject
             // 
             this.btn_ModifyProject.Location = new System.Drawing.Point(583, 62);
-            this.btn_ModifyProject.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ModifyProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ModifyProject.Name = "btn_ModifyProject";
             this.btn_ModifyProject.Size = new System.Drawing.Size(92, 37);
             this.btn_ModifyProject.TabIndex = 11;
@@ -318,7 +318,7 @@
             // btn_CreateProject
             // 
             this.btn_CreateProject.Location = new System.Drawing.Point(583, 20);
-            this.btn_CreateProject.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CreateProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_CreateProject.Name = "btn_CreateProject";
             this.btn_CreateProject.Size = new System.Drawing.Size(92, 37);
             this.btn_CreateProject.TabIndex = 10;
@@ -331,7 +331,7 @@
             this.dgv_Projects.AllowUserToOrderColumns = true;
             this.dgv_Projects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Projects.Location = new System.Drawing.Point(10, 20);
-            this.dgv_Projects.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Projects.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Projects.Name = "dgv_Projects";
             this.dgv_Projects.RowTemplate.Height = 24;
             this.dgv_Projects.Size = new System.Drawing.Size(440, 336);
@@ -348,9 +348,9 @@
             this.tab_Meetings.Controls.Add(this.dgv_Meetings);
             this.tab_Meetings.Controls.Add(this.calendar1);
             this.tab_Meetings.Location = new System.Drawing.Point(4, 54);
-            this.tab_Meetings.Margin = new System.Windows.Forms.Padding(2);
+            this.tab_Meetings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Meetings.Name = "tab_Meetings";
-            this.tab_Meetings.Padding = new System.Windows.Forms.Padding(2);
+            this.tab_Meetings.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Meetings.Size = new System.Drawing.Size(684, 366);
             this.tab_Meetings.TabIndex = 2;
             this.tab_Meetings.Text = "Meetings";
@@ -379,7 +379,7 @@
             // btn_LogOut_M
             // 
             this.btn_LogOut_M.Location = new System.Drawing.Point(583, 336);
-            this.btn_LogOut_M.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LogOut_M.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LogOut_M.Name = "btn_LogOut_M";
             this.btn_LogOut_M.Size = new System.Drawing.Size(92, 26);
             this.btn_LogOut_M.TabIndex = 26;
@@ -389,7 +389,7 @@
             // btn_ViewMeeting
             // 
             this.btn_ViewMeeting.Location = new System.Drawing.Point(579, 74);
-            this.btn_ViewMeeting.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ViewMeeting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ViewMeeting.Name = "btn_ViewMeeting";
             this.btn_ViewMeeting.Size = new System.Drawing.Size(92, 37);
             this.btn_ViewMeeting.TabIndex = 25;
@@ -400,7 +400,7 @@
             // btn_ModifyMeeting
             // 
             this.btn_ModifyMeeting.Location = new System.Drawing.Point(579, 115);
-            this.btn_ModifyMeeting.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ModifyMeeting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ModifyMeeting.Name = "btn_ModifyMeeting";
             this.btn_ModifyMeeting.Size = new System.Drawing.Size(92, 37);
             this.btn_ModifyMeeting.TabIndex = 24;
@@ -411,7 +411,7 @@
             // btn_CreateMeeting
             // 
             this.btn_CreateMeeting.Location = new System.Drawing.Point(579, 33);
-            this.btn_CreateMeeting.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CreateMeeting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_CreateMeeting.Name = "btn_CreateMeeting";
             this.btn_CreateMeeting.Size = new System.Drawing.Size(92, 37);
             this.btn_CreateMeeting.TabIndex = 23;
@@ -424,7 +424,7 @@
             this.dgv_Meetings.AllowUserToOrderColumns = true;
             this.dgv_Meetings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Meetings.Location = new System.Drawing.Point(250, 33);
-            this.dgv_Meetings.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Meetings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Meetings.Name = "dgv_Meetings";
             this.dgv_Meetings.RowTemplate.Height = 24;
             this.dgv_Meetings.Size = new System.Drawing.Size(180, 295);
@@ -434,10 +434,9 @@
             // 
             this.calendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
             this.calendar1.Location = new System.Drawing.Point(14, 25);
-            this.calendar1.Margin = new System.Windows.Forms.Padding(7);
+            this.calendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.calendar1.Name = "calendar1";
             this.calendar1.TabIndex = 21;
-            this.calendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendar1_DateSelected);
             // 
             // tab_Finance
             // 
@@ -451,9 +450,9 @@
             this.tab_Finance.Controls.Add(this.btn_SearchClient_F);
             this.tab_Finance.Controls.Add(this.dgv_Finance);
             this.tab_Finance.Location = new System.Drawing.Point(4, 54);
-            this.tab_Finance.Margin = new System.Windows.Forms.Padding(2);
+            this.tab_Finance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Finance.Name = "tab_Finance";
-            this.tab_Finance.Padding = new System.Windows.Forms.Padding(2);
+            this.tab_Finance.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Finance.Size = new System.Drawing.Size(684, 366);
             this.tab_Finance.TabIndex = 3;
             this.tab_Finance.Text = "Finance";
@@ -482,7 +481,7 @@
             // btn_LogOut_F
             // 
             this.btn_LogOut_F.Location = new System.Drawing.Point(584, 336);
-            this.btn_LogOut_F.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LogOut_F.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LogOut_F.Name = "btn_LogOut_F";
             this.btn_LogOut_F.Size = new System.Drawing.Size(92, 26);
             this.btn_LogOut_F.TabIndex = 15;
@@ -492,7 +491,7 @@
             // btn_ModifyNewClient
             // 
             this.btn_ModifyNewClient.Location = new System.Drawing.Point(584, 186);
-            this.btn_ModifyNewClient.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ModifyNewClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ModifyNewClient.Name = "btn_ModifyNewClient";
             this.btn_ModifyNewClient.Size = new System.Drawing.Size(92, 37);
             this.btn_ModifyNewClient.TabIndex = 14;
@@ -503,7 +502,7 @@
             // btn_ViewInvoices
             // 
             this.btn_ViewInvoices.Location = new System.Drawing.Point(584, 145);
-            this.btn_ViewInvoices.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ViewInvoices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ViewInvoices.Name = "btn_ViewInvoices";
             this.btn_ViewInvoices.Size = new System.Drawing.Size(92, 37);
             this.btn_ViewInvoices.TabIndex = 13;
@@ -514,7 +513,7 @@
             // btn_CreateInvoice
             // 
             this.btn_CreateInvoice.Location = new System.Drawing.Point(584, 103);
-            this.btn_CreateInvoice.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CreateInvoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_CreateInvoice.Name = "btn_CreateInvoice";
             this.btn_CreateInvoice.Size = new System.Drawing.Size(92, 37);
             this.btn_CreateInvoice.TabIndex = 12;
@@ -525,7 +524,7 @@
             // lbl_ModifyClient_F
             // 
             this.lbl_ModifyClient_F.Location = new System.Drawing.Point(584, 62);
-            this.lbl_ModifyClient_F.Margin = new System.Windows.Forms.Padding(2);
+            this.lbl_ModifyClient_F.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbl_ModifyClient_F.Name = "lbl_ModifyClient_F";
             this.lbl_ModifyClient_F.Size = new System.Drawing.Size(92, 37);
             this.lbl_ModifyClient_F.TabIndex = 11;
@@ -535,7 +534,7 @@
             // btn_SearchClient_F
             // 
             this.btn_SearchClient_F.Location = new System.Drawing.Point(584, 20);
-            this.btn_SearchClient_F.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_SearchClient_F.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SearchClient_F.Name = "btn_SearchClient_F";
             this.btn_SearchClient_F.Size = new System.Drawing.Size(92, 37);
             this.btn_SearchClient_F.TabIndex = 10;
@@ -548,7 +547,7 @@
             this.dgv_Finance.AllowUserToOrderColumns = true;
             this.dgv_Finance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Finance.Location = new System.Drawing.Point(10, 20);
-            this.dgv_Finance.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Finance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Finance.Name = "dgv_Finance";
             this.dgv_Finance.RowTemplate.Height = 24;
             this.dgv_Finance.Size = new System.Drawing.Size(440, 336);
@@ -566,9 +565,9 @@
             this.tab_Offer.Controls.Add(this.btn_CreateQuotation);
             this.tab_Offer.Controls.Add(this.dgv_Quatations);
             this.tab_Offer.Location = new System.Drawing.Point(4, 54);
-            this.tab_Offer.Margin = new System.Windows.Forms.Padding(2);
+            this.tab_Offer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Offer.Name = "tab_Offer";
-            this.tab_Offer.Padding = new System.Windows.Forms.Padding(2);
+            this.tab_Offer.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab_Offer.Size = new System.Drawing.Size(684, 366);
             this.tab_Offer.TabIndex = 4;
             this.tab_Offer.Text = "Quotation";
@@ -597,7 +596,7 @@
             // btn_LogOut_Q
             // 
             this.btn_LogOut_Q.Location = new System.Drawing.Point(583, 336);
-            this.btn_LogOut_Q.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LogOut_Q.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LogOut_Q.Name = "btn_LogOut_Q";
             this.btn_LogOut_Q.Size = new System.Drawing.Size(92, 26);
             this.btn_LogOut_Q.TabIndex = 15;
@@ -607,7 +606,7 @@
             // btn_DeleteQuotation
             // 
             this.btn_DeleteQuotation.Location = new System.Drawing.Point(574, 186);
-            this.btn_DeleteQuotation.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_DeleteQuotation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_DeleteQuotation.Name = "btn_DeleteQuotation";
             this.btn_DeleteQuotation.Size = new System.Drawing.Size(102, 37);
             this.btn_DeleteQuotation.TabIndex = 14;
@@ -617,7 +616,7 @@
             // btn_ChangeStatus
             // 
             this.btn_ChangeStatus.Location = new System.Drawing.Point(574, 145);
-            this.btn_ChangeStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ChangeStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ChangeStatus.Name = "btn_ChangeStatus";
             this.btn_ChangeStatus.Size = new System.Drawing.Size(102, 37);
             this.btn_ChangeStatus.TabIndex = 13;
@@ -627,7 +626,7 @@
             // btn_ModifyQuotation
             // 
             this.btn_ModifyQuotation.Location = new System.Drawing.Point(574, 103);
-            this.btn_ModifyQuotation.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ModifyQuotation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ModifyQuotation.Name = "btn_ModifyQuotation";
             this.btn_ModifyQuotation.Size = new System.Drawing.Size(102, 37);
             this.btn_ModifyQuotation.TabIndex = 12;
@@ -637,7 +636,7 @@
             // btn_SearchQuotation
             // 
             this.btn_SearchQuotation.Location = new System.Drawing.Point(574, 62);
-            this.btn_SearchQuotation.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_SearchQuotation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SearchQuotation.Name = "btn_SearchQuotation";
             this.btn_SearchQuotation.Size = new System.Drawing.Size(102, 37);
             this.btn_SearchQuotation.TabIndex = 11;
@@ -648,7 +647,7 @@
             // btn_CreateQuotation
             // 
             this.btn_CreateQuotation.Location = new System.Drawing.Point(574, 20);
-            this.btn_CreateQuotation.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_CreateQuotation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_CreateQuotation.Name = "btn_CreateQuotation";
             this.btn_CreateQuotation.Size = new System.Drawing.Size(102, 37);
             this.btn_CreateQuotation.TabIndex = 10;
@@ -661,7 +660,7 @@
             this.dgv_Quatations.AllowUserToOrderColumns = true;
             this.dgv_Quatations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Quatations.Location = new System.Drawing.Point(10, 20);
-            this.dgv_Quatations.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Quatations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Quatations.Name = "dgv_Quatations";
             this.dgv_Quatations.RowTemplate.Height = 24;
             this.dgv_Quatations.Size = new System.Drawing.Size(440, 336);
@@ -694,7 +693,7 @@
             this.Controls.Add(this.lbl_Time);
             this.Controls.Add(this.tc_Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "MainScreen";
             this.Text = "Barroc IT";
