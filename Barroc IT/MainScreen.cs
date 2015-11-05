@@ -28,6 +28,8 @@ namespace Barroc_IT
         CreateQuotation createQuotation;
         SearchQuotation searchQuotation;
         DatabaseHandler dbh = new DatabaseHandler();
+        BindingSource bindingSource1 = new BindingSource();
+            
         public int newLedgerID;
         private int currentLedgerID;
 
@@ -443,8 +445,6 @@ namespace Barroc_IT
             }
             else
             {
-            BindingSource bindingSource1 = new BindingSource();
-            DatabaseHandler dbh = new DatabaseHandler();
                 MessageBox.Show("Unfortunatly something went wrong, please contact your server administrator");
             }
             UpdateDataGridView();
@@ -458,12 +458,14 @@ namespace Barroc_IT
             where2 = where2 + "%";
             bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
             dgv_Meetings.DataSource = bindingSource1;
+
         public void UpdateDataGridView()
         {
             if (newLedgerID != currentLedgerID)
             {
                 string temp = newLedgerID.ToString();
                 BindingSource source = new BindingSource();
+                
                 source.DataSource = dbh.SelectQuerryDT("*", "tbl_clients", "C_LedgerNumber", temp);
                 dgv_Clients.DataSource = source;
             }

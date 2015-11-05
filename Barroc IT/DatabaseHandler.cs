@@ -134,7 +134,17 @@ namespace Barroc_IT
             command.Parameters.AddWithValue("@note", note);
             command.Connection = conn;
             conn.Open();
-        public bool Delete (string tbl, string columName, string value)
+        
+            amountOfRows = command.ExecuteNonQuery();
+            if (amountOfRows == 1)
+            {
+                succesfull = true;
+            }
+            conn.Close();
+            conn.Dispose();
+            return succesfull;
+        }
+        public bool Delete(string tbl, string columName, string value)
         {
             bool succesfull = false;
             int amountOfRows = 0;
@@ -152,15 +162,6 @@ namespace Barroc_IT
             {
                 succesfull = true;
             }
-            return succesfull;
-        }
-            amountOfRows = command.ExecuteNonQuery();
-            if (amountOfRows == 1)
-            {
-                succesfull = true;
-            }
-            conn.Close();
-            conn.Dispose();
             return succesfull;
         }
     }
