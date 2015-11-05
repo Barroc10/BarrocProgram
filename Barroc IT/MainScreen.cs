@@ -169,14 +169,14 @@ namespace Barroc_IT
         {
             if (viewMeeting == null)
             {
-                viewMeeting = new ViewMeeting();
+                viewMeeting = new ViewMeeting(calendar1.SelectionEnd);
                 viewMeeting.Show();
                 return;
             }
 
             if (!viewMeeting.Visible)
             {
-                viewMeeting = new ViewMeeting();
+                viewMeeting = new ViewMeeting(calendar1.SelectionEnd);
                 viewMeeting.Show();
             }
 
@@ -211,7 +211,7 @@ namespace Barroc_IT
         {
             if (modifyMeeting == null)
             {
-                modifyMeeting = new ModifyMeeting();
+                modifyMeeting = new ModifyMeeting(dgv_Meetings.SelectedRows);
                 modifyMeeting.Show();
                 return;
             }

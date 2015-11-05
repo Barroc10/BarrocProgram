@@ -244,12 +244,5 @@ namespace Barroc_IT
         {
             tb_Email.BackColor = Color.White;
         }
-
-        private void tb_BankAccountNumber_TextChanged(object sender, EventArgs e)
-        {
-            tb_BankAccountNumber.BackColor = Color.White;
-        }
-
-
     }
 }

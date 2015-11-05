@@ -29,201 +29,62 @@
         private void InitializeComponent()
         {
             this.btn_Cancel = new System.Windows.Forms.Button();
-            this.rtb_Comment = new System.Windows.Forms.RichTextBox();
-            this.lbl_Comment = new System.Windows.Forms.Label();
-            this.cb_Client = new System.Windows.Forms.ComboBox();
-            this.tb_Location = new System.Windows.Forms.TextBox();
-            this.tb_MeetingName = new System.Windows.Forms.TextBox();
-            this.lbl_Client = new System.Windows.Forms.Label();
-            this.lbl_Location = new System.Windows.Forms.Label();
-            this.lbl_Date = new System.Windows.Forms.Label();
-            this.lbl_EndTime = new System.Windows.Forms.Label();
-            this.lbl_StartTime = new System.Windows.Forms.Label();
-            this.lbl_MeetingName = new System.Windows.Forms.Label();
-            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_Done = new System.Windows.Forms.Button();
             this.gb_CreateMeeting = new System.Windows.Forms.GroupBox();
-            this.dtp_Date = new System.Windows.Forms.DateTimePicker();
-            this.dtp_StartTime = new System.Windows.Forms.DateTimePicker();
-            this.dtp_EndTime = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gb_CreateMeeting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(12, 343);
+            this.btn_Cancel.Location = new System.Drawing.Point(12, 208);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(103, 32);
             this.btn_Cancel.TabIndex = 7;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
-            // rtb_Comment
+            // btn_Done
             // 
-            this.rtb_Comment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtb_Comment.Location = new System.Drawing.Point(126, 229);
-            this.rtb_Comment.Name = "rtb_Comment";
-            this.rtb_Comment.Size = new System.Drawing.Size(245, 90);
-            this.rtb_Comment.TabIndex = 34;
-            this.rtb_Comment.Text = "";
-            // 
-            // lbl_Comment
-            // 
-            this.lbl_Comment.AutoSize = true;
-            this.lbl_Comment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Comment.Location = new System.Drawing.Point(6, 231);
-            this.lbl_Comment.Name = "lbl_Comment";
-            this.lbl_Comment.Size = new System.Drawing.Size(82, 20);
-            this.lbl_Comment.TabIndex = 33;
-            this.lbl_Comment.Text = "Comment:";
-            // 
-            // cb_Client
-            // 
-            this.cb_Client.FormattingEnabled = true;
-            this.cb_Client.Location = new System.Drawing.Point(126, 194);
-            this.cb_Client.Name = "cb_Client";
-            this.cb_Client.Size = new System.Drawing.Size(245, 28);
-            this.cb_Client.TabIndex = 31;
-            // 
-            // tb_Location
-            // 
-            this.tb_Location.Location = new System.Drawing.Point(126, 161);
-            this.tb_Location.Name = "tb_Location";
-            this.tb_Location.Size = new System.Drawing.Size(245, 27);
-            this.tb_Location.TabIndex = 25;
-            // 
-            // tb_MeetingName
-            // 
-            this.tb_MeetingName.Location = new System.Drawing.Point(126, 29);
-            this.tb_MeetingName.Name = "tb_MeetingName";
-            this.tb_MeetingName.Size = new System.Drawing.Size(245, 27);
-            this.tb_MeetingName.TabIndex = 19;
-            // 
-            // lbl_Client
-            // 
-            this.lbl_Client.AutoSize = true;
-            this.lbl_Client.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Client.Location = new System.Drawing.Point(6, 197);
-            this.lbl_Client.Name = "lbl_Client";
-            this.lbl_Client.Size = new System.Drawing.Size(53, 20);
-            this.lbl_Client.TabIndex = 7;
-            this.lbl_Client.Text = "Client:";
-            // 
-            // lbl_Location
-            // 
-            this.lbl_Location.AutoSize = true;
-            this.lbl_Location.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Location.Location = new System.Drawing.Point(6, 164);
-            this.lbl_Location.Name = "lbl_Location";
-            this.lbl_Location.Size = new System.Drawing.Size(74, 20);
-            this.lbl_Location.TabIndex = 6;
-            this.lbl_Location.Text = "Location:";
-            // 
-            // lbl_Date
-            // 
-            this.lbl_Date.AutoSize = true;
-            this.lbl_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Date.Location = new System.Drawing.Point(6, 131);
-            this.lbl_Date.Name = "lbl_Date";
-            this.lbl_Date.Size = new System.Drawing.Size(48, 20);
-            this.lbl_Date.TabIndex = 5;
-            this.lbl_Date.Text = "Date:";
-            // 
-            // lbl_EndTime
-            // 
-            this.lbl_EndTime.AutoSize = true;
-            this.lbl_EndTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EndTime.Location = new System.Drawing.Point(6, 98);
-            this.lbl_EndTime.Name = "lbl_EndTime";
-            this.lbl_EndTime.Size = new System.Drawing.Size(76, 20);
-            this.lbl_EndTime.TabIndex = 4;
-            this.lbl_EndTime.Text = "End time:";
-            // 
-            // lbl_StartTime
-            // 
-            this.lbl_StartTime.AutoSize = true;
-            this.lbl_StartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_StartTime.Location = new System.Drawing.Point(6, 65);
-            this.lbl_StartTime.Name = "lbl_StartTime";
-            this.lbl_StartTime.Size = new System.Drawing.Size(82, 20);
-            this.lbl_StartTime.TabIndex = 3;
-            this.lbl_StartTime.Text = "Start time:";
-            // 
-            // lbl_MeetingName
-            // 
-            this.lbl_MeetingName.AutoSize = true;
-            this.lbl_MeetingName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MeetingName.Location = new System.Drawing.Point(6, 32);
-            this.lbl_MeetingName.Name = "lbl_MeetingName";
-            this.lbl_MeetingName.Size = new System.Drawing.Size(114, 20);
-            this.lbl_MeetingName.TabIndex = 2;
-            this.lbl_MeetingName.Text = "Meeting name:";
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.Location = new System.Drawing.Point(303, 343);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(103, 32);
-            this.btn_Save.TabIndex = 6;
-            this.btn_Save.Text = "Save";
-            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Done.Location = new System.Drawing.Point(303, 208);
+            this.btn_Done.Name = "btn_Done";
+            this.btn_Done.Size = new System.Drawing.Size(103, 32);
+            this.btn_Done.TabIndex = 6;
+            this.btn_Done.Text = "Done";
+            this.btn_Done.UseVisualStyleBackColor = true;
             // 
             // gb_CreateMeeting
             // 
-            this.gb_CreateMeeting.Controls.Add(this.dtp_EndTime);
-            this.gb_CreateMeeting.Controls.Add(this.dtp_StartTime);
-            this.gb_CreateMeeting.Controls.Add(this.dtp_Date);
-            this.gb_CreateMeeting.Controls.Add(this.rtb_Comment);
-            this.gb_CreateMeeting.Controls.Add(this.lbl_Comment);
-            this.gb_CreateMeeting.Controls.Add(this.cb_Client);
-            this.gb_CreateMeeting.Controls.Add(this.tb_Location);
-            this.gb_CreateMeeting.Controls.Add(this.tb_MeetingName);
-            this.gb_CreateMeeting.Controls.Add(this.lbl_Client);
-            this.gb_CreateMeeting.Controls.Add(this.lbl_Location);
-            this.gb_CreateMeeting.Controls.Add(this.lbl_Date);
-            this.gb_CreateMeeting.Controls.Add(this.lbl_EndTime);
-            this.gb_CreateMeeting.Controls.Add(this.lbl_StartTime);
-            this.gb_CreateMeeting.Controls.Add(this.lbl_MeetingName);
+            this.gb_CreateMeeting.Controls.Add(this.dataGridView1);
             this.gb_CreateMeeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_CreateMeeting.Location = new System.Drawing.Point(12, 12);
             this.gb_CreateMeeting.Name = "gb_CreateMeeting";
-            this.gb_CreateMeeting.Size = new System.Drawing.Size(394, 325);
+            this.gb_CreateMeeting.Size = new System.Drawing.Size(394, 190);
             this.gb_CreateMeeting.TabIndex = 5;
             this.gb_CreateMeeting.TabStop = false;
             this.gb_CreateMeeting.Text = "Modify meeting";
             // 
-            // dtp_Date
+            // dataGridView1
             // 
-            this.dtp_Date.Location = new System.Drawing.Point(126, 128);
-            this.dtp_Date.Name = "dtp_Date";
-            this.dtp_Date.Size = new System.Drawing.Size(245, 27);
-            this.dtp_Date.TabIndex = 35;
-            // 
-            // dtp_StartTime
-            // 
-            this.dtp_StartTime.Location = new System.Drawing.Point(126, 60);
-            this.dtp_StartTime.Name = "dtp_StartTime";
-            this.dtp_StartTime.Size = new System.Drawing.Size(149, 27);
-            this.dtp_StartTime.TabIndex = 37;
-            // 
-            // dtp_EndTime
-            // 
-            this.dtp_EndTime.Location = new System.Drawing.Point(126, 93);
-            this.dtp_EndTime.Name = "dtp_EndTime";
-            this.dtp_EndTime.Size = new System.Drawing.Size(149, 27);
-            this.dtp_EndTime.TabIndex = 38;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 26);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(382, 153);
+            this.dataGridView1.TabIndex = 0;
             // 
             // ModifyMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 387);
+            this.ClientSize = new System.Drawing.Size(418, 255);
             this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.btn_Save);
+            this.Controls.Add(this.btn_Done);
             this.Controls.Add(this.gb_CreateMeeting);
             this.Name = "ModifyMeeting";
             this.Text = "ModifyMeeting";
             this.gb_CreateMeeting.ResumeLayout(false);
-            this.gb_CreateMeeting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,21 +92,8 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.RichTextBox rtb_Comment;
-        private System.Windows.Forms.Label lbl_Comment;
-        private System.Windows.Forms.ComboBox cb_Client;
-        private System.Windows.Forms.TextBox tb_Location;
-        private System.Windows.Forms.TextBox tb_MeetingName;
-        private System.Windows.Forms.Label lbl_Client;
-        private System.Windows.Forms.Label lbl_Location;
-        private System.Windows.Forms.Label lbl_Date;
-        private System.Windows.Forms.Label lbl_EndTime;
-        private System.Windows.Forms.Label lbl_StartTime;
-        private System.Windows.Forms.Label lbl_MeetingName;
-        private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.Button btn_Done;
         private System.Windows.Forms.GroupBox gb_CreateMeeting;
-        private System.Windows.Forms.DateTimePicker dtp_Date;
-        private System.Windows.Forms.DateTimePicker dtp_EndTime;
-        private System.Windows.Forms.DateTimePicker dtp_StartTime;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

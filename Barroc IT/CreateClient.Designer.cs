@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gb_CreateClient = new System.Windows.Forms.GroupBox();
-            this.lbl_BankAccountNumber = new System.Windows.Forms.Label();
             this.lbl_Email = new System.Windows.Forms.Label();
             this.lbl_FaxNumber = new System.Windows.Forms.Label();
             this.lbl_PhoneNumber2 = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@
             this.lbl_City1 = new System.Windows.Forms.Label();
             this.lbl_Number1 = new System.Windows.Forms.Label();
             this.lbl_Address1 = new System.Windows.Forms.Label();
-            this.tb_BankAccountNumber = new System.Windows.Forms.TextBox();
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_FaxNumber = new System.Windows.Forms.TextBox();
             this.tb_PhoneNumber2 = new System.Windows.Forms.TextBox();
@@ -67,7 +65,6 @@
             // 
             // gb_CreateClient
             // 
-            this.gb_CreateClient.Controls.Add(this.lbl_BankAccountNumber);
             this.gb_CreateClient.Controls.Add(this.lbl_Email);
             this.gb_CreateClient.Controls.Add(this.lbl_FaxNumber);
             this.gb_CreateClient.Controls.Add(this.lbl_PhoneNumber2);
@@ -82,7 +79,6 @@
             this.gb_CreateClient.Controls.Add(this.lbl_City1);
             this.gb_CreateClient.Controls.Add(this.lbl_Number1);
             this.gb_CreateClient.Controls.Add(this.lbl_Address1);
-            this.gb_CreateClient.Controls.Add(this.tb_BankAccountNumber);
             this.gb_CreateClient.Controls.Add(this.tb_Email);
             this.gb_CreateClient.Controls.Add(this.tb_FaxNumber);
             this.gb_CreateClient.Controls.Add(this.tb_PhoneNumber2);
@@ -102,20 +98,10 @@
             this.gb_CreateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_CreateClient.Location = new System.Drawing.Point(12, 12);
             this.gb_CreateClient.Name = "gb_CreateClient";
-            this.gb_CreateClient.Size = new System.Drawing.Size(436, 547);
+            this.gb_CreateClient.Size = new System.Drawing.Size(436, 518);
             this.gb_CreateClient.TabIndex = 0;
             this.gb_CreateClient.TabStop = false;
             this.gb_CreateClient.Text = "Create client";
-            // 
-            // lbl_BankAccountNumber
-            // 
-            this.lbl_BankAccountNumber.AutoSize = true;
-            this.lbl_BankAccountNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BankAccountNumber.Location = new System.Drawing.Point(6, 522);
-            this.lbl_BankAccountNumber.Name = "lbl_BankAccountNumber";
-            this.lbl_BankAccountNumber.Size = new System.Drawing.Size(129, 20);
-            this.lbl_BankAccountNumber.TabIndex = 48;
-            this.lbl_BankAccountNumber.Text = "Bank account nr:";
             // 
             // lbl_Email
             // 
@@ -257,14 +243,6 @@
             this.lbl_Address1.TabIndex = 34;
             this.lbl_Address1.Text = "Address 1:";
             // 
-            // tb_BankAccountNumber
-            // 
-            this.tb_BankAccountNumber.Location = new System.Drawing.Point(170, 515);
-            this.tb_BankAccountNumber.Name = "tb_BankAccountNumber";
-            this.tb_BankAccountNumber.Size = new System.Drawing.Size(260, 27);
-            this.tb_BankAccountNumber.TabIndex = 32;
-            this.tb_BankAccountNumber.TextChanged += new System.EventHandler(this.tb_BankAccountNumber_TextChanged);
-            // 
             // tb_Email
             // 
             this.tb_Email.Location = new System.Drawing.Point(170, 482);
@@ -397,7 +375,7 @@
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(345, 565);
+            this.btn_Create.Location = new System.Drawing.Point(345, 536);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(103, 32);
             this.btn_Create.TabIndex = 1;
@@ -409,7 +387,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 604);
+            this.ClientSize = new System.Drawing.Size(460, 577);
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.gb_CreateClient);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -426,7 +404,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gb_CreateClient;
-        private System.Windows.Forms.Label lbl_BankAccountNumber;
         private System.Windows.Forms.Label lbl_Email;
         private System.Windows.Forms.Label lbl_FaxNumber;
         private System.Windows.Forms.Label lbl_PhoneNumber2;
@@ -441,7 +418,6 @@
         private System.Windows.Forms.Label lbl_City1;
         private System.Windows.Forms.Label lbl_Number1;
         private System.Windows.Forms.Label lbl_Address1;
-        private System.Windows.Forms.TextBox tb_BankAccountNumber;
         private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.TextBox tb_FaxNumber;
         private System.Windows.Forms.TextBox tb_PhoneNumber2;
