@@ -90,28 +90,27 @@ namespace Barroc_IT
             bool succesfull = false;
             int amountOfRows = 0;
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("INSERT INTO tbl_clients (C_Adress0, C_HouseNumber0, C_City0, C_Zipcode0, C_Adress1, C_HouseNumber1, C_City1, C_Zipcode1, C_Contact, C_Contat_Initials, C_Phonenumber0, C_Phonenumber1, C_Fax, C_Email, C_CompanyName, C_CreditWorthy, C_BKRCheck, C_MaintenanceContract, C_BankNumber) VALUES ('" + adress0 + "' , '" + houseNumber + "', '"  + city0 + "' , '" + zipcode0 + "' , '" + adress1 + "' , '" + houseNumber1 + "' , '" + city1 + "' , '" + zipcode1 + "' , '" + contact + "' , '" + contactInitials + "' , " + phoneNumber + " , " + phoneNumber1 + " , " + fax + " , '" + email + "' , '" + companyName + "' , 0, 0, 0, 0)");
-            //command.Parameters.AddWithValue("a0",adress0);
-            //command.Parameters.AddWithValue("a1",adress1);
-            //command.Parameters.AddWithValue("hn0",houseNumber);
-            //command.Parameters.AddWithValue("hn1",houseNumber1);
-            //command.Parameters.AddWithValue("c0",city0);
-            //command.Parameters.AddWithValue("c1",city1);
-            //command.Parameters.AddWithValue("zc0",zipcode0);
-            //command.Parameters.AddWithValue("zc1",zipcode1);
-            //command.Parameters.AddWithValue("con",contact);
-            //command.Parameters.AddWithValue("coni",contactInitials);
-            //command.Parameters.AddWithValue("pn0",phoneNumber);
-            //command.Parameters.AddWithValue("pn1",phoneNumber1);
-            //command.Parameters.AddWithValue("f",fax);
-            //command.Parameters.AddWithValue("e",email);
-            //command.Parameters.AddWithValue("cn",companyName);
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_clients (C_Adress0, C_HouseNumber0, C_City0, C_Zipcode0, C_Adress1, C_HouseNumber1, C_City1, C_Zipcode1, C_Contact, C_Contat_Initials, C_Phonenumber0, C_Phonenumber1, C_Fax, C_Email, C_CompanyName, C_CreditWorthy, C_BKRCheck, C_MaintenanceContract, C_BankNumber) VALUES (@a0 , @hn0, @c0 , @zc0 , @a1 , @hn1 , @c1 , @zc1 , @con , @coni , @pn0 , @pn1 , @f , @e , @cn , 0, 0, 0, 0)");
+            command.Parameters.AddWithValue("a0",adress0);
+            command.Parameters.AddWithValue("a1",adress1);
+            command.Parameters.AddWithValue("hn0",houseNumber);
+            command.Parameters.AddWithValue("hn1",houseNumber1);
+            command.Parameters.AddWithValue("c0",city0);
+            command.Parameters.AddWithValue("c1",city1);
+            command.Parameters.AddWithValue("zc0",zipcode0);
+            command.Parameters.AddWithValue("zc1",zipcode1);
+            command.Parameters.AddWithValue("con",contact);
+            command.Parameters.AddWithValue("coni",contactInitials);
+            command.Parameters.AddWithValue("pn0",phoneNumber);
+            command.Parameters.AddWithValue("pn1",phoneNumber1);
+            command.Parameters.AddWithValue("f",fax);
+            command.Parameters.AddWithValue("e",email);
+            command.Parameters.AddWithValue("cn",companyName);
             command.Connection = conn;
-            //string commandText = command.CommandText.ToString();
             conn.Open();
 
             amountOfRows = command.ExecuteNonQuery();
-            if (amountOfRows >= 1)
+            if (amountOfRows == 1)
             {
                 succesfull = true;
             }

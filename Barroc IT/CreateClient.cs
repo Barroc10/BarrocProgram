@@ -59,17 +59,21 @@ namespace Barroc_IT
                 {
                     phoneNumber2 = Convert.ToInt32(tb_PhoneNumber2.Text);
                 }
-                faxNumber = Convert.ToInt32(tb_FaxNumber.Text);
+                if (tb_FaxNumber.Text != "")
+                {
+                    faxNumber = Convert.ToInt32(tb_FaxNumber.Text);
+                }
                 email = tb_Email.Text;
 
                 succesfull = dbh.InsertInto(address1, number1, city1, zipCode1, contactPerson, initials, phoneNumber1, faxNumber, email, company1, address2, number2, city2, zipCode2, phoneNumber2);
                 if (succesfull)
                 {
+                    MessageBox.Show("The data for company " + company1 + " has been saved");
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("The data couldn't be saved, please check your connection to the internet and contact your server admin");
+                    MessageBox.Show("The data couldn't be saved, please check your connection to the internet and contact your server administrator");
                 }
             }
         }
