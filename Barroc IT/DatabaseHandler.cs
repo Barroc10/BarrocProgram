@@ -118,8 +118,28 @@ namespace Barroc_IT
             conn.Dispose();
             return succesfull;
         }
-        
 
+        public bool Delete (string tbl, string columName, string value)
+        {
+            bool succesfull = false;
+            int amountOfRows = 0;
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("DELETE FROM @0 WHERE @1 = @2");
+            command.Parameters.AddWithValue("0", tbl);
+            command.Parameters.AddWithValue("1", columName);
+            command.Parameters.AddWithValue("2", value);
+            command.Connection = conn;
 
+            conn.Open();
+            amountOfRows = command.ExecuteNonQuery();
+            conn.Close();
+            conn.Dispose();
+
+            if (amountOfRows == 0)
+            {
+                succesfull = true;
+            }
+            return succesfull;
+        }
     }
 }

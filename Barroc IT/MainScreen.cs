@@ -27,6 +27,7 @@ namespace Barroc_IT
         ViewInvoices viewInvoice;
         CreateQuotation createQuotation;
         SearchQuotation searchQuotation;
+        DatabaseHandler dbh = new DatabaseHandler();
 
         public MainScreen()
         {
@@ -362,25 +363,41 @@ namespace Barroc_IT
 
         }
 
-        private void btn_PrintClient_Click(object sender, EventArgs e)
-        {
-            pd_PrintDocument.DocumentName = "Client";
-            pd_PrintDialog.Document = pd_PrintDocument;
+        //private void btn_PrintClient_Click(object sender, EventArgs e)
+        //{
+        //    pd_PrintDocument.DocumentName = "Client";
+        //    pd_PrintDialog.Document = pd_PrintDocument;
 
-            if (pd_PrintDialog.ShowDialog() == DialogResult.OK) pd_PrintDocument.Print();
-            else
-            {
-                MessageBox.Show("Something went wrong!");
-                return;
-            }
+        //    if (pd_PrintDialog.ShowDialog() == DialogResult.OK) pd_PrintDocument.Print();
+        //    else
+        //    {
+        //        MessageBox.Show("Something went wrong!");
+        //        return;
+        //    }
             
 
-        }
+        //}
 
         private void pd_PrintDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {            
             PaintEventArgs pe = new PaintEventArgs(e.Graphics, new Rectangle(new Point(0, 0), this.Size));
             this.InvokePaint(dgv_Clients, pe);
+        }
+
+        private void btn_DeleteClient_Click(object sender, EventArgs e)
+        {
+            bool succesfull = false;
+            int ledgerNumber;
+            int.TryParse(dgv_Clients[1, 1].ToString(), out ledgerNumber);
+            succesfull = dbh.Delete("tbl_clients", "C_LedgerNumber", ledgerNumber.ToString());
+            if(succesfull)
+            {
+                MessageBox.Show("The data has been deleted");
+            }
+            else
+            {
+                MessageBox.Show("Unfortunatly something went wrong, please contact your server administrator");
+            }
         }
     }
 }
