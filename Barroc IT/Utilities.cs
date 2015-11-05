@@ -72,7 +72,7 @@ namespace Barroc_IT
 
             PrintDocument pd = new PrintDocument();
 
-            pd.DocumentName();
+            //pd.DocumentName();
         }
     }
 }

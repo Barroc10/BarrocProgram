@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.gb_ViewMeeting = new System.Windows.Forms.GroupBox();
-            this.btn_Done = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_Done = new System.Windows.Forms.Button();
             this.gb_ViewMeeting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +46,16 @@
             this.gb_ViewMeeting.TabStop = false;
             this.gb_ViewMeeting.Text = "View meeting";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 26);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(353, 238);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // btn_Done
             // 
             this.btn_Done.Location = new System.Drawing.Point(284, 288);
@@ -55,15 +65,6 @@
             this.btn_Done.Text = "Done";
             this.btn_Done.UseVisualStyleBackColor = true;
             this.btn_Done.Click += new System.EventHandler(this.btn_Done_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(353, 238);
-            this.dataGridView1.TabIndex = 0;
             // 
             // ViewMeeting
             // 

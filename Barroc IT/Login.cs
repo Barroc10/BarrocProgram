@@ -50,7 +50,7 @@ namespace Barroc_IT
             if (correct == 1)
             {
                 succesful = true;
-                MainFormReference.Main.LoggedIn();
+                MainFormReference.Main.LoggedIn(tb_Username.Text);
                 
             }
             else

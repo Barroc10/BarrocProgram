@@ -12,6 +12,7 @@ namespace Barroc_IT
 {
     public partial class CreateMeeting : Form
     {
+        private DatabaseHandler dbh = new DatabaseHandler();
         public CreateMeeting()
         {
             InitializeComponent();
@@ -58,14 +59,17 @@ namespace Barroc_IT
             }
             else
             {
-                string query = "INSERT INTO tbl_meetings(M_Name, M_StartTime, M_EndTime, M_Date, M_Location, M_Participants. M_Note) VALUES(@name, @startTime, @endTime, @date, @location, @participants, @note)";
-                //iets.Parameters.Add("@name", tb_MeetingName.Text);
-                //iets.Parameters.Add("@startTime", dtp_StartTime.Value);
-                //iets.Parameters.Add("@endTime", dtp_EndTime.Value);
-                //iets.Parameters.Add("@date", dtp_Date.Value);
-                //iets.Parameters.Add("@location", tb_Location.Text);
-                //iets.Parameters.Add("@participants", cb_Client.Value);
-                //iets.Parameters.Add("@Note, rtb_Comment.Text);
+                bool succesfull = false;
+                succesfull = dbh.InsertInto(tb_MeetingName.Text, dtp_StartTime.Value, dtp_EndTime.Value, dtp_Date.Value, tb_Location.Text, cb_Client.Text, rtb_Comment.Text);
+                if (succesfull)
+                {
+                    MessageBox.Show("Meeting aangemaakt");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Failed");
+                }
             }
         }
 

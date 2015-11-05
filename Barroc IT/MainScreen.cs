@@ -343,11 +343,56 @@ namespace Barroc_IT
             }
         }
 
-        public void LoggedIn()
+        public void LoggedIn(string username)
         {
             this.Enabled = true;
             this.ShowInTaskbar = true;
             this.WindowState = FormWindowState.Normal;
+            switch (username)
+            {
+                case "dev":
+                    {
+                        tc_Main.SelectTab(tab_Projects);
+                        btn_CreateClient.Enabled = false;
+                        btn_ModifyClient_C.Enabled = false;
+                        btn_DeleteClient.Enabled = false;
+                        ((Control)tab_Finance).Enabled = false;
+                        ((Control)tab_Quotation).Enabled = false;
+                        lbl_Username_C.Text = "Development";
+                        lbl_Username_F.Text = "Development";
+                        lbl_Username_M.Text = "Development";
+                        lbl_Username_P.Text = "Development";
+                        lbl_Username_Q.Text = "Development";
+                        break;
+                    }
+                case "sales":
+                    {
+                        ((Control)tab_Finance).Enabled = false;
+                        ((Control)tab_Projects).Enabled = false;
+                        lbl_Username_C.Text = "Sales";
+                        lbl_Username_F.Text = "Sales";
+                        lbl_Username_M.Text = "Sales";
+                        lbl_Username_P.Text = "Sales";
+                        lbl_Username_Q.Text = "Sales";
+                        break;
+                    }
+                case "finance":
+                    {
+                        tc_Main.SelectTab(tab_Finance);
+                        ((Control)tab_Projects).Enabled = false;
+                        btn_CreateClient.Enabled = false;
+                        btn_ModifyClient_C.Enabled = false;
+                        btn_DeleteClient.Enabled = false;
+                        lbl_Username_C.Text = "Finance";
+                        lbl_Username_F.Text = "Finance";
+                        lbl_Username_M.Text = "Finance";
+                        lbl_Username_P.Text = "Finance";
+                        lbl_Username_Q.Text = "Finance";
+                        break;
+                    }
+                default:
+                    break;
+            }
             login.Close();
         }
 
@@ -371,7 +416,8 @@ namespace Barroc_IT
             string select = "M_Name";
             string from = "tbl_meetings";
             string where1 = "M_Date";
-            string where2 = calendar1.SelectionEnd.ToString("dd-MM-yyyy");
+            string where2 = calendar1.SelectionEnd.ToString();
+            where2 = where2 + "%";
             bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
             dgv_Meetings.DataSource = bindingSource1;
         }

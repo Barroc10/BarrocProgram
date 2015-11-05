@@ -26,7 +26,7 @@ namespace Barroc_IT
             string select = "*";
             string from = "tbl_meetings";
             string where1 = "M_Date";
-            string where2 = date.ToString("dd-MM-yyyy");
+            string where2 = date.ToString();
             bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
             dataGridView1.DataSource = bindingSource1;
         }
