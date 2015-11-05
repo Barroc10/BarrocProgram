@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -364,15 +365,15 @@ namespace Barroc_IT
 
         private void btn_PrintClient_Click(object sender, EventArgs e)
         {
-            pd_PrintDocument.DocumentName = "Client";
-            pd_PrintDialog.Document = pd_PrintDocument;
+            //pd_PrintDocument.DocumentName = "Client";
+            //pd_PrintDialog.Document = pd_PrintDocument;
 
-            if (pd_PrintDialog.ShowDialog() == DialogResult.OK) pd_PrintDocument.Print();
-            else
-            {
-                MessageBox.Show("Something went wrong!");
-                return;
-            }
+            //if (pd_PrintDialog.ShowDialog() == DialogResult.OK) pd_PrintDocument.Print();
+            //else
+            //{
+            //    MessageBox.Show("Something went wrong!");
+            //    return;
+            //}
             
 
         }
@@ -381,6 +382,40 @@ namespace Barroc_IT
         {            
             PaintEventArgs pe = new PaintEventArgs(e.Graphics, new Rectangle(new Point(0, 0), this.Size));
             this.InvokePaint(dgv_Clients, pe);
+        }
+
+        public void Print(PrintDocument doc)
+        {
+
+
+            PrintDocument pd = doc;
+
+            pd.PrintPage += pd_PrintPage;
+
+            PrintDialog pdg = new PrintDialog();
+
+            pdg.UseEXDialog = true;
+            pdg.Document = pd;
+
+            if (pdg.ShowDialog() == DialogResult.OK)
+            {
+                pd.Print();
+            }
+            else
+            {
+                MessageBox.Show("Could not print document!");
+            }
+        }
+
+        private void pd_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            PaintEventArgs pe = new PaintEventArgs(e.Graphics, new Rectangle(new Point(0, 0), this.Size));
+            this.InvokePaint(dgv_Clients, pe);
+        }
+
+        private void btn_ModifyProject_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

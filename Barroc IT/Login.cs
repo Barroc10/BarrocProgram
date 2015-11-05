@@ -13,11 +13,12 @@ namespace Barroc_IT
     public partial class Login : Form
     {
         private DatabaseHandler dbh = new DatabaseHandler();
-        private bool succesful = false;
+        private bool succesful;
 
         public Login()
         {
             InitializeComponent();
+            succesful = false;
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace Barroc_IT
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-           // if (!succesful) MainFormReference.Main.Close();
+            if (!succesful) MainFormReference.Main.Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)

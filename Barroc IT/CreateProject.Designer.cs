@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_CreateProject = new System.Windows.Forms.GroupBox();
-            this.cb_MaintenanceContract = new System.Windows.Forms.ComboBox();
+            this.lbl_Contract = new System.Windows.Forms.Label();
             this.cb_ClientName = new System.Windows.Forms.ComboBox();
             this.lbl_MaintenanceContract = new System.Windows.Forms.Label();
             this.lbl_ClientName = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             // 
             // gb_CreateProject
             // 
-            this.gb_CreateProject.Controls.Add(this.cb_MaintenanceContract);
+            this.gb_CreateProject.Controls.Add(this.lbl_Contract);
             this.gb_CreateProject.Controls.Add(this.cb_ClientName);
             this.gb_CreateProject.Controls.Add(this.lbl_MaintenanceContract);
             this.gb_CreateProject.Controls.Add(this.lbl_ClientName);
@@ -71,17 +71,14 @@
             this.gb_CreateProject.TabStop = false;
             this.gb_CreateProject.Text = "Create project";
             // 
-            // cb_MaintenanceContract
+            // lbl_Contract
             // 
-            this.cb_MaintenanceContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_MaintenanceContract.FormattingEnabled = true;
-            this.cb_MaintenanceContract.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.cb_MaintenanceContract.Location = new System.Drawing.Point(185, 226);
-            this.cb_MaintenanceContract.Name = "cb_MaintenanceContract";
-            this.cb_MaintenanceContract.Size = new System.Drawing.Size(62, 28);
-            this.cb_MaintenanceContract.TabIndex = 31;
+            this.lbl_Contract.AutoSize = true;
+            this.lbl_Contract.Location = new System.Drawing.Point(181, 227);
+            this.lbl_Contract.Name = "lbl_Contract";
+            this.lbl_Contract.Size = new System.Drawing.Size(20, 22);
+            this.lbl_Contract.TabIndex = 31;
+            this.lbl_Contract.Text = "?";
             // 
             // cb_ClientName
             // 
@@ -91,6 +88,7 @@
             this.cb_ClientName.Name = "cb_ClientName";
             this.cb_ClientName.Size = new System.Drawing.Size(245, 28);
             this.cb_ClientName.TabIndex = 30;
+            this.cb_ClientName.SelectedIndexChanged += new System.EventHandler(this.cb_ClientName_SelectedIndexChanged);
             // 
             // lbl_MaintenanceContract
             // 
@@ -239,8 +237,8 @@
         private System.Windows.Forms.TextBox tb_OS;
         private System.Windows.Forms.TextBox tb_Hardware;
         private System.Windows.Forms.TextBox tb_ProjectName;
-        private System.Windows.Forms.ComboBox cb_MaintenanceContract;
         private System.Windows.Forms.ComboBox cb_ClientName;
         private System.Windows.Forms.Button btn_Create;
+        private System.Windows.Forms.Label lbl_Contract;
     }
 }
