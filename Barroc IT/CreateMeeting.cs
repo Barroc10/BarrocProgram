@@ -60,7 +60,7 @@ namespace Barroc_IT
             else
             {
                 bool succesfull = false;
-                succesfull = dbh.InsertInto(tb_MeetingName.Text, dtp_StartTime.Value, dtp_EndTime.Value, dtp_Date.Value, tb_Location.Text, cb_Client.Text, rtb_Comment.Text);
+                //succesfull = dbh.InsertInto(tb_MeetingName.Text, dtp_StartTime.Value, dtp_EndTime.Value, dtp_Date.Value, tb_Location.Text, cb_Client.Text, rtb_Comment.Text);
                 if (succesfull)
                 {
                     MessageBox.Show("Meeting aangemaakt");
