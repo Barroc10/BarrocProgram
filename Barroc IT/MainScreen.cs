@@ -361,5 +361,19 @@ namespace Barroc_IT
         {
 
         }
+
+        private void calendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            BindingSource bindingSource1 = new BindingSource();
+            DatabaseHandler dbh = new DatabaseHandler();
+
+            MessageBox.Show(calendar1.SelectionEnd.ToString("dd-MM-yyyy"));
+            string select = "M_Name";
+            string from = "tbl_meetings";
+            string where1 = "M_Date";
+            string where2 = calendar1.SelectionEnd.ToString("dd-MM-yyyy");
+            bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
+            dgv_Meetings.DataSource = bindingSource1;
+        }
     }
 }
