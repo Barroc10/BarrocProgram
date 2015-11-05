@@ -361,5 +361,26 @@ namespace Barroc_IT
         {
 
         }
+
+        private void btn_PrintClient_Click(object sender, EventArgs e)
+        {
+            pd_PrintDocument.DocumentName = "Client";
+            pd_PrintDialog.Document = pd_PrintDocument;
+
+            if (pd_PrintDialog.ShowDialog() == DialogResult.OK) pd_PrintDocument.Print();
+            else
+            {
+                MessageBox.Show("Something went wrong!");
+                return;
+            }
+            
+
+        }
+
+        private void pd_PrintDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {            
+            PaintEventArgs pe = new PaintEventArgs(e.Graphics, new Rectangle(new Point(0, 0), this.Size));
+            this.InvokePaint(dgv_Clients, pe);
+        }
     }
 }

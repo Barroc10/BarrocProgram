@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Barroc_IT
 {
@@ -62,6 +64,15 @@ namespace Barroc_IT
         public static string GetDate()
         {
             return DateTime.Now.ToShortDateString();
+        }
+
+        public static void Print()
+        {
+            PrintDialog pdg = new PrintDialog();
+
+            PrintDocument pd = new PrintDocument();
+
+            pd.DocumentName();
         }
     }
 }
