@@ -450,15 +450,6 @@ namespace Barroc_IT
             UpdateDataGridView();
         }
 
-            MessageBox.Show(calendar1.SelectionEnd.ToString());
-            string select = "M_Name";
-            string from = "tbl_meetings";
-            string where1 = "M_Date";
-            string where2 = calendar1.SelectionEnd.ToString();
-            where2 = where2 + "%";
-            bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
-            dgv_Meetings.DataSource = bindingSource1;
-
         public void UpdateDataGridView()
         {
             if (newLedgerID != currentLedgerID)
@@ -469,6 +460,18 @@ namespace Barroc_IT
                 source.DataSource = dbh.SelectQuerryDT("*", "tbl_clients", "C_LedgerNumber", temp);
                 dgv_Clients.DataSource = source;
             }
+        }
+
+        private void calendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            MessageBox.Show(calendar1.SelectionEnd.ToString());
+            string select = "M_Name";
+            string from = "tbl_meetings";
+            string where1 = "M_Date";
+            string where2 = calendar1.SelectionEnd.ToString();
+            where2 = where2 + "%";
+            bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
+            dgv_Meetings.DataSource = bindingSource1;
         }
     }
 }
