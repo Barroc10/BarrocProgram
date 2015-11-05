@@ -27,8 +27,8 @@ namespace Barroc_IT
                         instance = new MainScreen();
                     }
                     return instance;
-                }                
+                }
             }
-        }        
+        }   
     }
 }
