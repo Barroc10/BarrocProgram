@@ -221,6 +221,8 @@ namespace Barroc_IT
             command.Parameters.AddWithValue("@ml", location);
             command.Parameters.AddWithValue("@mp", client);
             command.Parameters.AddWithValue("@mn", note);
+            command.Connection = conn;
+            conn.Open();
 
             amountOfRows = command.ExecuteNonQuery();
             if (amountOfRows == 1)
