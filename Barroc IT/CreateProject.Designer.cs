@@ -44,11 +44,15 @@
             this.lbl_Hardware = new System.Windows.Forms.Label();
             this.lbl_ProjectName = new System.Windows.Forms.Label();
             this.btn_Create = new System.Windows.Forms.Button();
+            this.lbl_Price = new System.Windows.Forms.Label();
+            this.tb_Price = new System.Windows.Forms.TextBox();
             this.gb_CreateProject.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_CreateProject
             // 
+            this.gb_CreateProject.Controls.Add(this.tb_Price);
+            this.gb_CreateProject.Controls.Add(this.lbl_Price);
             this.gb_CreateProject.Controls.Add(this.lbl_Contract);
             this.gb_CreateProject.Controls.Add(this.cb_ClientName);
             this.gb_CreateProject.Controls.Add(this.lbl_MaintenanceContract);
@@ -66,7 +70,7 @@
             this.gb_CreateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_CreateProject.Location = new System.Drawing.Point(12, 12);
             this.gb_CreateProject.Name = "gb_CreateProject";
-            this.gb_CreateProject.Size = new System.Drawing.Size(436, 264);
+            this.gb_CreateProject.Size = new System.Drawing.Size(436, 297);
             this.gb_CreateProject.TabIndex = 0;
             this.gb_CreateProject.TabStop = false;
             this.gb_CreateProject.Text = "Create project";
@@ -74,7 +78,7 @@
             // lbl_Contract
             // 
             this.lbl_Contract.AutoSize = true;
-            this.lbl_Contract.Location = new System.Drawing.Point(181, 227);
+            this.lbl_Contract.Location = new System.Drawing.Point(181, 263);
             this.lbl_Contract.Name = "lbl_Contract";
             this.lbl_Contract.Size = new System.Drawing.Size(20, 22);
             this.lbl_Contract.TabIndex = 31;
@@ -84,7 +88,7 @@
             // 
             this.cb_ClientName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ClientName.FormattingEnabled = true;
-            this.cb_ClientName.Location = new System.Drawing.Point(185, 193);
+            this.cb_ClientName.Location = new System.Drawing.Point(185, 226);
             this.cb_ClientName.Name = "cb_ClientName";
             this.cb_ClientName.Size = new System.Drawing.Size(245, 28);
             this.cb_ClientName.TabIndex = 30;
@@ -94,7 +98,7 @@
             // 
             this.lbl_MaintenanceContract.AutoSize = true;
             this.lbl_MaintenanceContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaintenanceContract.Location = new System.Drawing.Point(6, 229);
+            this.lbl_MaintenanceContract.Location = new System.Drawing.Point(6, 265);
             this.lbl_MaintenanceContract.Name = "lbl_MaintenanceContract";
             this.lbl_MaintenanceContract.Size = new System.Drawing.Size(163, 20);
             this.lbl_MaintenanceContract.TabIndex = 29;
@@ -104,7 +108,7 @@
             // 
             this.lbl_ClientName.AutoSize = true;
             this.lbl_ClientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ClientName.Location = new System.Drawing.Point(6, 196);
+            this.lbl_ClientName.Location = new System.Drawing.Point(6, 229);
             this.lbl_ClientName.Name = "lbl_ClientName";
             this.lbl_ClientName.Size = new System.Drawing.Size(93, 20);
             this.lbl_ClientName.TabIndex = 28;
@@ -197,7 +201,7 @@
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(345, 282);
+            this.btn_Create.Location = new System.Drawing.Point(345, 315);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(103, 32);
             this.btn_Create.TabIndex = 2;
@@ -205,11 +209,28 @@
             this.btn_Create.UseVisualStyleBackColor = true;
             this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
+            // lbl_Price
+            // 
+            this.lbl_Price.AutoSize = true;
+            this.lbl_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Price.Location = new System.Drawing.Point(6, 194);
+            this.lbl_Price.Name = "lbl_Price";
+            this.lbl_Price.Size = new System.Drawing.Size(44, 20);
+            this.lbl_Price.TabIndex = 32;
+            this.lbl_Price.Text = "Price";
+            // 
+            // tb_Price
+            // 
+            this.tb_Price.Location = new System.Drawing.Point(185, 193);
+            this.tb_Price.Name = "tb_Price";
+            this.tb_Price.Size = new System.Drawing.Size(245, 27);
+            this.tb_Price.TabIndex = 33;
+            // 
             // CreateProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 320);
+            this.ClientSize = new System.Drawing.Size(460, 359);
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.gb_CreateProject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -240,5 +261,7 @@
         private System.Windows.Forms.ComboBox cb_ClientName;
         private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.Label lbl_Contract;
+        private System.Windows.Forms.TextBox tb_Price;
+        private System.Windows.Forms.Label lbl_Price;
     }
 }

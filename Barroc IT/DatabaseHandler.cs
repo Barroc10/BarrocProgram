@@ -104,6 +104,28 @@ namespace Barroc_IT
             return result;
         }
 
+        public int[] SelectID(string select, string from, string where1, string where2)
+        {
+            int i = 0;
+            int[] result = new int[100];
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + from + " WHERE " + where1 + " = '" + where2 + "'");
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    result[i] = reader.GetInt32(0);
+                    i++;
+                }
+            }
+            conn.Close();
+            conn.Dispose();
+            return result;
+        }
+
         public bool InsertInto(string adress0, string houseNumber, string city0, string zipcode0, string contact, string contactInitials, int phoneNumber, int fax, string email, string companyName, string adress1, string houseNumber1, string city1, string zipcode1, int phoneNumber1)
         {
             bool succesfull = false;
@@ -138,19 +160,20 @@ namespace Barroc_IT
             return succesfull;
         }
 
-        public bool InsertIntoProjects(string projectName, string projectHardware, string projectOS, string projectComment, string projectInternalContact)
+        public bool InsertIntoProjects(string projectName, string projectHardware, string projectOS, string projectComment, string projectInternalContact, string projectPrice)
         {
             bool succesfull = false;
 
             int amountOfRows = 0;
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("INSERT INTO tbl_projects (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact) VALUES (@pn, @ph, @pos, @pcom, @pic)");
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_projects (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact, P_Price) VALUES (@pn, @ph, @pos, @pcom, @pic, @pp)");
 
             command.Parameters.AddWithValue("pn", projectName);
             command.Parameters.AddWithValue("ph", projectHardware);
             command.Parameters.AddWithValue("pos", projectOS);
             command.Parameters.AddWithValue("pcom", projectComment);
             command.Parameters.AddWithValue("pic", projectInternalContact);
+            command.Parameters.AddWithValue("pp", projectPrice);
 
 
             command.Connection = conn;
@@ -187,7 +210,7 @@ namespace Barroc_IT
             return result;
         }
 
-        public bool InsertIntoRules1 (string ledgerNumber, string projectID)
+        public bool InsertIntoRules1 (int ledgerNumber, int projectID)
         {
             bool succesfull = false;
             int amountOfRows = 0;
