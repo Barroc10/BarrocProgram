@@ -55,9 +55,9 @@
             this.gb_CreateInvoice.Controls.Add(this.lbl_Amount);
             this.gb_CreateInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_CreateInvoice.Location = new System.Drawing.Point(16, 15);
-            this.gb_CreateInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gb_CreateInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.gb_CreateInvoice.Name = "gb_CreateInvoice";
-            this.gb_CreateInvoice.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gb_CreateInvoice.Padding = new System.Windows.Forms.Padding(4);
             this.gb_CreateInvoice.Size = new System.Drawing.Size(389, 217);
             this.gb_CreateInvoice.TabIndex = 0;
             this.gb_CreateInvoice.TabStop = false;
@@ -67,7 +67,7 @@
             // 
             this.dtp_Date.CustomFormat = "dd-MM-yyyy";
             this.dtp_Date.Location = new System.Drawing.Point(168, 79);
-            this.dtp_Date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_Date.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(207, 32);
             this.dtp_Date.TabIndex = 39;
@@ -108,7 +108,7 @@
             // tb_Reason
             // 
             this.tb_Reason.Location = new System.Drawing.Point(168, 161);
-            this.tb_Reason.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_Reason.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Reason.Name = "tb_Reason";
             this.tb_Reason.Size = new System.Drawing.Size(207, 32);
             this.tb_Reason.TabIndex = 35;
@@ -117,7 +117,7 @@
             // 
             this.cb_Project.FormattingEnabled = true;
             this.cb_Project.Location = new System.Drawing.Point(168, 119);
-            this.cb_Project.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Project.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Project.Name = "cb_Project";
             this.cb_Project.Size = new System.Drawing.Size(207, 34);
             this.cb_Project.TabIndex = 34;
@@ -126,7 +126,7 @@
             // 
             this.num_Amount.DecimalPlaces = 2;
             this.num_Amount.Location = new System.Drawing.Point(168, 38);
-            this.num_Amount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.num_Amount.Margin = new System.Windows.Forms.Padding(4);
             this.num_Amount.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -160,7 +160,7 @@
             // btn_Cancel
             // 
             this.btn_Cancel.Location = new System.Drawing.Point(16, 239);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(137, 39);
             this.btn_Cancel.TabIndex = 5;
@@ -171,7 +171,7 @@
             // btn_Create
             // 
             this.btn_Create.Location = new System.Drawing.Point(268, 239);
-            this.btn_Create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Create.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(137, 39);
             this.btn_Create.TabIndex = 6;
@@ -188,7 +188,7 @@
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.gb_CreateInvoice);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "CreateInvoice";
             this.Text = "CreateInvoice";

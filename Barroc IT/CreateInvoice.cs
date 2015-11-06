@@ -29,10 +29,21 @@ namespace Barroc_IT
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
+            bool succesfull = false;
             checkInformation();
-            if(!error)
+            if (!error)
             {
-                dbh.in
+                succesfull = dbh.InsertIntoInvoice((int)num_Amount.Value, tb_Reason.Text.ToString(), dtp_Date.Value);
+            }
+
+            if (succesfull)
+            {
+                MessageBox.Show("The new Invoice has been made");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("The data couldn't be added so please contact your system administrator");
             }
         }
 

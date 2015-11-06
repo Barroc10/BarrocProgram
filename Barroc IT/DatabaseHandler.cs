@@ -232,8 +232,31 @@ namespace Barroc_IT
             conn.Close();
             conn.Dispose();
             return succesfull;
-        
         }
+
+
+        public bool InsertIntoInvoice(int amount, string reason, DateTime sentDate)
+        {
+            bool succesfull = false;
+            int amountOfRows = 0;
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_invoices (I_Amount, I_SentDate, I_Reason, I_Status, I_IsSent) VALUES (@0, @1, @2, 0, 0)");
+            command.Parameters.AddWithValue("0", amount);
+            command.Parameters.AddWithValue("1", sentDate);
+            command.Parameters.AddWithValue("2", reason);
+            command.Connection = conn;
+
+            conn.Open();
+            amountOfRows = command.ExecuteNonQuery();
+            if (amountOfRows == 1)
+            {
+                succesfull = true;
+            }
+            conn.Close();
+            conn.Dispose();
+            return succesfull;
+        }
+
         public bool Delete(string tbl, string columName, string value)
         {
             bool succesfull = false;
