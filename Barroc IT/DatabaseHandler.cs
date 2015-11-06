@@ -208,6 +208,8 @@ namespace Barroc_IT
             return succesfull;
         }
 
+
+
         public bool Delete(string tbl, string columName, string value)
         {
             bool succesfull = false;
