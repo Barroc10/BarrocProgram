@@ -30,5 +30,10 @@ namespace Barroc_IT
             dgv_Projects.DataSource = bs_BindingSource;
             dgv_Projects.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
+
+        private void btn_Select_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

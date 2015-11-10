@@ -144,14 +144,13 @@ namespace Barroc_IT
 
             int amountOfRows = 0;
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("INSERT INTO tbl_projects (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact) VALUES (@pn, @ph, @pos, @pcom, @pic)");
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_projects (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact, P_Price) VALUES (@pn, @ph, @pos, @pcom, @pic, 0)");
 
             command.Parameters.AddWithValue("pn", projectName);
             command.Parameters.AddWithValue("ph", projectHardware);
             command.Parameters.AddWithValue("pos", projectOS);
             command.Parameters.AddWithValue("pcom", projectComment);
             command.Parameters.AddWithValue("pic", projectInternalContact);
-
 
             command.Connection = conn;
             conn.Open();
@@ -180,14 +179,13 @@ namespace Barroc_IT
                 {
                     result = reader.GetBoolean(0);
                 }
-                
             }
             conn.Close();
             conn.Dispose();
             return result;
         }
 
-        public bool InsertIntoRules1 (string ledgerNumber, string projectID)
+        public bool InsertIntoRules1(string ledgerNumber, string projectID)
         {
             bool succesfull = false;
             int amountOfRows = 0;
@@ -276,6 +274,23 @@ namespace Barroc_IT
                 succesfull = true;
             }
             return succesfull;
+        }
+
+        public DataTable SelectDTStar (string select, string table)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + table);
+            command.Connection = conn;
+
+            conn.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable tableStar = new DataTable();
+            da.Fill(tableStar);
+            conn.Close();
+            conn.Dispose();
+
+            return tableStar;
         }
     }
 }
