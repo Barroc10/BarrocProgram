@@ -32,6 +32,8 @@ namespace Barroc_IT
             
         public int newLedgerID;
         private int currentLedgerID;
+        public int newprojectID;
+        private int currentProjectId;
 
         public MainScreen()
         {
@@ -459,6 +461,10 @@ namespace Barroc_IT
                 
                 source.DataSource = dbh.SelectQuerryDT("*", "tbl_clients", "C_LedgerNumber", temp);
                 dgv_Clients.DataSource = source;
+            }
+            else if (newprojectID != currentProjectId)
+            {
+
             }
         }
 

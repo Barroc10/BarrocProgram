@@ -236,7 +236,6 @@ namespace Barroc_IT
                 {
                     result = reader.GetBoolean(0);
                 }
-                
             }
             conn.Close();
             conn.Dispose();
@@ -332,6 +331,23 @@ namespace Barroc_IT
                 succesfull = true;
             }
             return succesfull;
+        }
+
+        public DataTable SelectDTStar (string select, string table)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + table);
+            command.Connection = conn;
+
+            conn.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable tableStar = new DataTable();
+            da.Fill(tableStar);
+            conn.Close();
+            conn.Dispose();
+
+            return tableStar;
         }
     }
 }
