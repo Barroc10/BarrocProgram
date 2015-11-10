@@ -47,12 +47,12 @@
             this.tb_PhoneNumber = new System.Windows.Forms.TextBox();
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_ContactPerson = new System.Windows.Forms.TextBox();
-            this.tb_TimeSpan = new System.Windows.Forms.TextBox();
             this.num_Price = new System.Windows.Forms.NumericUpDown();
             this.tb_Name = new System.Windows.Forms.TextBox();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
+            this.dtp_TimeSpan = new System.Windows.Forms.DateTimePicker();
             this.gb_CreateQuotation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_Number)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Price)).BeginInit();
@@ -60,6 +60,7 @@
             // 
             // gb_CreateQuotation
             // 
+            this.gb_CreateQuotation.Controls.Add(this.dtp_TimeSpan);
             this.gb_CreateQuotation.Controls.Add(this.dtp_Date);
             this.gb_CreateQuotation.Controls.Add(this.lbl_Zipcode);
             this.gb_CreateQuotation.Controls.Add(this.lbl_City);
@@ -78,7 +79,6 @@
             this.gb_CreateQuotation.Controls.Add(this.tb_PhoneNumber);
             this.gb_CreateQuotation.Controls.Add(this.tb_Email);
             this.gb_CreateQuotation.Controls.Add(this.tb_ContactPerson);
-            this.gb_CreateQuotation.Controls.Add(this.tb_TimeSpan);
             this.gb_CreateQuotation.Controls.Add(this.num_Price);
             this.gb_CreateQuotation.Controls.Add(this.tb_Name);
             this.gb_CreateQuotation.Controls.Add(this.lbl_Name);
@@ -246,13 +246,6 @@
             this.tb_ContactPerson.Size = new System.Drawing.Size(225, 27);
             this.tb_ContactPerson.TabIndex = 24;
             // 
-            // tb_TimeSpan
-            // 
-            this.tb_TimeSpan.Location = new System.Drawing.Point(129, 128);
-            this.tb_TimeSpan.Name = "tb_TimeSpan";
-            this.tb_TimeSpan.Size = new System.Drawing.Size(225, 27);
-            this.tb_TimeSpan.TabIndex = 23;
-            // 
             // num_Price
             // 
             this.num_Price.Location = new System.Drawing.Point(129, 95);
@@ -294,6 +287,14 @@
             this.btn_Create.TabIndex = 5;
             this.btn_Create.Text = "Create";
             this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
+            // 
+            // dtp_TimeSpan
+            // 
+            this.dtp_TimeSpan.Location = new System.Drawing.Point(129, 128);
+            this.dtp_TimeSpan.Name = "dtp_TimeSpan";
+            this.dtp_TimeSpan.Size = new System.Drawing.Size(225, 27);
+            this.dtp_TimeSpan.TabIndex = 42;
             // 
             // CreateQuotation
             // 
@@ -337,10 +338,10 @@
         private System.Windows.Forms.TextBox tb_PhoneNumber;
         private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.TextBox tb_ContactPerson;
-        private System.Windows.Forms.TextBox tb_TimeSpan;
         private System.Windows.Forms.NumericUpDown num_Price;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.DateTimePicker dtp_Date;
+        private System.Windows.Forms.DateTimePicker dtp_TimeSpan;
     }
 }

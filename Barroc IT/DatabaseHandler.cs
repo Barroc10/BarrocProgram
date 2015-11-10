@@ -14,7 +14,6 @@ namespace Barroc_IT
         private string connectionString;
         public DatabaseHandler()
         {
-            //connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Joris\Documents\School\Periode 5\Project\Barroc IT\Barroc IT\Barroc IT.mdf";
             connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=" + AppDomain.CurrentDomain.BaseDirectory + "Barroc IT.mdf";
         }
 
@@ -167,6 +166,35 @@ namespace Barroc_IT
             int amountOfRows = 0;
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("INSERT INTO tbl_projects (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact, P_Price) VALUES (@pn, @ph, @pos, @pcom, @pic, @pp)");
+
+            command.Parameters.AddWithValue("pn", projectName);
+            command.Parameters.AddWithValue("ph", projectHardware);
+            command.Parameters.AddWithValue("pos", projectOS);
+            command.Parameters.AddWithValue("pcom", projectComment);
+            command.Parameters.AddWithValue("pic", projectInternalContact);
+            command.Parameters.AddWithValue("pp", projectPrice);
+
+
+            command.Connection = conn;
+            conn.Open();
+
+            amountOfRows = command.ExecuteNonQuery();
+            if (amountOfRows == 1)
+            {
+                succesfull = true;
+            }
+            conn.Close();
+            conn.Dispose();
+            return succesfull;
+        }
+
+        public bool InsertIntoQuotations(string qName, DateTime qDAte, int qPrice, DateTime qTimeSpan, string qContactPerson, string qEmail, string qAddress, int qHouseNumber, string qCity, string qZipCode)
+        {
+            bool succesfull = false;
+
+            int amountOfRows = 0;
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_quotations (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact, P_Price) VALUES (@pn, @ph, @pos, @pcom, @pic, @pp)");
 
             command.Parameters.AddWithValue("pn", projectName);
             command.Parameters.AddWithValue("ph", projectHardware);
