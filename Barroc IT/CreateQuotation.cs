@@ -48,7 +48,7 @@ namespace Barroc_IT
             city = tb_City.Text;
             zipcode = tb_Zipcode.Text;
 
-            //succesfull = dbh.InsertIntoQuotations();
+            succesfull = dbh.InsertIntoQuotations(name, date, price, timeSpan, contactPerson, address, houseNumber, email, phoneNumber, city, zipcode);
 
         }
     }

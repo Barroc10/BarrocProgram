@@ -12,7 +12,8 @@ namespace Barroc_IT
 {
     public partial class SearchProject : Form
     {
-        DatabaseHandler dbh = new DatabaseHandler();
+        private BindingSource bindingSource = new BindingSource();
+        private DatabaseHandler dbh = new DatabaseHandler();
 
         public SearchProject()
         {
@@ -26,8 +27,8 @@ namespace Barroc_IT
             string where1 = "P_Name";
             string where2 = tb_Property.Text;
             where2 = "%" + where2 + "%";
-            bs_BindingSource.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
-            dgv_Projects.DataSource = bs_BindingSource;
+            bindingSource.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
+            dgv_Projects.DataSource = bindingSource;
             dgv_Projects.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
     }

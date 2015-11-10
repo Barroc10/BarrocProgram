@@ -60,7 +60,7 @@ namespace Barroc_IT
 
                     int ledgerNumber = dbh.SelectID("C_LedgerNumber", "tbl_clients", "C_CompanyName", companyName)[0]; // string number = SELECT C_LedgerNumber FROM tbl_clients WHERE C_CompanyName = 'companyName'
 
-                    succesfull = dbh.InsertIntoRules1(ledgerNumber, projectID);
+                    succesfull = dbh.InsertIntoRules(ledgerNumber, projectID);
 
                     if (succesfull)
                     {

@@ -188,21 +188,26 @@ namespace Barroc_IT
             return succesfull;
         }
 
-        public bool InsertIntoQuotations(string qName, DateTime qDAte, int qPrice, DateTime qTimeSpan, string qContactPerson, string qEmail, string qAddress, int qHouseNumber, string qCity, string qZipCode)
+        public bool InsertIntoQuotations(string qName, DateTime qDAte, int qPrice, DateTime qTimeSpan, string qContactPerson, string qAddress, int qHouseNumber, string qEmail, string qPhoneNumber, string qCity, string qZipCode)
         {
             bool succesfull = false;
 
             int amountOfRows = 0;
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("INSERT INTO tbl_quotations (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact, P_Price) VALUES (@pn, @ph, @pos, @pcom, @pic, @pp)");
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_quotations (Q_Name, Q_Date, Q_Price, Q_Timespan, Q_ClientContactPerson, Q_ClientAdress, Q_ClientHouseNumber, Q_ClientEmail, Q_ClientPhoneNumber, Q_ClientCity, Q_ClientZipcode, Q_Status) VALUES (@qn, @qd, @qp, @qts, @qcp, @qa, @qhn, @qe, @qpn, @qc, @qzc, @qs)");
 
-            command.Parameters.AddWithValue("pn", projectName);
-            command.Parameters.AddWithValue("ph", projectHardware);
-            command.Parameters.AddWithValue("pos", projectOS);
-            command.Parameters.AddWithValue("pcom", projectComment);
-            command.Parameters.AddWithValue("pic", projectInternalContact);
-            command.Parameters.AddWithValue("pp", projectPrice);
-
+            command.Parameters.AddWithValue("qn", qName);
+            command.Parameters.AddWithValue("qd", qDAte);
+            command.Parameters.AddWithValue("qp", qPrice);
+            command.Parameters.AddWithValue("qts", qTimeSpan);
+            command.Parameters.AddWithValue("qcp", qContactPerson);
+            command.Parameters.AddWithValue("qa", qAddress);
+            command.Parameters.AddWithValue("qhn", qHouseNumber);
+            command.Parameters.AddWithValue("qe", qEmail);
+            command.Parameters.AddWithValue("qpn", qPhoneNumber);
+            command.Parameters.AddWithValue("qc", qCity);
+            command.Parameters.AddWithValue("qzc", qZipCode);
+            command.Parameters.AddWithValue("qs", 1);
 
             command.Connection = conn;
             conn.Open();
@@ -238,7 +243,7 @@ namespace Barroc_IT
             return result;
         }
 
-        public bool InsertIntoRules1 (int ledgerNumber, int projectID)
+        public bool InsertIntoRules(int ledgerNumber, int projectID)
         {
             bool succesfull = false;
             int amountOfRows = 0;

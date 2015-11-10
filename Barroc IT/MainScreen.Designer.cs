@@ -634,6 +634,7 @@
             this.btn_ModifyQuotation.TabIndex = 12;
             this.btn_ModifyQuotation.Text = "Modify quotation";
             this.btn_ModifyQuotation.UseVisualStyleBackColor = true;
+            this.btn_ModifyQuotation.Click += new System.EventHandler(this.btn_ModifyQuotation_Click);
             // 
             // btn_SearchQuotation
             // 

@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gb_SearchProject = new System.Windows.Forms.GroupBox();
             this.dgv_Projects = new System.Windows.Forms.DataGridView();
             this.tb_Property = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.btn_Select = new System.Windows.Forms.Button();
-            this.bs_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gb_SearchProject.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Projects)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs_BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_SearchProject
@@ -111,7 +108,6 @@
             this.gb_SearchProject.ResumeLayout(false);
             this.gb_SearchProject.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Projects)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs_BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,6 +119,5 @@
         private System.Windows.Forms.TextBox tb_Property;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_Select;
-        private System.Windows.Forms.BindingSource bs_BindingSource;
     }
 }

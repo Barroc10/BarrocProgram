@@ -473,5 +473,10 @@ namespace Barroc_IT
             bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
             dgv_Meetings.DataSource = bindingSource1;
         }
+
+        private void btn_ModifyQuotation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
