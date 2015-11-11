@@ -33,8 +33,8 @@ namespace Barroc_IT
 
         private void btn_Select_Click(object sender, EventArgs e)
         {
-            string temp;
-            temp = dgv_Clients["C_LedgerNumber", 0].Value.ToString();
+            int index = dgv_Clients.CurrentRow.Index;
+            string temp = dgv_Clients["C_LedgerNumber", index].Value.ToString();
             int temp1;
             int.TryParse(temp, out temp1);
             MainFormReference.Main.newLedgerID = temp1;

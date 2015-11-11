@@ -33,7 +33,8 @@ namespace Barroc_IT
 
         private void btn_Select_Click(object sender, EventArgs e)
         {
-            string temp = dgv_Quotations["Q_QuotationID", 0].Value.ToString();
+            int index = dgv_Quotations.CurrentRow.Index;
+            string temp = dgv_Quotations["Q_QuotationID", index].Value.ToString();
             int temp1;
             int.TryParse(temp, out temp1);
             MainFormReference.Main.newQuotationID = temp1;

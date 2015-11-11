@@ -32,7 +32,7 @@ namespace Barroc_IT
             
         public int newLedgerID;
         private int currentLedgerID;
-        public int newprojectID;
+        public int newProjectID;
         private int currentProjectID;
         public int newQuotationID;
         private int currentQuotationID;
@@ -464,7 +464,7 @@ namespace Barroc_IT
                 source.DataSource = dbh.SelectQuerryDT("*", "tbl_clients", "C_LedgerNumber", temp);
                 dgv_Clients.DataSource = source;
             }
-            else if (newprojectID != currentProjectID)
+            else if (newProjectID != currentProjectID)
             {
 
             }
@@ -486,6 +486,22 @@ namespace Barroc_IT
             }
         }
 
+        public void UpdateDataGridViewProjects()
+        {
+            if (newProjectID != currentProjectID)
+            {
+                string temp = newProjectID.ToString();
+                BindingSource source = new BindingSource();
+                source.DataSource = dbh.SelectQuerryDT("*", "tbl_projects", "P_ProjectID", temp);
+                dgv_Projects.DataSource = source;
+            }
+
+            else if (newProjectID != currentProjectID)
+            {
+
+            }
+        }
+
         private void calendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
             MessageBox.Show(calendar1.SelectionEnd.ToString());
@@ -500,12 +516,17 @@ namespace Barroc_IT
 
         private void btn_ModifyQuotation_Click(object sender, EventArgs e)
         {
-
+            dgv_Quotations.Update();
         }
 
         private void btn_ModifyClient_C_Click(object sender, EventArgs e)
         {
             dgv_Clients.Update();
+        }
+
+        private void btn_ModifyProject_Click(object sender, EventArgs e)
+        {
+            dgv_Projects.Update();
         }
     }
 }

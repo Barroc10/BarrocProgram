@@ -315,6 +315,7 @@
             this.btn_ModifyProject.TabIndex = 11;
             this.btn_ModifyProject.Text = "Modify project";
             this.btn_ModifyProject.UseVisualStyleBackColor = true;
+            this.btn_ModifyProject.Click += new System.EventHandler(this.btn_ModifyProject_Click);
             // 
             // btn_CreateProject
             // 

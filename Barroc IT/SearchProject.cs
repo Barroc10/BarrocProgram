@@ -34,7 +34,13 @@ namespace Barroc_IT
 
         private void btn_Select_Click(object sender, EventArgs e)
         {
-
+            int index = dgv_Projects.CurrentRow.Index;
+            string temp = dgv_Projects["P_ProjectID", index].Value.ToString();
+            int temp1;
+            int.TryParse(temp, out temp1);
+            MainFormReference.Main.newProjectID = temp1;
+            MainFormReference.Main.UpdateDataGridViewProjects();
+            this.Close();
         }
     }
 }
