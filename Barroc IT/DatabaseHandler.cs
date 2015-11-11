@@ -263,19 +263,19 @@ namespace Barroc_IT
             return succesfull;
         }
 
-        public bool InsertIntoMeeting(string meetingName, DateTime startTime, DateTime endTime, DateTime date, string location, string client, string note)
+        public bool InsertIntoMeeting(string meetingName, DateTime startTime, DateTime endTime, string date, string location, string client, string note)
         {
             bool succesfull = false;
             int amountOfRows = 0;
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("INSERT INTO tbl_meetings (M_Name, M_StartTime, M_EndTime, M_Date, M_Location, M_Participants, M_Note) VALUES (@mn, @st, @et, @md, @ml, @mp, @mn");
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_meetings (M_Name, M_StartTime, M_EndTime, M_Date, M_Location, M_Participants, M_Note) VALUES (@mn, @st, @et, @md, @ml, @mp, @mnote)");
             command.Parameters.AddWithValue("@mn", meetingName);
             command.Parameters.AddWithValue("@st", startTime);
             command.Parameters.AddWithValue("@et", endTime);
             command.Parameters.AddWithValue("@md", date);
             command.Parameters.AddWithValue("@ml", location);
             command.Parameters.AddWithValue("@mp", client);
-            command.Parameters.AddWithValue("@mn", note);
+            command.Parameters.AddWithValue("@mnote", note);
             command.Connection = conn;
             conn.Open();
 

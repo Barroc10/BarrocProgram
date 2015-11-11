@@ -174,22 +174,29 @@ namespace Barroc_IT
 
         private void btn_ViewMeeting_Click(object sender, EventArgs e)
         {
-            if (viewMeeting == null)
+            if (dgv_Meetings.SelectedCells.Count == 0)
             {
-                viewMeeting = new ViewMeeting(calendar1.SelectionEnd);
-                viewMeeting.Show();
-                return;
+                MessageBox.Show("You haven't selected a date!");
             }
-
-            if (!viewMeeting.Visible)
-            {
-                viewMeeting = new ViewMeeting(calendar1.SelectionEnd);
-                viewMeeting.Show();
-            }
-
             else
             {
-                viewMeeting.Focus();
+                if (viewMeeting == null)
+                {
+                    viewMeeting = new ViewMeeting(dgv_Meetings.SelectedCells[0].Value.ToString());
+                    viewMeeting.Show();
+                    return;
+                }
+
+                if (!viewMeeting.Visible)
+                {
+                    viewMeeting = new ViewMeeting(dgv_Meetings.SelectedRows.ToString());
+                    viewMeeting.Show();
+                }
+
+                else
+                {
+                    viewMeeting.Focus();
+                }
             }
         }
 
@@ -218,7 +225,7 @@ namespace Barroc_IT
         {
             if (modifyMeeting == null)
             {
-                modifyMeeting = new ModifyMeeting(dgv_Meetings.SelectedRows);
+                modifyMeeting = new ModifyMeeting(dgv_Meetings.SelectedCells[0].Value.ToString());
                 modifyMeeting.Show();
                 return;
             }
@@ -470,12 +477,10 @@ namespace Barroc_IT
 
         private void calendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            MessageBox.Show(calendar1.SelectionEnd.ToString());
             string select = "M_Name";
             string from = "tbl_meetings";
             string where1 = "M_Date";
-            string where2 = calendar1.SelectionEnd.ToString();
-            where2 = where2 + "%";
+            string where2 = calendar1.SelectionEnd.ToString("dd-MM-yyyy"); ;
             bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
             dgv_Meetings.DataSource = bindingSource1;
         }
