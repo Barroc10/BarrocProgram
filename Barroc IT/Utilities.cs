@@ -65,5 +65,19 @@ namespace Barroc_IT
         {
             return DateTime.Now.ToShortDateString();
         }
+
+        public static bool comparer(DateTime old, DateTime newdateTme)
+        {
+            int i = 0;
+            bool isNewer = false;
+            string oldd = old.ToString();
+            string newd = newdateTme.ToString();
+            while (oldd[i] < newd[i])
+            {
+                i++;
+                isNewer = true;
+            }
+            return isNewer;
+        }
     }
 }

@@ -468,7 +468,7 @@ namespace Barroc_IT
             string select = "M_Name";
             string from = "tbl_meetings";
             string where1 = "M_Date";
-            string where2 = calendar1.SelectionEnd.ToString();
+            string where2 = calendar1.SelectionEnd.ToString("dd-MM-yyyy");
             where2 = where2 + "%";
             bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
             dgv_Meetings.DataSource = bindingSource1;
