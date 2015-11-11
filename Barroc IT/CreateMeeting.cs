@@ -24,6 +24,12 @@ namespace Barroc_IT
             dtp_EndTime.Format = DateTimePickerFormat.Custom;
             dtp_EndTime.CustomFormat = "hh:mm tt";
             dtp_EndTime.ShowUpDown = true;
+            string[] companys = dbh.SelectQuerryAR("P_Name", "tbl_projects");
+            foreach (string item in companys)
+            {
+                if (item == null) break;
+                cb_Client.Items.Add(item);
+            }
         }
 
         private void btn_Create_Click(object sender, EventArgs e)
