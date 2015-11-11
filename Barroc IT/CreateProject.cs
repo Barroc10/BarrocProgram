@@ -19,6 +19,7 @@ namespace Barroc_IT
         private string projectOS;
         private string projectComment;
         private string internalContactPerson;
+        private string projectPrice;
         private string companyName;
         private string maintenanceContract;
         private bool succesfull;
@@ -43,6 +44,7 @@ namespace Barroc_IT
             projectOS = tb_OS.Text;
             projectComment = tb_Appointments.Text;
             internalContactPerson = tb_InternalContactPerson.Text;
+            projectPrice = tb_Price.Text;
             companyName = cb_ClientName.SelectedItem.ToString();
 
 
@@ -50,15 +52,15 @@ namespace Barroc_IT
 
             if (projectCount == 0)
             {
-                succesfull = dbh.InsertIntoProjects(projectName, projectHardware, projectOS, projectComment, internalContactPerson);
+                succesfull = dbh.InsertIntoProjects(projectName, projectHardware, projectOS, projectComment, internalContactPerson, projectPrice);
 
                 if (succesfull)
                 {
-                    string projectID = dbh.SelectQuerryAR("P_ProjectID", "tbl_projects", "P_Name", projectName)[0]; // string id = SELECT P_ProjectID FROM tbl_projects WHERE P_Name = 'projectName'
+                    int projectID = dbh.SelectID("P_ProjectID", "tbl_projects", "P_Name", projectName)[0]; // string id = SELECT P_ProjectID FROM tbl_projects WHERE P_Name = 'projectName'
 
-                    string ledgerNumber = dbh.SelectQuerryAR("C_LedgerNumber", "tbl_clients", "C_CompanyName", companyName)[0]; // string number = SELECT C_LedgerNumber FROM tbl_clients WHERE C_CompanyName = 'companyName'
+                    int ledgerNumber = dbh.SelectID("C_LedgerNumber", "tbl_clients", "C_CompanyName", companyName)[0]; // string number = SELECT C_LedgerNumber FROM tbl_clients WHERE C_CompanyName = 'companyName'
 
-                    succesfull = dbh.InsertIntoRules1(ledgerNumber, projectID);
+                    succesfull = dbh.InsertIntoRules(ledgerNumber, projectID);
 
                     if (succesfull)
                     {

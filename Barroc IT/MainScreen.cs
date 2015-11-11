@@ -32,6 +32,10 @@ namespace Barroc_IT
             
         public int newLedgerID;
         private int currentLedgerID;
+        public int newProjectID;
+        private int currentProjectID;
+        public int newQuotationID;
+        private int currentQuotationID;
 
         public MainScreen()
         {
@@ -447,10 +451,10 @@ namespace Barroc_IT
             {
                 MessageBox.Show("Unfortunatly something went wrong, please contact your server administrator");
             }
-            UpdateDataGridView();
+            UpdateDataGridViewClients();
         }
 
-        public void UpdateDataGridView()
+        public void UpdateDataGridViewClients()
         {
             if (newLedgerID != currentLedgerID)
             {
@@ -459,6 +463,42 @@ namespace Barroc_IT
                 
                 source.DataSource = dbh.SelectQuerryDT("*", "tbl_clients", "C_LedgerNumber", temp);
                 dgv_Clients.DataSource = source;
+            }
+            else if (newProjectID != currentProjectID)
+            {
+
+            }
+        }
+
+        public void UpdateDataGridViewQuotations()
+        {
+            if (newQuotationID != currentQuotationID)
+            {
+                string temp = newQuotationID.ToString();
+                BindingSource source = new BindingSource();
+                source.DataSource = dbh.SelectQuerryDT("*", "tbl_quotations", "Q_QuotationID", temp);
+                dgv_Quotations.DataSource = source;
+            }
+
+            else if (newQuotationID != currentQuotationID)
+            {
+
+            }
+        }
+
+        public void UpdateDataGridViewProjects()
+        {
+            if (newProjectID != currentProjectID)
+            {
+                string temp = newProjectID.ToString();
+                BindingSource source = new BindingSource();
+                source.DataSource = dbh.SelectQuerryDT("*", "tbl_projects", "P_ProjectID", temp);
+                dgv_Projects.DataSource = source;
+            }
+
+            else if (newProjectID != currentProjectID)
+            {
+
             }
         }
 
@@ -472,6 +512,21 @@ namespace Barroc_IT
             where2 = where2 + "%";
             bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
             dgv_Meetings.DataSource = bindingSource1;
+        }
+
+        private void btn_ModifyQuotation_Click(object sender, EventArgs e)
+        {
+            dgv_Quotations.Update();
+        }
+
+        private void btn_ModifyClient_C_Click(object sender, EventArgs e)
+        {
+            dgv_Clients.Update();
+        }
+
+        private void btn_ModifyProject_Click(object sender, EventArgs e)
+        {
+            dgv_Projects.Update();
         }
     }
 }

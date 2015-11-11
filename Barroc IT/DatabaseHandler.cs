@@ -14,7 +14,6 @@ namespace Barroc_IT
         private string connectionString;
         public DatabaseHandler()
         {
-            //connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Joris\Documents\School\Periode 5\Project\Barroc IT\Barroc IT\Barroc IT.mdf";
             connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=" + AppDomain.CurrentDomain.BaseDirectory + "Barroc IT.mdf";
         }
 
@@ -46,7 +45,6 @@ namespace Barroc_IT
         {
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + from + " WHERE " + where1 + " LIKE '" + where2 + "'");
-            command.Parameters.AddWithValue("0", where2);
             command.Connection = conn;
 
             conn.Open();
@@ -104,6 +102,28 @@ namespace Barroc_IT
             return result;
         }
 
+        public int[] SelectID(string select, string from, string where1, string where2)
+        {
+            int i = 0;
+            int[] result = new int[100];
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + from + " WHERE " + where1 + " = '" + where2 + "'");
+            command.Connection = conn;
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    result[i] = reader.GetInt32(0);
+                    i++;
+                }
+            }
+            conn.Close();
+            conn.Dispose();
+            return result;
+        }
+
         public bool InsertInto(string adress0, string houseNumber, string city0, string zipcode0, string contact, string contactInitials, int phoneNumber, int fax, string email, string companyName, string adress1, string houseNumber1, string city1, string zipcode1, int phoneNumber1)
         {
             bool succesfull = false;
@@ -138,20 +158,55 @@ namespace Barroc_IT
             return succesfull;
         }
 
-        public bool InsertIntoProjects(string projectName, string projectHardware, string projectOS, string projectComment, string projectInternalContact)
+        public bool InsertIntoProjects(string projectName, string projectHardware, string projectOS, string projectComment, string projectInternalContact, string projectPrice)
         {
             bool succesfull = false;
 
             int amountOfRows = 0;
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("INSERT INTO tbl_projects (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact) VALUES (@pn, @ph, @pos, @pcom, @pic)");
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_projects (P_Name, P_Hardware, P_OS, P_Comment, P_InternalContact, P_Price) VALUES (@pn, @ph, @pos, @pcom, @pic, @pp)");
 
             command.Parameters.AddWithValue("pn", projectName);
             command.Parameters.AddWithValue("ph", projectHardware);
             command.Parameters.AddWithValue("pos", projectOS);
             command.Parameters.AddWithValue("pcom", projectComment);
             command.Parameters.AddWithValue("pic", projectInternalContact);
+            command.Parameters.AddWithValue("pp", projectPrice);
 
+
+            command.Connection = conn;
+            conn.Open();
+
+            amountOfRows = command.ExecuteNonQuery();
+            if (amountOfRows == 1)
+            {
+                succesfull = true;
+            }
+            conn.Close();
+            conn.Dispose();
+            return succesfull;
+        }
+
+        public bool InsertIntoQuotations(string qName, DateTime qDAte, int qPrice, DateTime qTimeSpan, string qContactPerson, string qAddress, int qHouseNumber, string qEmail, string qPhoneNumber, string qCity, string qZipCode)
+        {
+            bool succesfull = false;
+
+            int amountOfRows = 0;
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_quotations (Q_Name, Q_Date, Q_Price, Q_Timespan, Q_ClientContactPerson, Q_ClientAdress, Q_ClientHouseNumber, Q_ClientEmail, Q_ClientPhoneNumber, Q_ClientCity, Q_ClientZipcode, Q_Status) VALUES (@qn, @qd, @qp, @qts, @qcp, @qa, @qhn, @qe, @qpn, @qc, @qzc, @qs)");
+
+            command.Parameters.AddWithValue("qn", qName);
+            command.Parameters.AddWithValue("qd", qDAte);
+            command.Parameters.AddWithValue("qp", qPrice);
+            command.Parameters.AddWithValue("qts", qTimeSpan);
+            command.Parameters.AddWithValue("qcp", qContactPerson);
+            command.Parameters.AddWithValue("qa", qAddress);
+            command.Parameters.AddWithValue("qhn", qHouseNumber);
+            command.Parameters.AddWithValue("qe", qEmail);
+            command.Parameters.AddWithValue("qpn", qPhoneNumber);
+            command.Parameters.AddWithValue("qc", qCity);
+            command.Parameters.AddWithValue("qzc", qZipCode);
+            command.Parameters.AddWithValue("qs", 1);
 
             command.Connection = conn;
             conn.Open();
@@ -180,14 +235,13 @@ namespace Barroc_IT
                 {
                     result = reader.GetBoolean(0);
                 }
-                
             }
             conn.Close();
             conn.Dispose();
             return result;
         }
 
-        public bool InsertIntoRules1 (string ledgerNumber, string projectID)
+        public bool InsertIntoRules(int ledgerNumber, int projectID)
         {
             bool succesfull = false;
             int amountOfRows = 0;
@@ -213,14 +267,14 @@ namespace Barroc_IT
             bool succesfull = false;
             int amountOfRows = 0;
             SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("INSERT INTO tbl_meetings (M_Name, M_StartTime, M_EndTime, M_Date, M_Location, M_Participants, M_Note) VALUES (@mn, @st, @et, @md, @ml, @mp, @mnote)");
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_meetings (M_Name, M_StartTime, M_EndTime, M_Date, M_Location, M_Participants, M_Note) VALUES (@mn, @st, @et, @md, @ml, @mp, @mn");
             command.Parameters.AddWithValue("@mn", meetingName);
             command.Parameters.AddWithValue("@st", startTime);
             command.Parameters.AddWithValue("@et", endTime);
             command.Parameters.AddWithValue("@md", date);
             command.Parameters.AddWithValue("@ml", location);
             command.Parameters.AddWithValue("@mp", client);
-            command.Parameters.AddWithValue("@mnote", note);
+            command.Parameters.AddWithValue("@mn", note);
             command.Connection = conn;
             conn.Open();
 
@@ -231,8 +285,32 @@ namespace Barroc_IT
             }
             conn.Close();
             conn.Dispose();
-            return succesfull; ;
+            return succesfull;
         }
+
+
+        public bool InsertIntoInvoice(int amount, string reason, DateTime sentDate)
+        {
+            bool succesfull = false;
+            int amountOfRows = 0;
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("INSERT INTO tbl_invoices (I_Amount, I_SentDate, I_Reason, I_Status, I_IsSent) VALUES (@0, @1, @2, 0, 0)");
+            command.Parameters.AddWithValue("0", amount);
+            command.Parameters.AddWithValue("1", sentDate);
+            command.Parameters.AddWithValue("2", reason);
+            command.Connection = conn;
+
+            conn.Open();
+            amountOfRows = command.ExecuteNonQuery();
+            if (amountOfRows == 1)
+            {
+                succesfull = true;
+            }
+            conn.Close();
+            conn.Dispose();
+            return succesfull;
+        }
+
         public bool Delete(string tbl, string columName, string value)
         {
             bool succesfull = false;
@@ -252,6 +330,23 @@ namespace Barroc_IT
                 succesfull = true;
             }
             return succesfull;
+        }
+
+        public DataTable SelectDTStar (string select, string table)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + table);
+            command.Connection = conn;
+
+            conn.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable tableStar = new DataTable();
+            da.Fill(tableStar);
+            conn.Close();
+            conn.Dispose();
+
+            return tableStar;
         }
     }
 }

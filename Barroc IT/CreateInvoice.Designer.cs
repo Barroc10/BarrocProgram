@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_CreateInvoice = new System.Windows.Forms.GroupBox();
+            this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_Reason = new System.Windows.Forms.Label();
             this.lbl_ProjectName = new System.Windows.Forms.Label();
             this.lbl_DueDate = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.lbl_Amount = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
-            this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.gb_CreateInvoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_Amount)).BeginInit();
             this.SuspendLayout();
@@ -54,20 +54,32 @@
             this.gb_CreateInvoice.Controls.Add(this.num_Amount);
             this.gb_CreateInvoice.Controls.Add(this.lbl_Amount);
             this.gb_CreateInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_CreateInvoice.Location = new System.Drawing.Point(12, 12);
+            this.gb_CreateInvoice.Location = new System.Drawing.Point(16, 15);
+            this.gb_CreateInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.gb_CreateInvoice.Name = "gb_CreateInvoice";
-            this.gb_CreateInvoice.Size = new System.Drawing.Size(292, 176);
+            this.gb_CreateInvoice.Padding = new System.Windows.Forms.Padding(4);
+            this.gb_CreateInvoice.Size = new System.Drawing.Size(389, 217);
             this.gb_CreateInvoice.TabIndex = 0;
             this.gb_CreateInvoice.TabStop = false;
             this.gb_CreateInvoice.Text = "Create invoice";
+            // 
+            // dtp_Date
+            // 
+            this.dtp_Date.CustomFormat = "dd-MM-yyyy";
+            this.dtp_Date.Location = new System.Drawing.Point(168, 79);
+            this.dtp_Date.Margin = new System.Windows.Forms.Padding(4);
+            this.dtp_Date.Name = "dtp_Date";
+            this.dtp_Date.Size = new System.Drawing.Size(207, 32);
+            this.dtp_Date.TabIndex = 39;
             // 
             // lbl_Reason
             // 
             this.lbl_Reason.AutoSize = true;
             this.lbl_Reason.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Reason.Location = new System.Drawing.Point(6, 134);
+            this.lbl_Reason.Location = new System.Drawing.Point(8, 165);
+            this.lbl_Reason.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Reason.Name = "lbl_Reason";
-            this.lbl_Reason.Size = new System.Drawing.Size(69, 20);
+            this.lbl_Reason.Size = new System.Drawing.Size(85, 25);
             this.lbl_Reason.TabIndex = 38;
             this.lbl_Reason.Text = "Reason:";
             // 
@@ -75,9 +87,10 @@
             // 
             this.lbl_ProjectName.AutoSize = true;
             this.lbl_ProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ProjectName.Location = new System.Drawing.Point(6, 100);
+            this.lbl_ProjectName.Location = new System.Drawing.Point(8, 123);
+            this.lbl_ProjectName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ProjectName.Name = "lbl_ProjectName";
-            this.lbl_ProjectName.Size = new System.Drawing.Size(106, 20);
+            this.lbl_ProjectName.Size = new System.Drawing.Size(132, 25);
             this.lbl_ProjectName.TabIndex = 37;
             this.lbl_ProjectName.Text = "Project name:";
             // 
@@ -85,31 +98,35 @@
             // 
             this.lbl_DueDate.AutoSize = true;
             this.lbl_DueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DueDate.Location = new System.Drawing.Point(6, 67);
+            this.lbl_DueDate.Location = new System.Drawing.Point(8, 82);
+            this.lbl_DueDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DueDate.Name = "lbl_DueDate";
-            this.lbl_DueDate.Size = new System.Drawing.Size(79, 20);
+            this.lbl_DueDate.Size = new System.Drawing.Size(97, 25);
             this.lbl_DueDate.TabIndex = 36;
             this.lbl_DueDate.Text = "Due date:";
             // 
             // tb_Reason
             // 
-            this.tb_Reason.Location = new System.Drawing.Point(126, 131);
+            this.tb_Reason.Location = new System.Drawing.Point(168, 161);
+            this.tb_Reason.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Reason.Name = "tb_Reason";
-            this.tb_Reason.Size = new System.Drawing.Size(156, 27);
+            this.tb_Reason.Size = new System.Drawing.Size(207, 32);
             this.tb_Reason.TabIndex = 35;
             // 
             // cb_Project
             // 
             this.cb_Project.FormattingEnabled = true;
-            this.cb_Project.Location = new System.Drawing.Point(126, 97);
+            this.cb_Project.Location = new System.Drawing.Point(168, 119);
+            this.cb_Project.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Project.Name = "cb_Project";
-            this.cb_Project.Size = new System.Drawing.Size(156, 28);
+            this.cb_Project.Size = new System.Drawing.Size(207, 34);
             this.cb_Project.TabIndex = 34;
             // 
             // num_Amount
             // 
             this.num_Amount.DecimalPlaces = 2;
-            this.num_Amount.Location = new System.Drawing.Point(126, 31);
+            this.num_Amount.Location = new System.Drawing.Point(168, 38);
+            this.num_Amount.Margin = new System.Windows.Forms.Padding(4);
             this.num_Amount.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -121,7 +138,7 @@
             0,
             0});
             this.num_Amount.Name = "num_Amount";
-            this.num_Amount.Size = new System.Drawing.Size(156, 27);
+            this.num_Amount.Size = new System.Drawing.Size(208, 32);
             this.num_Amount.TabIndex = 4;
             this.num_Amount.Value = new decimal(new int[] {
             1,
@@ -133,48 +150,45 @@
             // 
             this.lbl_Amount.AutoSize = true;
             this.lbl_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Amount.Location = new System.Drawing.Point(6, 33);
+            this.lbl_Amount.Location = new System.Drawing.Point(8, 41);
+            this.lbl_Amount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Amount.Name = "lbl_Amount";
-            this.lbl_Amount.Size = new System.Drawing.Size(69, 20);
+            this.lbl_Amount.Size = new System.Drawing.Size(86, 25);
             this.lbl_Amount.TabIndex = 3;
             this.lbl_Amount.Text = "Amount:";
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(12, 194);
+            this.btn_Cancel.Location = new System.Drawing.Point(16, 239);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(103, 32);
+            this.btn_Cancel.Size = new System.Drawing.Size(137, 39);
             this.btn_Cancel.TabIndex = 5;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(201, 194);
+            this.btn_Create.Location = new System.Drawing.Point(268, 239);
+            this.btn_Create.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(103, 32);
+            this.btn_Create.Size = new System.Drawing.Size(137, 39);
             this.btn_Create.TabIndex = 6;
             this.btn_Create.Text = "Create";
             this.btn_Create.UseVisualStyleBackColor = true;
             this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
-            // dtp_Date
-            // 
-            this.dtp_Date.CustomFormat = "dd-MM-yyyy";
-            this.dtp_Date.Location = new System.Drawing.Point(126, 64);
-            this.dtp_Date.Name = "dtp_Date";
-            this.dtp_Date.Size = new System.Drawing.Size(156, 27);
-            this.dtp_Date.TabIndex = 39;
-            // 
             // CreateInvoice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 237);
+            this.ClientSize = new System.Drawing.Size(420, 292);
             this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.gb_CreateInvoice);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "CreateInvoice";
             this.Text = "CreateInvoice";

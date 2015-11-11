@@ -77,7 +77,7 @@
             this.btn_ModifyQuotation = new System.Windows.Forms.Button();
             this.btn_SearchQuotation = new System.Windows.Forms.Button();
             this.btn_CreateQuotation = new System.Windows.Forms.Button();
-            this.dgv_Quatations = new System.Windows.Forms.DataGridView();
+            this.dgv_Quotations = new System.Windows.Forms.DataGridView();
             this.lbl_Time = new System.Windows.Forms.Label();
             this.lbl_Date = new System.Windows.Forms.Label();
             this.tc_Main.SuspendLayout();
@@ -90,7 +90,7 @@
             this.tab_Finance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Finance)).BeginInit();
             this.tab_Quotation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Quatations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Quotations)).BeginInit();
             this.SuspendLayout();
             // 
             // tc_Main
@@ -315,6 +315,7 @@
             this.btn_ModifyProject.TabIndex = 11;
             this.btn_ModifyProject.Text = "Modify project";
             this.btn_ModifyProject.UseVisualStyleBackColor = true;
+            this.btn_ModifyProject.Click += new System.EventHandler(this.btn_ModifyProject_Click);
             // 
             // btn_CreateProject
             // 
@@ -565,7 +566,7 @@
             this.tab_Quotation.Controls.Add(this.btn_ModifyQuotation);
             this.tab_Quotation.Controls.Add(this.btn_SearchQuotation);
             this.tab_Quotation.Controls.Add(this.btn_CreateQuotation);
-            this.tab_Quotation.Controls.Add(this.dgv_Quatations);
+            this.tab_Quotation.Controls.Add(this.dgv_Quotations);
             this.tab_Quotation.Location = new System.Drawing.Point(4, 54);
             this.tab_Quotation.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Quotation.Name = "tab_Quotation";
@@ -634,6 +635,7 @@
             this.btn_ModifyQuotation.TabIndex = 12;
             this.btn_ModifyQuotation.Text = "Modify quotation";
             this.btn_ModifyQuotation.UseVisualStyleBackColor = true;
+            this.btn_ModifyQuotation.Click += new System.EventHandler(this.btn_ModifyQuotation_Click);
             // 
             // btn_SearchQuotation
             // 
@@ -657,16 +659,16 @@
             this.btn_CreateQuotation.UseVisualStyleBackColor = true;
             this.btn_CreateQuotation.Click += new System.EventHandler(this.btn_CreateQuotation_Click);
             // 
-            // dgv_Quatations
+            // dgv_Quotations
             // 
-            this.dgv_Quatations.AllowUserToOrderColumns = true;
-            this.dgv_Quatations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Quatations.Location = new System.Drawing.Point(10, 20);
-            this.dgv_Quatations.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_Quatations.Name = "dgv_Quatations";
-            this.dgv_Quatations.RowTemplate.Height = 24;
-            this.dgv_Quatations.Size = new System.Drawing.Size(440, 336);
-            this.dgv_Quatations.TabIndex = 9;
+            this.dgv_Quotations.AllowUserToOrderColumns = true;
+            this.dgv_Quotations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Quotations.Location = new System.Drawing.Point(10, 20);
+            this.dgv_Quotations.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Quotations.Name = "dgv_Quotations";
+            this.dgv_Quotations.RowTemplate.Height = 24;
+            this.dgv_Quotations.Size = new System.Drawing.Size(440, 336);
+            this.dgv_Quotations.TabIndex = 9;
             // 
             // lbl_Time
             // 
@@ -714,7 +716,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Finance)).EndInit();
             this.tab_Quotation.ResumeLayout(false);
             this.tab_Quotation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Quatations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Quotations)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -770,7 +772,7 @@
         private System.Windows.Forms.Button btn_ModifyQuotation;
         private System.Windows.Forms.Button btn_SearchQuotation;
         private System.Windows.Forms.Button btn_CreateQuotation;
-        private System.Windows.Forms.DataGridView dgv_Quatations;
+        private System.Windows.Forms.DataGridView dgv_Quotations;
         private System.Windows.Forms.Label lbl_Username_F;
         private System.Windows.Forms.Label lbl_Time;
         public System.Windows.Forms.Label lbl_Date;

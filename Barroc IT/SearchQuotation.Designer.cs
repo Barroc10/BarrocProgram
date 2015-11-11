@@ -74,6 +74,7 @@
             this.btn_Search.TabIndex = 0;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Select
             // 
@@ -83,6 +84,7 @@
             this.btn_Select.TabIndex = 2;
             this.btn_Select.Text = "Select";
             this.btn_Select.UseVisualStyleBackColor = true;
+            this.btn_Select.Click += new System.EventHandler(this.btn_Select_Click);
             // 
             // SearchQuotation
             // 
