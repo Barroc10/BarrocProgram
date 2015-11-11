@@ -178,14 +178,14 @@ namespace Barroc_IT
         {
             if (viewMeeting == null)
             {
-                viewMeeting = new ViewMeeting(calendar1.SelectionEnd);
+                viewMeeting = new ViewMeeting(dgv_Meetings.SelectedCells[0].Value.ToString());
                 viewMeeting.Show();
                 return;
             }
 
             if (!viewMeeting.Visible)
             {
-                viewMeeting = new ViewMeeting(calendar1.SelectionEnd);
+                viewMeeting = new ViewMeeting(dgv_Meetings.SelectedCells[0].Value.ToString());
                 viewMeeting.Show();
             }
 
@@ -220,7 +220,7 @@ namespace Barroc_IT
         {
             if (modifyMeeting == null)
             {
-                modifyMeeting = new ModifyMeeting(dgv_Meetings.SelectedRows);
+                modifyMeeting = new ModifyMeeting(dgv_Meetings.SelectedCells[0].Value.ToString());
                 modifyMeeting.Show();
                 return;
             }
@@ -504,7 +504,6 @@ namespace Barroc_IT
 
         private void calendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            MessageBox.Show(calendar1.SelectionEnd.ToString());
             string select = "M_Name";
             string from = "tbl_meetings";
             string where1 = "M_Date";

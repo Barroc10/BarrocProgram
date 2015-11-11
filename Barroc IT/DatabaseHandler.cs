@@ -262,7 +262,7 @@ namespace Barroc_IT
             return succesfull;
         }
 
-        public bool InsertIntoMeeting(string meetingName, DateTime startTime, DateTime endTime, DateTime date, string location, string client, string note)
+        public bool InsertIntoMeeting(string meetingName, DateTime startTime, DateTime endTime, string date, string location, string client, string note)
         {
             bool succesfull = false;
             int amountOfRows = 0;
