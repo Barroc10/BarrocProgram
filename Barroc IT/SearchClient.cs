@@ -38,7 +38,7 @@ namespace Barroc_IT
             int temp1;
             int.TryParse(temp, out temp1);
             MainFormReference.Main.newLedgerID = temp1;
-            MainFormReference.Main.UpdateDataGridView();
+            MainFormReference.Main.UpdateDataGridViewClients();
             this.Close();
         }
     }

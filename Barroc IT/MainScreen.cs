@@ -33,7 +33,9 @@ namespace Barroc_IT
         public int newLedgerID;
         private int currentLedgerID;
         public int newprojectID;
-        private int currentProjectId;
+        private int currentProjectID;
+        public int newQuotationID;
+        private int currentQuotationID;
 
         public MainScreen()
         {
@@ -449,10 +451,10 @@ namespace Barroc_IT
             {
                 MessageBox.Show("Unfortunatly something went wrong, please contact your server administrator");
             }
-            UpdateDataGridView();
+            UpdateDataGridViewClients();
         }
 
-        public void UpdateDataGridView()
+        public void UpdateDataGridViewClients()
         {
             if (newLedgerID != currentLedgerID)
             {
@@ -462,7 +464,23 @@ namespace Barroc_IT
                 source.DataSource = dbh.SelectQuerryDT("*", "tbl_clients", "C_LedgerNumber", temp);
                 dgv_Clients.DataSource = source;
             }
-            else if (newprojectID != currentProjectId)
+            else if (newprojectID != currentProjectID)
+            {
+
+            }
+        }
+
+        public void UpdateDataGridViewQuotations()
+        {
+            if (newQuotationID != currentQuotationID)
+            {
+                string temp = newQuotationID.ToString();
+                BindingSource source = new BindingSource();
+                source.DataSource = dbh.SelectQuerryDT("*", "tbl_quotations", "Q_QuotationID", temp);
+                dgv_Quotations.DataSource = source;
+            }
+
+            else if (newQuotationID != currentQuotationID)
             {
 
             }
