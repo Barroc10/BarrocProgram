@@ -32,10 +32,8 @@ namespace Barroc_IT
             
         public int newLedgerID;
         private int currentLedgerID;
-        public int newProjectID;
-        private int currentProjectID;
-        public int newQuotationID;
-        private int currentQuotationID;
+        public int newprojectID;
+        private int currentProjectId;
 
         public MainScreen()
         {
@@ -176,22 +174,29 @@ namespace Barroc_IT
 
         private void btn_ViewMeeting_Click(object sender, EventArgs e)
         {
-            if (viewMeeting == null)
+            if (dgv_Meetings.SelectedCells.Count == 0)
             {
-                viewMeeting = new ViewMeeting(calendar1.SelectionEnd);
-                viewMeeting.Show();
-                return;
+                MessageBox.Show("You haven't selected a date!");
             }
-
-            if (!viewMeeting.Visible)
-            {
-                viewMeeting = new ViewMeeting(calendar1.SelectionEnd);
-                viewMeeting.Show();
-            }
-
             else
             {
-                viewMeeting.Focus();
+                if (viewMeeting == null)
+                {
+                    viewMeeting = new ViewMeeting(dgv_Meetings.SelectedCells[0].Value.ToString());
+                    viewMeeting.Show();
+                    return;
+                }
+
+                if (!viewMeeting.Visible)
+                {
+                    viewMeeting = new ViewMeeting(dgv_Meetings.SelectedRows.ToString());
+                    viewMeeting.Show();
+                }
+
+                else
+                {
+                    viewMeeting.Focus();
+                }
             }
         }
 
@@ -220,7 +225,7 @@ namespace Barroc_IT
         {
             if (modifyMeeting == null)
             {
-                modifyMeeting = new ModifyMeeting(dgv_Meetings.SelectedRows);
+                modifyMeeting = new ModifyMeeting(dgv_Meetings.SelectedCells[0].Value.ToString());
                 modifyMeeting.Show();
                 return;
             }
@@ -451,10 +456,10 @@ namespace Barroc_IT
             {
                 MessageBox.Show("Unfortunatly something went wrong, please contact your server administrator");
             }
-            UpdateDataGridViewClients();
+            UpdateDataGridView();
         }
 
-        public void UpdateDataGridViewClients()
+        public void UpdateDataGridView()
         {
             if (newLedgerID != currentLedgerID)
             {
@@ -464,39 +469,7 @@ namespace Barroc_IT
                 source.DataSource = dbh.SelectQuerryDT("*", "tbl_clients", "C_LedgerNumber", temp);
                 dgv_Clients.DataSource = source;
             }
-            else if (newProjectID != currentProjectID)
-            {
-
-            }
-        }
-
-        public void UpdateDataGridViewQuotations()
-        {
-            if (newQuotationID != currentQuotationID)
-            {
-                string temp = newQuotationID.ToString();
-                BindingSource source = new BindingSource();
-                source.DataSource = dbh.SelectQuerryDT("*", "tbl_quotations", "Q_QuotationID", temp);
-                dgv_Quotations.DataSource = source;
-            }
-
-            else if (newQuotationID != currentQuotationID)
-            {
-
-            }
-        }
-
-        public void UpdateDataGridViewProjects()
-        {
-            if (newProjectID != currentProjectID)
-            {
-                string temp = newProjectID.ToString();
-                BindingSource source = new BindingSource();
-                source.DataSource = dbh.SelectQuerryDT("*", "tbl_projects", "P_ProjectID", temp);
-                dgv_Projects.DataSource = source;
-            }
-
-            else if (newProjectID != currentProjectID)
+            else if (newprojectID != currentProjectId)
             {
 
             }
@@ -504,29 +477,17 @@ namespace Barroc_IT
 
         private void calendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            MessageBox.Show(calendar1.SelectionEnd.ToString());
             string select = "M_Name";
             string from = "tbl_meetings";
             string where1 = "M_Date";
-            string where2 = calendar1.SelectionEnd.ToString("dd-MM-yyyy");
-            where2 = where2 + "%";
+            string where2 = calendar1.SelectionEnd.ToString("dd-MM-yyyy"); ;
             bindingSource1.DataSource = dbh.SelectQuerryDT(select, from, where1, where2);
             dgv_Meetings.DataSource = bindingSource1;
         }
 
         private void btn_ModifyQuotation_Click(object sender, EventArgs e)
         {
-            dgv_Quotations.Update();
-        }
 
-        private void btn_ModifyClient_C_Click(object sender, EventArgs e)
-        {
-            dgv_Clients.Update();
-        }
-
-        private void btn_ModifyProject_Click(object sender, EventArgs e)
-        {
-            dgv_Projects.Update();
         }
     }
 }
