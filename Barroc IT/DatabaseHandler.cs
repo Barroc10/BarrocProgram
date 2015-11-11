@@ -87,7 +87,7 @@ namespace Barroc_IT
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + from + " WHERE " + where1 + " = '" + where2 + "'");
             command.Connection = conn;
-            conn.Open();
+            conn.Open(); // SELECT CREDIT CLIENTS COMPANYNAME = THIS NAME
             SqlDataReader reader = command.ExecuteReader();
             if (reader.HasRows)
             {

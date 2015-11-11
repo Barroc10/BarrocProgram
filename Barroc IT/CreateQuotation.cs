@@ -34,6 +34,8 @@ namespace Barroc_IT
             InitializeComponent();
             dtp_Date.Format = DateTimePickerFormat.Custom;
             dtp_Date.CustomFormat = "dd-MM-yyyy";
+            dtp_TimeSpan.Format = DateTimePickerFormat.Custom;
+            dtp_TimeSpan.CustomFormat = "dd-MM-yyyy";
         }
 
         private void btn_Create_Click(object sender, EventArgs e)
