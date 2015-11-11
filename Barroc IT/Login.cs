@@ -45,18 +45,23 @@ namespace Barroc_IT
                 MessageBox.Show("Please enter a password");
                 return;
             }
-
-            int correct = 0;
-            correct = dbh.CountQuerry("*", "tbl_rights", "R_DepartmentPassword", password);
-            if (correct == 1)
+            if (username == "sales" || username == "dev" || username == "finance")
             {
-                succesful = true;
-                MainFormReference.Main.LoggedIn(tb_Username.Text);
-                
+                int correct = 0;
+                correct = dbh.CountQuerry("*", "tbl_rights", "R_DepartmentPassword", password);
+                if (correct == 1)
+                {
+                    succesful = true;
+                    MainFormReference.Main.LoggedIn(tb_Username.Text);
+                }
+                else
+                {
+                    MessageBox.Show("The password is incorrect");
+                }
             }
             else
             {
-                MessageBox.Show("The username or password is incorrect");
+                MessageBox.Show("The username is incorrect");
             }
         }
 
