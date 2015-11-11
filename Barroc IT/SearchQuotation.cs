@@ -30,5 +30,15 @@ namespace Barroc_IT
             dgv_Quotations.DataSource = bindingSource;
             dgv_Quotations.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
+
+        private void btn_Select_Click(object sender, EventArgs e)
+        {
+            string temp = dgv_Quotations["Q_QuotationID", 0].Value.ToString();
+            int temp1;
+            int.TryParse(temp, out temp1);
+            MainFormReference.Main.newQuotationID = temp1;
+            MainFormReference.Main.UpdateDataGridViewQuotations();
+            this.Close();
+        }
     }
 }

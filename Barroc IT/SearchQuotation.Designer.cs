@@ -84,6 +84,7 @@
             this.btn_Select.TabIndex = 2;
             this.btn_Select.Text = "Select";
             this.btn_Select.UseVisualStyleBackColor = true;
+            this.btn_Select.Click += new System.EventHandler(this.btn_Select_Click);
             // 
             // SearchQuotation
             // 

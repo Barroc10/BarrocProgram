@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_CreateQuotation = new System.Windows.Forms.GroupBox();
+            this.dtp_TimeSpan = new System.Windows.Forms.DateTimePicker();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.lbl_Zipcode = new System.Windows.Forms.Label();
             this.lbl_City = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.lbl_Name = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Create = new System.Windows.Forms.Button();
-            this.dtp_TimeSpan = new System.Windows.Forms.DateTimePicker();
             this.gb_CreateQuotation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_Number)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_Price)).BeginInit();
@@ -89,6 +89,13 @@
             this.gb_CreateQuotation.TabIndex = 0;
             this.gb_CreateQuotation.TabStop = false;
             this.gb_CreateQuotation.Text = "Create Quotation";
+            // 
+            // dtp_TimeSpan
+            // 
+            this.dtp_TimeSpan.Location = new System.Drawing.Point(129, 128);
+            this.dtp_TimeSpan.Name = "dtp_TimeSpan";
+            this.dtp_TimeSpan.Size = new System.Drawing.Size(225, 27);
+            this.dtp_TimeSpan.TabIndex = 42;
             // 
             // dtp_Date
             // 
@@ -200,16 +207,20 @@
             // tb_Zipcode
             // 
             this.tb_Zipcode.Location = new System.Drawing.Point(129, 359);
+            this.tb_Zipcode.MaxLength = 6;
             this.tb_Zipcode.Name = "tb_Zipcode";
             this.tb_Zipcode.Size = new System.Drawing.Size(225, 27);
             this.tb_Zipcode.TabIndex = 30;
+            this.tb_Zipcode.TextChanged += new System.EventHandler(this.tb_Zipcode_TextChanged);
             // 
             // tb_City
             // 
             this.tb_City.Location = new System.Drawing.Point(129, 326);
+            this.tb_City.MaxLength = 25;
             this.tb_City.Name = "tb_City";
             this.tb_City.Size = new System.Drawing.Size(225, 27);
             this.tb_City.TabIndex = 29;
+            this.tb_City.TextChanged += new System.EventHandler(this.tb_City_TextChanged);
             // 
             // num_Number
             // 
@@ -221,30 +232,38 @@
             // tb_Address
             // 
             this.tb_Address.Location = new System.Drawing.Point(129, 260);
+            this.tb_Address.MaxLength = 50;
             this.tb_Address.Name = "tb_Address";
             this.tb_Address.Size = new System.Drawing.Size(225, 27);
             this.tb_Address.TabIndex = 27;
+            this.tb_Address.TextChanged += new System.EventHandler(this.tb_Address_TextChanged);
             // 
             // tb_PhoneNumber
             // 
             this.tb_PhoneNumber.Location = new System.Drawing.Point(129, 227);
+            this.tb_PhoneNumber.MaxLength = 10;
             this.tb_PhoneNumber.Name = "tb_PhoneNumber";
             this.tb_PhoneNumber.Size = new System.Drawing.Size(225, 27);
             this.tb_PhoneNumber.TabIndex = 26;
+            this.tb_PhoneNumber.TextChanged += new System.EventHandler(this.tb_PhoneNumber_TextChanged);
             // 
             // tb_Email
             // 
             this.tb_Email.Location = new System.Drawing.Point(129, 194);
+            this.tb_Email.MaxLength = 25;
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(225, 27);
             this.tb_Email.TabIndex = 25;
+            this.tb_Email.TextChanged += new System.EventHandler(this.tb_Email_TextChanged);
             // 
             // tb_ContactPerson
             // 
             this.tb_ContactPerson.Location = new System.Drawing.Point(129, 161);
+            this.tb_ContactPerson.MaxLength = 25;
             this.tb_ContactPerson.Name = "tb_ContactPerson";
             this.tb_ContactPerson.Size = new System.Drawing.Size(225, 27);
             this.tb_ContactPerson.TabIndex = 24;
+            this.tb_ContactPerson.TextChanged += new System.EventHandler(this.tb_ContactPerson_TextChanged);
             // 
             // num_Price
             // 
@@ -256,9 +275,11 @@
             // tb_Name
             // 
             this.tb_Name.Location = new System.Drawing.Point(129, 29);
+            this.tb_Name.MaxLength = 25;
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(225, 27);
             this.tb_Name.TabIndex = 20;
+            this.tb_Name.TextChanged += new System.EventHandler(this.tb_Name_TextChanged);
             // 
             // lbl_Name
             // 
@@ -288,13 +309,6 @@
             this.btn_Create.Text = "Create";
             this.btn_Create.UseVisualStyleBackColor = true;
             this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
-            // 
-            // dtp_TimeSpan
-            // 
-            this.dtp_TimeSpan.Location = new System.Drawing.Point(129, 128);
-            this.dtp_TimeSpan.Name = "dtp_TimeSpan";
-            this.dtp_TimeSpan.Size = new System.Drawing.Size(225, 27);
-            this.dtp_TimeSpan.TabIndex = 42;
             // 
             // CreateQuotation
             // 
