@@ -14,6 +14,8 @@ namespace Barroc_IT
     public partial class CreateProject : Form
     {
         DatabaseHandler dbh = new DatabaseHandler();
+        private List<string> errorMessage = new List<string>();
+        private bool error;
         private string projectName;
         private string projectHardware;
         private string projectOS;
@@ -39,6 +41,10 @@ namespace Barroc_IT
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
+            error = false;
+            CheckInformation();
+            if (error) return;
+
             projectName = tb_ProjectName.Text;
             projectHardware = tb_Hardware.Text;
             projectOS = tb_OS.Text;
@@ -47,7 +53,13 @@ namespace Barroc_IT
             projectPrice = tb_Price.Text;
             companyName = cb_ClientName.SelectedItem.ToString();
 
+            int result = dbh.SelectID("C_CreditWorthy", "tbl_clients", "C_CompanyName", companyName)[0];
 
+            if (result == 0) 
+            {
+                MessageBox.Show("Client not credit worthy!");
+                return;
+            }
             int projectCount = dbh.CountQuerry("*", "tbl_projects", "P_Name", projectName);
 
             if (projectCount == 0)
@@ -71,6 +83,69 @@ namespace Barroc_IT
                 }
 
                 MessageBox.Show("The data couldn't be saved, please check your connection to the internet and contact your server administrator");
+            }
+        }
+
+        private void CheckInformation()
+        {
+            if (tb_ProjectName.Text == "")
+            {
+                errorMessage.Add("Project name");
+                error = true;
+                tb_ProjectName.BackColor = Color.Red;
+            }
+
+            if (tb_Hardware.Text == "")
+            {
+                errorMessage.Add("Hardware");
+                error = true;
+                tb_Hardware.BackColor = Color.Red;
+            }
+
+            if (tb_OS.Text == "")
+            {
+                errorMessage.Add("OS");
+                error = true;
+                tb_OS.BackColor = Color.Red;
+            }
+
+            if (tb_Appointments.Text == "")
+            {
+                errorMessage.Add("Comment");
+                error = true;
+                tb_Appointments.BackColor = Color.Red;
+            }
+
+            if (tb_InternalContactPerson.Text == "")
+            {
+                errorMessage.Add("Contact person");
+                error = true;
+                tb_InternalContactPerson.BackColor = Color.Red;
+            }
+
+            if (tb_Price.Text == "")
+            {
+                errorMessage.Add("Price");
+                error = true;
+                tb_Price.BackColor = Color.Red;
+            }
+
+            if (cb_ClientName.SelectedItem.ToString() == "")
+            {
+                errorMessage.Add("Company name");
+                error = true;
+                cb_ClientName.BackColor = Color.Red;
+            }
+
+            if (error)
+            {
+                string message = "De volgende velden zijn fout:";
+                for (int i = 0; i < errorMessage.Count; i++)
+                {
+                    message += "\n" + errorMessage[i];
+                }
+                MessageBox.Show(message);
+                errorMessage.Clear();
             }
         }
 
