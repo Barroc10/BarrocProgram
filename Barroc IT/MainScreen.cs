@@ -484,5 +484,10 @@ namespace Barroc_IT
         {
 
         }
+
+        private void btn_ModifyClient_C_Click(object sender, EventArgs e)
+        {
+            dgv_Clients.Update();
+        }
     }
 }

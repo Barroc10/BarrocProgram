@@ -45,7 +45,6 @@ namespace Barroc_IT
         {
             SqlConnection conn = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("SELECT " + select + " FROM " + from + " WHERE " + where1 + " LIKE '" + where2 + "'");
-            command.Parameters.AddWithValue("0", where2);
             command.Connection = conn;
 
             conn.Open();
