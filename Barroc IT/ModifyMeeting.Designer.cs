@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Done = new System.Windows.Forms.Button();
             this.gb_CreateMeeting = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gb_CreateMeeting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.Location = new System.Drawing.Point(12, 208);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(103, 32);
-            this.btn_Cancel.TabIndex = 7;
-            this.btn_Cancel.Text = "Cancel";
-            this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
             // btn_Done
             // 
@@ -53,6 +43,7 @@
             this.btn_Done.TabIndex = 6;
             this.btn_Done.Text = "Done";
             this.btn_Done.UseVisualStyleBackColor = true;
+            this.btn_Done.Click += new System.EventHandler(this.btn_Done_Click);
             // 
             // gb_CreateMeeting
             // 
@@ -78,7 +69,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 255);
-            this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Done);
             this.Controls.Add(this.gb_CreateMeeting);
             this.Name = "ModifyMeeting";
@@ -91,7 +81,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Done;
         private System.Windows.Forms.GroupBox gb_CreateMeeting;
         private System.Windows.Forms.DataGridView dataGridView1;
